@@ -13,7 +13,7 @@
 | Platform | URL |
 |---|---|
 | Cloudflare Pages (production) | https://greenroot-af0.pages.dev |
-| Hugging Face Space (mirror) | https://huggingface.co/spaces/SoSa123456/greenroot |
+| Hugging Face Space (mirror) | https://sosa123456-greenroot.static.hf.space |
 | GitHub (this repo) | https://github.com/Websites-by-AI/greenroot |
 
 ## Automation (push → live everywhere)
