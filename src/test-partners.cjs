@@ -63,7 +63,10 @@ function equal(a,b,label){assert.equal(a,b,label);}
  await page.locator('[data-pf-region="iran"]').click();
  const dP=page.waitForEvent('download');await page.locator('#pfExport').click();const dl=await dP;
  const tmp=path.join(root,'research/test-filtered-download.csv');await dl.saveAs(tmp);
- const csv=fs.readFileSync(tmp,'utf8');equal(csv.trim().split('\n').length,11);assert(csv.includes('IR-'));
+ const csv=fs.readFileSync(tmp,'utf8');
+ const records=[];let row=[],field='',quote=false;
+ for(let i=0;i<csv.length;i++){const ch=csv[i];if(ch==='"'){if(quote&&csv[i+1]==='"'){field+='"';i++;}else quote=!quote;}else if(ch===','&&!quote){row.push(field);field='';}else if(ch==='\n'&&!quote){row.push(field.replace(/\r$/,''));records.push(row);row=[];field='';}else field+=ch;}
+ if(field||row.length){row.push(field);records.push(row);}equal(records.length,11);assert(csv.includes('IR-'));
  pass('Filtered CSV download: 10 Iran records plus header; source columns present');
  fs.unlinkSync(tmp);
  const xl=await page.request.get(base+'/kit/GreenRoot-Outreach-210.xlsx');equal(xl.status(),200);assert((await xl.body()).length>10000);
@@ -95,6 +98,7 @@ function equal(a,b,label){assert.equal(a,b,label);}
  assert(await page.locator('.mobile-cta a[href="#directory"]').isVisible());
  await page.screenshot({path:path.join(screens,'22-partner-finder-mobile-FA.png'),fullPage:false});
  await page.goto(base+'/partners.html?lang=fa&region=iran#directory');await page.waitForSelector('[data-pf-save]');
+ await page.evaluate(()=>{document.documentElement.style.scrollBehavior='auto';window.scrollTo({top:document.getElementById('pfResults').getBoundingClientRect().top+scrollY-82,behavior:'instant'});});
  await page.screenshot({path:path.join(screens,'23-partner-contacts-mobile-FA.png'),fullPage:false});
  pass('Mobile directory has contextual search / Excel actions; screenshots captured');
  // Smoke-test all build templates without checking demo results / medical effectiveness.

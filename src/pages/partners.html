@@ -95,13 +95,13 @@
      <div class="pf-field"><label for="pfSort" data-i18n="pf.sortLabel">Sort</label><select id="pfSort"><option value="priority" data-i18n="pf.sort.priority">Suggested first contacts</option><option value="name" data-i18n="pf.sort.name">Name A–Z</option></select></div>
     </div>
     <div class="pf-checks"><label><input type="checkbox" id="pfShortlist"><span data-i18n="pf.shortlist">Suggested first contacts only</span></label><label><input type="checkbox" id="pfPhoneOnly"><span data-i18n="pf.phoneOnly">Has a published phone</span></label><label><input type="checkbox" id="pfSavedOnly"><span data-i18n="pf.savedOnly">My saved leads only</span></label><button id="pfReset" type="button" class="pf-reset" data-i18n="pf.reset">Reset filters</button></div>
-   </details>
+   <div class="pf-wa-filter"><label for="pfWhatsapp" data-i18n="wa.label">Published WhatsApp evidence</label><select id="pfWhatsapp"><option value="" data-i18n="wa.all">All WhatsApp evidence states</option><option value="published" data-i18n="wa.filter">Published WhatsApp link only</option><option value="not_found" data-i18n="wa.not_found">No official link found — account unknown</option><option value="unavailable" data-i18n="wa.unavailable">Source unavailable — unknown</option><option value="directory_only" data-i18n="wa.directory_only">Directory issuer’s channel only</option></select></div></details>
   </div>
   <div class="pf-resultbar" id="pfResults"><div><strong id="pfResultCount" aria-live="polite" aria-atomic="true">210 results · 88 parent institutions</strong><div id="pfShowing">Showing 1–12 of 210</div></div><span class="pf-saved-count" id="pfSavedCount">0 saved on this device</span></div>
   <noscript><p class="pf-no-phone">JavaScript is disabled: this is a 12-lead preview. Download <a href="kit/GreenRoot-Outreach-210.xlsx">Excel</a> or <a href="kit/GreenRoot-Outreach-210.csv">CSV</a> to access all 210 contacts and sources.</p></noscript>
   <div class="pf-cards" id="pfCards"><!--PARTNER-FALLBACK--></div>
   <nav class="pf-pagination" aria-label="Directory pages"><button type="button" id="pfPrev" disabled data-i18n="pf.prev">Previous</button><span id="pfPageStatus">Page 1 of 18</span><button type="button" id="pfNext" data-i18n="pf.next">Next</button></nav>
-  <p class="pf-quiet-note" data-i18n="pf.priorityNote">Priority is an editorial judgement of thematic fit — not a probability of funding or agreement.</p>
+  <p class="pf-wa-summary" data-i18n="wa.summary">WhatsApp review: 12 published institutional routes; no account tests.</p><p class="pf-quiet-note" data-i18n="wa.limit">A published link is not an active account or outreach permission.</p><p class="pf-quiet-note" data-i18n="pf.priorityNote">Priority is an editorial judgement of thematic fit — not a probability of funding or agreement.</p>
   <p class="pf-quiet-note" data-i18n="pf.localNote">Saved leads stay in this browser only. They are not sent to GreenRoot.</p>
  </div>
 </section>
@@ -139,7 +139,7 @@
     <p class="disclaimer" data-i18n="footer.disclaimer">GreenRoot is a concept prototype. Nothing on this site is medical advice.</p>
     <p class="copy">© <span id="year">2026</span> GreenRoot.</p>
   </div>
-<div class="container"><a href="partners.html" data-i18n="nav.partners">Partner finder</a></div></footer>
+<div class="container"><a href="partners.html" data-i18n="nav.partners">Partner finder</a> · <a href="outreach.html" data-i18n="ow.nav">Outreach desk</a></div></footer>
 <div class="pf-toast" id="pfToast" role="status" aria-live="polite"></div>
 <!--PARTNER-DATA-->
 <!--APP-->

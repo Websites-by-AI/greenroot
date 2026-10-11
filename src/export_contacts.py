@@ -6,8 +6,9 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
 
-ROOT=Path(__file__).resolve().parent.parent
-spec=importlib.util.spec_from_file_location('partners_content', ROOT/'src/partners-content.py')
+SRC=Path(__file__).resolve().parent
+ROOT=SRC.parent/'site' if (SRC.parent/'site').is_dir() else SRC.parent
+spec=importlib.util.spec_from_file_location('partners_content', SRC/'partners-content.py')
 c=importlib.util.module_from_spec(spec); spec.loader.exec_module(c)
 D=json.loads((ROOT/'data/partners.json').read_text()); rows=D['contacts'];meta=D['meta']
 for r in rows:
@@ -24,10 +25,13 @@ for r in rows:
 
 # This dictionary is loaded after existing translations, before the app.
 js='/* Researched outreach directory UI: EN / FA / TR. */\n(function(){\nvar X='+json.dumps(c.TEXT,ensure_ascii=False)+';\nObject.keys(X).forEach(function(l){window.I18N[l]=Object.assign(window.I18N[l]||{},X[l]);});\nwindow.GR_MESSAGES='+json.dumps(c.MESSAGES,ensure_ascii=False)+';\nwindow.GR_PLACES_FA='+json.dumps(c.PLACES_FA,ensure_ascii=False)+';\n})();\n'
-(ROOT/'src/partners-i18n.js').write_text(js)
+(SRC/'partners-i18n.js').write_text(js)
 
 KIT=ROOT/'kit';KIT.mkdir(exist_ok=True)
-columns=['id','name','name_fa','name_en','region','country','city','district','parent','type','category','phone','phone_raw','phone_scope','email','website','source','checked','evidence','phone_called','priority','ask_en','ask_fa','ask_tr','note_en','note_fa','partnership']
+for r in rows:
+    r['whatsapp_url']='\n'.join(x['url'] for x in r.get('whatsapp_channels',[]))
+    r['whatsapp_source']='\n'.join(x['source'] for x in r.get('whatsapp_channels',[]))
+columns=['id','name','name_fa','name_en','region','country','city','district','parent','type','category','phone','phone_raw','phone_scope','email','website','source','checked','evidence','phone_called','priority','ask_en','ask_fa','ask_tr','note_en','note_fa','whatsapp_status','whatsapp_checked','whatsapp_url','whatsapp_source','whatsapp_purpose','whatsapp_account_tested','outreach_profile','fit_level','message_subject_en','message_en','message_subject_fa','message_fa','message_subject_tr','message_tr','partnership']
 def csvsafe(v):
     if v is None: return ''
     v=str(v)
@@ -72,9 +76,9 @@ for i in range(1,len(info)+1):
 for cell in overview[1]:cell.fill=PatternFill('solid',fgColor=GREEN);cell.font=Font(color=LIME,bold=True,size=14)
 overview.freeze_panes='B2'
 
-headers=['ID','Official name','نام فارسی','City','District','Category','Entry type','Parent institution','Public phone','Phone scope','Email','Website / contact route','Official source','Source reviewed','Evidence','Suggested ask (EN)','پیشنهاد همکاری (FA)','Notes (EN)','Phone called?','Priority']
-keys=['id','name','name_fa','city','district','category','type','parent','phone','phone_scope','email','website','source','checked','evidence','ask_en','ask_fa','note_en','phone_called','priority']
-widths=[13,46,42,20,21,19,18,37,24,18,35,45,45,18,32,70,70,65,17,13]
+headers=['ID','Official name','نام فارسی','City','District','Category','Entry type','Parent institution','Public phone','Phone scope','Email','Website / contact route','Official source','Source reviewed','Evidence','Suggested ask (EN)','پیشنهاد همکاری (FA)','Notes (EN)','Phone called?','Priority','WhatsApp evidence','WhatsApp reviewed','Published WhatsApp URL','WhatsApp source','Channel purpose / limits','Account probed?','Outreach profile','Fit (not success probability)','Message subject (EN)','Personalized message (EN)','موضوع (FA)','پیام اختصاصی (FA)','Mesaj konusu (TR)','Kişiselleştirilmiş mesaj (TR)']
+keys=['id','name','name_fa','city','district','category','type','parent','phone','phone_scope','email','website','source','checked','evidence','ask_en','ask_fa','note_en','phone_called','priority','whatsapp_status','whatsapp_checked','whatsapp_url','whatsapp_source','whatsapp_purpose','whatsapp_account_tested','outreach_profile','fit_level','message_subject_en','message_en','message_subject_fa','message_fa','message_subject_tr','message_tr']
+widths=[13,46,42,20,21,19,18,37,24,18,35,45,45,18,32,70,70,65,17,13]+[34,20,42,48,42,17,25,28,45,100,45,100,45,100]
 def setup_table(ws, table_name, widths):
     ws.sheet_view.showGridLines=False;ws.freeze_panes='D2'
     end=get_column_letter(ws.max_column)
@@ -116,6 +120,20 @@ for lang,msg in c.MESSAGES.items():ws.append([lang.upper(),msg])
 setup_table(ws,'MessageTemplates',[15,125]);
 for i in range(2,5):ws.row_dimensions[i].height=320
 
+wa_ws=wb.create_sheet('WhatsApp evidence')
+wa_ws.append(['ID','Institution','نام فارسی','Entry type / scope','Phone (not called)','WhatsApp evidence state','Published WhatsApp URL','Official WhatsApp source','Purpose / limits','Account probed?','Source reviewed'])
+for rr in rows:wa_ws.append([rr.get(k,'') for k in ['id','name','name_fa','type','phone','whatsapp_status','whatsapp_url','whatsapp_source','whatsapp_purpose','whatsapp_account_tested','whatsapp_checked']])
+setup_table(wa_ws,'WhatsAppEvidence',[14,50,45,25,24,38,46,55,60,20,22])
+msg_ws=wb.create_sheet('Personalized first messages')
+msg_ws.append(['ID','Institution','Recipient role','Fit: not probability','Subject (EN)','Draft (EN)','موضوع (FA)','پیش‌نویس (FA)','Konu (TR)','Taslak (TR)'])
+for rr in rows:msg_ws.append([rr.get(k,'') for k in ['id','name','outreach_profile','fit_level','message_subject_en','message_en','message_subject_fa','message_fa','message_subject_tr','message_tr']])
+setup_table(msg_ws,'PersonalizedMessages',[14,50,34,32,55,120,55,120,55,120])
+routepath=ROOT/'data/funding-routes.json'
+if routepath.exists():
+    rd=json.loads(routepath.read_text());ws=wb.create_sheet('University Funding Routes')
+    ws.append(['ID','Route','نام فارسی','Type: grant/equity/repayable','Gate','Reviewed call status','Deadline in source','Company pre-registration','Official source','Official route','Source reviewed','Next-step summary (FA)','Next-step summary (EN)'])
+    for rr in rd['routes']:ws.append([rr.get(k,'') for k in ['id','name','name_fa','kind','gate','status','deadline','pre_registration','source','apply','checked','summary_fa','summary_en']])
+    setup_table(ws,'FundingRoutes',[14,58,50,30,38,36,22,24,55,55,22,110,110])
 wb.save(KIT/'GreenRoot-Outreach-210.xlsx')
 messages='GREENROOT | FIRST CONTACT MESSAGES\nSource-backed concept outreach; no automatic sending. Replace every bracketed placeholder.\n\n'
 for lang,msg in c.MESSAGES.items():messages+='========== '+lang.upper()+' ==========\n\n'+msg+'\n'

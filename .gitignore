@@ -5,3 +5,9 @@ __pycache__/
 .env.*
 .cache/
 .local/
+
+research/
+.cache/
+.wrangler/
+*.sqlite
+*.sqlite-wal

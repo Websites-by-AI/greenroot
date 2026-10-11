@@ -194,6 +194,7 @@ var CHAT_GREETING = {
   fa:"سلام، من رها هستم 🌱 همیار بهبودی گرین‌روت. امروز حالت چطوره؟ از دکمه‌های پایین استفاده کن یا آزادانه بنویس — فارسی یا English، هر دو جواب می‌ده."
 };
 var CHAT_CHIPS = [
+  { id:"outreach", en:"University / funding / follow-up", fa:"دانشگاه / فاند / پیگیری", tr:"Üniversite / fon / takip" },
   { id:"craving", en:"I have a craving", fa:"هوس دارم" },
   { id:"mood",    en:"I feel low",      fa:"حالم پایینه" },
   { id:"career",  en:"Career rewind",   fa:"بازگشت شغلی" },
@@ -219,7 +220,9 @@ function botReply(intentId, userText){
   chatBody.appendChild(typing);
   chatBody.scrollTop = chatBody.scrollHeight;
   var resp, d = I18N[lang]||I18N.en;
-  if (intentId){ resp = CHAT_INTENTS.find(function(i){return i.id===intentId;}).r[lang] || CHAT_INTENTS.find(function(i){return i.id===intentId;}).r.en; }
+  if ((intentId==="outreach" || !intentId) && window.GR_OUTREACH) resp=window.GR_OUTREACH.coach(intentId==="outreach"?"outreach":userText,lang);
+  if(resp){}
+  else if (intentId){ resp = CHAT_INTENTS.find(function(i){return i.id===intentId;}).r[lang] || CHAT_INTENTS.find(function(i){return i.id===intentId;}).r.en; }
   else {
     var lower = (userText||"").toLowerCase();
     var hit = CHAT_INTENTS.find(function(i){ return i.kw.some(function(k){ return lower.indexOf(k.toLowerCase())>-1; }); });
@@ -493,9 +496,11 @@ document.addEventListener("DOMContentLoaded", function(){
     /* sticky mobile CTA */
     if (window.matchMedia && window.matchMedia("(max-width:660px)").matches && !document.querySelector(".mobile-cta")){
       var cta = document.createElement("div"); cta.className = "mobile-cta";
-      var isDirectory = document.body.getAttribute("data-page")==="partners";
-      var j = document.createElement("a"); j.className="btn small"; j.href=isDirectory ? "#directory" : "join.html"; j.innerHTML=(isDirectory?"🔎 ":"🌱 ")+"<span data-i18n=\""+(isDirectory?"pf.browse":"nav.cta")+"\">"+t(isDirectory?"pf.browse":"nav.cta")+"</span>";
-      var p = document.createElement("a"); p.className="btn small ghost"; p.href=isDirectory ? "kit/GreenRoot-Outreach-210.xlsx" : "podcast.html"; p.innerHTML=(isDirectory?"⬇ ":"🎧 ")+"<span data-i18n=\""+(isDirectory?"pf.xlsshort":"nav.podcast")+"\">"+t(isDirectory?"pf.xlsshort":"nav.podcast")+"</span>";
+      var isDirectory = document.body.getAttribute("data-page")==="partners", isDesk=document.body.getAttribute("data-page")==="outreach";
+      var mainKey=isDesk?"ow.nav":isDirectory?"pf.browse":"nav.cta";
+      var secondKey=isDesk?"nav.partners":isDirectory?"pf.xlsshort":"nav.podcast";
+      var j = document.createElement("a"); j.className="btn small"; j.href=isDesk?"#desk":isDirectory?"#directory":"join.html"; j.innerHTML=(isDesk?"🗂️ ":isDirectory?"🔎 ":"🌱 ")+"<span data-i18n=\""+mainKey+"\">"+t(mainKey)+"</span>";
+      var p = document.createElement("a"); p.className="btn small ghost"; p.href=isDesk?"partners.html":isDirectory?"kit/GreenRoot-Outreach-210.xlsx":"podcast.html"; p.innerHTML=(isDesk?"🤝 ":isDirectory?"⬇ ":"🎧 ")+"<span data-i18n=\""+secondKey+"\">"+t(secondKey)+"</span>";
       p.style.border = "1.5px solid rgba(217,249,157,.5)"; p.style.background="rgba(255,255,255,.08)";
       cta.appendChild(j); cta.appendChild(p);
       document.body.appendChild(cta);

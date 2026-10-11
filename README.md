@@ -72,3 +72,37 @@ Live: https://greenroot-af0.pages.dev/partners
 - Phone conflicts: Buğday / Toloo; legacy contact route: Tehran waste management. Email / reconfirm before calling.
 
 No participant health data should be stored or sent. Clinical care must remain independent of work output. Eligibility, lawful wages, work permits, insurance and licensing require local professional review.
+
+
+## Idea-stage outreach desk / 11 October 2026
+
+https://greenroot-af0.pages.dev/outreach?lang=fa
+
+- Main bank stays 210 entries / 88 parents (100 Istanbul, 100 other Türkiye, 10 Tehran/Iran).
+- WhatsApp review via 136 public pages: 12 institution-specific published links; 180 no link found; 14 not inspectable; 4 directory-provider channels not attributable to the institution. No account probes or messages. Municipal-service and support routes are not business-outreach consent.
+- Every bank row now has a role-specific EN/FA/TR draft, a fit label (not reply probability), channel evidence and a next-step link.
+- 13 separate university/incubator/funding routes with official sources, current/archived deadline distinctions and explicit idea-stage/company/degree/shareholding gates.
+- 3 editable application dossiers; actual achievements, CVs, costs, qualifications and partners remain blanks where unknown.
+- Local private desk: actual user-reported send → +2-calendar-day inbox/portal check; no reply → one later manual follow-up review; decline → stop; positive reply → prepare requested materials. Time alone never means admission, company registration or grant award.
+- Raha sidebar/playbook plus rules-based coach; not an autonomous filing or inbox-reading agent.
+- Real-email backend deployed as a dedicated SQLite Durable Object with persistent alarms, not account cron. Other account databases/triggers were untouched; no paid plan upgrade. Provider/sender NOT configured; real delivery remains untested. Setup guide is on the page and in kit/GreenRoot-Email-Setup-FA.md.
+- Owner-only beta or verified sender domain + Turnstile + real privacy contact/notice; email verification, salted per-workspace authorization, encrypted stable unsubscribe tokens, minimal task sync, deletion and retention controls. No private notes, drafts, documents or health records are sent/committed.
+- Current build: 21 source templates / 23 total HTML pages (including standalone link hub / 404). Existing decks, districts, booklet and podcast retained.
+- QA: 16 directory checks + 17 workbench checks + 16 backend checks. Backend transport tests use LOCAL MOCKS: zero real emails. 21 templates × 3 languages and viewport widths 320/390/768/1360/1600 passed. Screenshots 24–28 are clean-context captures with no fictional sends/replies/registrations.
+
+### Rebuild committed public data / HTML
+
+Install Python openpyxl and python-docx; from this repo run:
+
+```sh
+python src/export_contacts.py
+python src/prepare_workflow.py
+python src/export_contacts.py
+python src/build.py
+```
+
+In the deploy repository these scripts detect site/ as output; in the canonical workspace they write alongside src/. The minimal institutional snapshots and source audits live in src/. A fresh scrape is a deliberate source-review task, not proof a phone/account works. Review changed source scope before publishing.
+
+### Backend deployment
+
+backend/wrangler.toml and the new GitHub workflow deploy the dedicated Worker while retaining encrypted secrets. Do not put API keys in HTML, Git or chat. Sender activation remains an owner action. See backend/README.md for API/autonomy/security limits.

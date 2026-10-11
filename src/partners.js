@@ -7,7 +7,7 @@ var DATA=JSON.parse(dataEl.textContent), ROWS=DATA.contacts, PAGE_SIZE=12;
 var ids=new Set(ROWS.map(function(r){return r.id;}));
 var saved=new Set();
 try{var ss=JSON.parse(localStorage.getItem('gr-partner-saved-v1')||'[]');if(Array.isArray(ss))ss.forEach(function(id){if(ids.has(id))saved.add(id);});}catch(e){}
-var state={region:'all',q:'',category:'',place:'',type:'',shortlist:false,phone:false,saved:false,sort:'priority',page:1};
+var state={region:'all',q:'',category:'',place:'',type:'',whatsapp:'',shortlist:false,phone:false,saved:false,sort:'priority',page:1};
 var lastLang='', ready=false, current=[], toastTimer;
 var categories=['civic','recovery','recycling','environment','employment','research','family'];
 var ICON_PATHS={
@@ -48,7 +48,7 @@ function persist(){try{localStorage.setItem('gr-partner-saved-v1',JSON.stringify
 function syncURL(){
  try{
   var u=new URL(location.href),p=u.searchParams;
-  ['region','q','category','place','type','shortlist','phone','saved','sort','page'].forEach(function(k){
+  ['region','q','category','place','type','whatsapp','shortlist','phone','saved','sort','page'].forEach(function(k){
    var v=state[k];if((k==='region'&&v==='all')||(k==='sort'&&v==='priority')||(k==='page'&&v===1)||v===''||v===false)p.delete(k);else p.set(k,v===true?'1':String(v));
   });
   p.set('lang',lang());history.replaceState(null,'',u.pathname+u.search+u.hash);
@@ -65,11 +65,12 @@ function loadURL(){
   if(ROWS.some(function(r){return place===('d:'+r.district)&&r.region==='istanbul'||place===('c:'+r.city);}))state.place=place;
   state.shortlist=p.get('shortlist')==='1';state.phone=p.get('phone')==='1';state.saved=p.get('saved')==='1';
   if(p.get('sort')==='name')state.sort='name';
+  if(['published','not_found','unavailable','directory_only','hq_only'].indexOf(p.get('whatsapp'))>-1)state.whatsapp=p.get('whatsapp');
   state.page=Math.max(1,parseInt(p.get('page')||'1',10)||1);
  }catch(e){}
 }
 function controlValues(){
- var map={pfSearch:'q',pfCategory:'category',pfPlace:'place',pfType:'type',pfSort:'sort'};
+ var map={pfSearch:'q',pfCategory:'category',pfPlace:'place',pfType:'type',pfSort:'sort',pfWhatsapp:'whatsapp'};
  Object.keys(map).forEach(function(id){var e=document.getElementById(id);if(e)e.value=state[map[id]];});
  ['Shortlist','PhoneOnly','SavedOnly'].forEach(function(s){var e=document.getElementById('pf'+s);if(e)e.checked=state[{Shortlist:'shortlist',PhoneOnly:'phone',SavedOnly:'saved'}[s]];});
  document.querySelectorAll('[data-pf-region]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.pfRegion===state.region));});
@@ -89,6 +90,7 @@ function filter(){
   if(state.region!=='all'&&state.region!==r.region)return false;
   if(state.category&&state.category!==r.category)return false;
   if(state.type&&state.type!==r.type)return false;
+  if(state.whatsapp&&state.whatsapp!==r.whatsapp_status)return false;
   if(state.place){var good=state.place==='d:'+r.district&&r.region==='istanbul'||state.place==='c:'+r.city;if(!good)return false;}
   if(state.shortlist&&r.priority!==1)return false;
   if(state.phone&&!r.phone)return false;
@@ -107,6 +109,12 @@ function card(r){
  var phoneHtml=r.phone?'<a class="pf-phone" href="tel:'+esc(r.phone)+'" aria-label="'+esc(t('pf.call')+' '+prettyPhone(r))+'">'+esc(prettyPhone(r))+'</a><div class="pf-phone-state">'+esc(t('pf.untested'))+'</div>'+(r.phone_scope==='domestic'?'<div class="pf-number-note">'+esc(t('pf.domestic'))+'</div>':'')+'<a class="pf-call" href="tel:'+esc(r.phone)+'">↗ '+esc(t('pf.call'))+'</a>':'<div class="pf-no-phone">'+esc(t('pf.noPhone'))+'</div>';
  var email=r.email?'<a href="mailto:'+esc(r.email)+'" title="'+esc(r.email)+'">'+esc(t('pf.email'))+' ↗</a>':'';
  var note=r['note_'+l]||'';
+ var wa='<div class="pf-wa"><b>'+esc(t('wa.label'))+'</b><p>'+esc(t('wa.'+r.whatsapp_status))+'</p>';
+ if(r.whatsapp_status==='published'){
+  var ch=r.whatsapp_channels[0];
+  wa+='<a href="'+esc(ch.source)+'" target="_blank" rel="noopener noreferrer">'+esc(t('wa.source'))+' ↗</a><p class="pf-wa-purpose">'+esc(t(r.whatsapp_purpose==='support_not_business'?'wa.support':r.whatsapp_purpose==='public_service_not_business_confirmed'?'wa.service':'wa.purpose'))+'</p>';
+ }
+ wa+='</div><a class="pf-plan-contact" href="outreach.html?lead='+esc(r.id)+'&amp;lang='+l+'#desk">'+esc(t('wa.plan'))+' →</a>';
  var parent=r.type!=='organization'?'<div class="pf-parent">'+esc(t('pf.parent'))+': <bdi>'+esc(r.parent)+'</bdi></div>':'';
  return '<article class="pf-card" id="'+esc(r.id)+'" data-category="'+esc(r.category)+'">'+
  '<div class="pf-card-head"><div><div class="pf-card-id">'+esc(r.id)+'</div><div class="pf-cat-icon">'+svg(r.category)+'</div></div><button class="pf-save" type="button" data-pf-save="'+esc(r.id)+'" aria-pressed="'+isSaved+'" aria-label="'+esc((isSaved?t('pf.unsave'):t('pf.save'))+' '+name)+'"><svg viewBox="0 0 24 24" fill="'+(isSaved?'currentColor':'none')+'" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2-5.5-2.9L6.5 20l1-6.2L3 9.6l6.2-.9Z"/></svg>'+esc(isSaved?t('pf.unsave'):t('pf.save'))+'</button></div>'+
@@ -115,7 +123,7 @@ function card(r){
  '<div class="pf-labels"><span>'+esc(t('pf.cat.'+r.category))+'</span><span>'+esc(t('pf.type.'+r.type))+'</span>'+(r.priority===1?'<span class="pf-priority">'+esc(t('pf.start'))+'</span>':'')+'</div>'+parent+
  '<div class="pf-ask"><strong>'+esc(t('pf.ask'))+'</strong>'+esc(r['ask_'+l]||r.ask_en)+'</div><div class="pf-phonebox">'+phoneHtml+
  '<div class="pf-links">'+email+'<a href="'+esc(r.website)+'" target="_blank" rel="noopener noreferrer">'+esc(t('pf.website'))+' ↗</a><button class="pf-copy" type="button" data-pf-copy="'+esc(r.id)+'">'+esc(t('pf.copy'))+'</button></div>'+ (note?'<p class="pf-card-note">'+esc(note)+'</p>':'')+
- '<div class="pf-card-source"><span>'+esc(t('pf.checked'))+'</span><a href="'+esc(r.source)+'" target="_blank" rel="noopener noreferrer">['+esc(r.source_ref||1)+'] '+esc(t('pf.source'))+' ↗</a></div><div class="pf-evidence">'+esc(sourceLabel)+'</div></div></article>';
+ wa+'<div class="pf-card-source"><span>'+esc(t('pf.checked'))+'</span><a href="'+esc(r.source)+'" target="_blank" rel="noopener noreferrer">['+esc(r.source_ref||1)+'] '+esc(t('pf.source'))+' ↗</a></div><div class="pf-evidence">'+esc(sourceLabel)+'</div></div></article>';
 }
 function render(){
  if(!ready)return;
@@ -134,10 +142,10 @@ function render(){
  syncURL();
 }
 function change(k,value){state[k]=value;state.page=1;render();}
-function contactText(r){return [r.id+' — '+r.name,placeLabel(r.city)+' / '+placeLabel(r.district),t('pf.type.'+r.type)+' — '+r.parent,r.phone||t('pf.noPhone'),r.email,r.website,t('pf.source')+': '+r.source,t('pf.checked'),t('pf.untested'),r['ask_'+lang()]].filter(Boolean).join('\n');}
+function contactText(r){return [r.id+' — '+r.name,placeLabel(r.city)+' / '+placeLabel(r.district),t('pf.type.'+r.type)+' — '+r.parent,r.phone||t('pf.noPhone'),r.email,r.website,t('pf.source')+': '+r.source,t('pf.checked'),t('pf.untested'),t('wa.'+r.whatsapp_status),r['ask_'+lang()]].filter(Boolean).join('\n');}
 function csvsafe(x){x=String(x===undefined||x===null?'':x);if(/^[\s]*[=+\-@]/.test(x))x="'"+x;return '"'+x.replace(/"/g,'""')+'"';}
 function exportCSV(){
- var cols=['id','name','name_fa','name_en','region','city','district','parent','type','category','phone','phone_scope','email','website','source','checked','evidence','phone_called','priority','ask_'+lang(),'note_'+lang(),'partnership'];
+ var cols=['id','name','name_fa','name_en','region','city','district','parent','type','category','phone','phone_scope','email','website','source','checked','evidence','phone_called','priority','ask_'+lang(),'note_'+lang(),'whatsapp_status','whatsapp_checked','whatsapp_purpose','whatsapp_account_tested','outreach_profile','fit_level','message_subject_'+lang(),'message_'+lang(),'partnership'];
  var str='\uFEFF'+cols.map(csvsafe).join(',')+'\r\n'+current.map(function(r){return cols.map(function(k){return csvsafe(r[k]);}).join(',');}).join('\r\n');
  var blob=new Blob([str],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
  a.href=url;a.download='GreenRoot-'+state.region+'-'+current.length+'-leads.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);
@@ -149,11 +157,11 @@ function init(){
  document.querySelectorAll('[data-pf-jump]').forEach(function(a){a.addEventListener('click',function(){change('region',a.dataset.pfJump);});});
  var debounce;
  document.getElementById('pfSearch').addEventListener('input',function(e){var val=e.target.value;clearTimeout(debounce);debounce=setTimeout(function(){change('q',val);},150);});
- var m={pfCategory:'category',pfPlace:'place',pfType:'type',pfSort:'sort'};
+ var m={pfCategory:'category',pfPlace:'place',pfType:'type',pfSort:'sort',pfWhatsapp:'whatsapp'};
  Object.keys(m).forEach(function(id){document.getElementById(id).addEventListener('change',function(e){change(m[id],e.target.value);});});
  var checks={pfShortlist:'shortlist',pfPhoneOnly:'phone',pfSavedOnly:'saved'};
  Object.keys(checks).forEach(function(id){document.getElementById(id).addEventListener('change',function(e){change(checks[id],e.target.checked);});});
- document.getElementById('pfReset').addEventListener('click',function(){state={region:'all',q:'',category:'',place:'',type:'',shortlist:false,phone:false,saved:false,sort:'priority',page:1};render();});
+ document.getElementById('pfReset').addEventListener('click',function(){state={region:'all',q:'',category:'',place:'',type:'',whatsapp:'',shortlist:false,phone:false,saved:false,sort:'priority',page:1};render();});
  document.getElementById('pfCards').addEventListener('click',function(e){
   var b=e.target.closest('[data-pf-save]');if(b){var id=b.dataset.pfSave;saved.has(id)?saved.delete(id):saved.add(id);persist();render();return;}
   b=e.target.closest('[data-pf-copy]');if(b){var r=ROWS.find(function(x){return x.id===b.dataset.pfCopy;});if(r)copy(contactText(r)).then(function(){toast(t('pf.copied'));}).catch(function(){toast(t('pf.copyFailed'));});}

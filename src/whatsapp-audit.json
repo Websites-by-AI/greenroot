@@ -1,0 +1,5114 @@
+{
+  "checked": "2026-10-11",
+  "method": "Official site/contact-page recipient-specific links only. No probing, calls or messages. Absence does not mean no WhatsApp account. Branches do not inherit HQ availability. Public service/counselling channels are not outreach permission.",
+  "pages_reviewed": 136,
+  "records": {
+    "IST-001": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://bakirkoyruhsinireah.saglik.gov.tr/TR-128214/egitim-yonetim-birimi.html",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://bakirkoyruhsinireah.saglik.gov.tr/TR-94098/iletisim-amp-ulasim.html",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-002": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://besiktas.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-003": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bugday.org/blog/sizinle-nasil-iletisime-gecebilirim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bugday.org/blog/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-004": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.turmepa.org.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.turmepa.org.tr/contact",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-005": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://erenkoyruhsinireah.saglik.gov.tr/TR-1177195/iletisim.html",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://erenkoyruhsinireah.saglik.gov.tr/TR-38455/iletisim-ve-ulasim.html",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-006": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://habitatdernegi.org/en/contact/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://habitatdernegi.org/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-007": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://bio.ibb.istanbul/offices",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-008": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-009": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.iso.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.iso.org.tr/kurumsal/organizasyon-yapisi/baskanlik-kurumsal-iletisim-danismani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.iso.org.tr/kurumsal/organizasyon-yapisi/kurumsal-iletisim-subesi/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-010": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ins.itu.edu.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ins.itu.edu.tr/en/contact",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-011": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.istac.istanbul/iletisim/sirket-kunyesi",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.istac.istanbul/iletisim/sikca-sorulan-sorular",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.istac.istanbul/iletisim/adres-ve-telefonlar",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-012": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kadikoy.bel.tr/tr",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-013": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.kedv.org.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kedv.org.tr/iletisim ",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/902122922628",
+          "phone": "+902122922628",
+          "label": "0212 292 26 28",
+          "source": "https://www.kedv.org.tr/iletisim"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-014": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://pagcev.org/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://pagcev.org/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-015": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.tema.org.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-016": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilayakademi.org/tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-017": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-018": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.cevko.org.tr/iletisim",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-019": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.uskudar.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-020": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-021": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-022": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-023": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.atasehir.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.atasehir.bel.tr/icerik/iletisim/sosyal-medya-hesaplari",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905301664873",
+          "phone": "+905301664873",
+          "label": "WhatsApp Şikayet Hattı ( 0530 166 48 73 )",
+          "source": "https://www.atasehir.bel.tr/icerik/iletisim/sosyal-medya-hesaplari"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-024": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.avcilar.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.avcilar.bel.tr/iletisim/hizmet-binalari",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.avcilar.bel.tr/iletisim/mudurlukler",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-025": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bahcelievler.istanbul/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bahcelievler.istanbul/iletisim/hizmet-binalari",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-026": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bakirkoy.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bakirkoy.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bakirkoy.bel.tr/whatsapp-iletisim-hatti",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905529127336",
+          "phone": "+905529127336",
+          "label": "",
+          "source": "https://www.bakirkoy.bel.tr/whatsapp-iletisim-hatti"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-027": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-028": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bagcilar.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905524100600",
+          "phone": "+905524100600",
+          "label": "0(552) 410 06 00",
+          "source": "https://www.bagcilar.bel.tr/"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-029": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-030": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.beykoz.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.beykoz.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.beykoz.bel.tr/etkinlikler/siddetsiz-iletisimden-ilhamla-hayati-zenginlestiren-dil-107",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-031": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.beylikduzu.istanbul/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.beylikduzu.istanbul/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-032": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://beyoglu.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://beyoglu.bel.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://beyoglu.bel.tr/hizmetlerimiz/iletisim-merkezi/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-033": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://bogazici.edu.tr/tr/pages/iletisim/685",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://bogazici.edu.tr/tr/pages/kurumsal-iletisim/143",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://bogazici.edu.tr/tr/pages/iletisim/busign.bogazici.edu.tr",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-034": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bcekmece.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905309323232",
+          "phone": "+905309323232",
+          "label": "",
+          "source": "https://www.bcekmece.bel.tr/"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-035": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-036": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-037": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.eyupsultan.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.eyupsultan.bel.tr/tr/main/pages/iletisim/12",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905369063030",
+          "phone": "+905369063030",
+          "label": "0536 906 30 30",
+          "source": "https://www.eyupsultan.bel.tr/tr/main/pages/iletisim/12"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-038": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.fatih.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.fatih.bel.tr/tr/main/contact",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-039": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-040": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-041": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.hayatadestek.org/bize-ulasin/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/908504410043",
+          "phone": "+908504410043",
+          "label": "+90 850 441 0043",
+          "source": "https://www.hayatadestek.org/bize-ulasin/"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "support_not_business"
+    },
+    "IST-042": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ito.org.tr/tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ito.org.tr/tr/iletisim/iletisim-bilgileri",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ito.org.tr/tr/iletisim/iletisim-formu",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-043": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-044": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kagithane.istanbul/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kagithane.istanbul/iletisim/detail/Cagri-Merkezi/53/107/0",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kagithane.istanbul/iletisim/detail/Iletisim/79/77/0",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-045": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://kucukcekmece.istanbul/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-046": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.maltepe.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.maltepe.bel.tr/iletisim/iletisim-bilgileri",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.maltepe.bel.tr/iletisim/luzumlu-telefonlar",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-047": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-048": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-049": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-050": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.silivri.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.silivri.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-051": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-052": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.sultangazi.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.sultangazi.bel.tr/contact",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-053": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.tog.org.tr/en/contact",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.tog.org.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-054": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.tuzla.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905309190906",
+          "phone": "+905309190906",
+          "label": "WhatsApp ile iletişime geçin",
+          "source": "https://www.tuzla.bel.tr/"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-055": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.wwf.org.tr/wwf/iletisim_bilgileri/",
+          "http": 403,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-056": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-057": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-058": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-059": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-060": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-061": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-062": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-063": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-064": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-065": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-066": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-067": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-068": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-069": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-070": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-071": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-072": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-073": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-074": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-075": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-076": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-077": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-078": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-079": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-080": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-081": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-082": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-083": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-084": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-085": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-086": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-087": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-088": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-089": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-090": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-091": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-092": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-093": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IST-094": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-095": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://catalca.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://catalca.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-096": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-097": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.cekulvakfi.org.tr/en/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.cekulvakfi.org.tr/tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-098": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.cevrevakfi.org.tr/hakkimizda/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://cevrevakfi.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IST-099": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://umraniye.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://umraniye.bel.tr/umraniye/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IST-100": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://sile.bel.tr/tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://sile.bel.tr/tr/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://ibb.istanbul/ibb/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-001": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.akdeniz.edu.tr/tr/akdeniz_universitesi_iletisim_bilgileri-1122",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.akdeniz.edu.tr/tr/iletisimformu",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-002": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.antalya.bel.tr/tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-003": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.konyaalti.bel.tr/iletisim",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-004": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.turkiye.gov.tr/muratpasa-belediyesi",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.turkiye.gov.tr/iletisim?hizli=CozumMerkeziV2",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.turkiye.gov.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-005": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.turcev.org.tr/v2/iletisim.aspx",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-006": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-007": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://ayvalik.bel.tr/Home/Iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905331540099",
+          "phone": "+905331540099",
+          "label": "05331540099",
+          "source": "https://ayvalik.bel.tr/Home/Iletisim"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-008": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905011531616",
+          "phone": "+905011531616",
+          "label": "",
+          "source": "https://www.bursa.bel.tr/iletisim"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-009": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://dogadernegi.org/tr/iletisim/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://dogadernegi.org/en/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-010": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://dkm.org.tr/tr/hakkimizda",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://dkm.org.tr/tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-011": {
+      "status": "directory_only",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "http://www.gemlik.bel.tr ",
+          "http": null,
+          "usable": false
+        },
+        {
+          "url": "https://www.bursa.bel.tr/rehber",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [
+        {
+          "url": "https://wa.me/905011531616",
+          "phone": "+905011531616",
+          "label": "",
+          "source": "https://www.bursa.bel.tr/iletisim"
+        }
+      ],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-012": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "http://www.inegol.bel.tr/ ",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bursa.bel.tr/rehber",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.inegol.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905301573000",
+          "phone": "+905301573000",
+          "label": "WhatsApp +90 530 157 3000",
+          "source": "https://www.inegol.bel.tr/iletisim"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-013": {
+      "status": "published",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.izmir.bel.tr/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.izmir.bel.tr/tr/HemsehriIletisimMerkezi(him)/28/126",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.izmir.bel.tr/tr/Iletisim/312",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [
+        {
+          "url": "https://wa.me/905309194035",
+          "phone": "+905309194035",
+          "label": "+90 530 919 40 35",
+          "source": "https://www.izmir.bel.tr/tr/Iletisim/312"
+        }
+      ],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-014": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.ankara.gov.tr/calisma-ve-is-kurumu-il-mudurlugu",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.ankara.gov.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-015": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.kosgeb.gov.tr/site/tr/genel/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kosgeb.gov.tr/site/tr/genel/iletisimmerkezi",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.kosgeb.gov.tr/site/tr/genel/IletisimMerkezi",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-016": {
+      "status": "directory_only",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bursa.bel.tr/rehber",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "http://www.nilufer.bel.tr ",
+          "http": null,
+          "usable": false
+        },
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [
+        {
+          "url": "https://wa.me/905011531616",
+          "phone": "+905011531616",
+          "label": "",
+          "source": "https://www.bursa.bel.tr/iletisim"
+        }
+      ],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-017": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.metu.edu.tr/tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.metu.edu.tr/contact-info",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-018": {
+      "status": "directory_only",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "http://www.osmangazi.bel.tr/ ",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bursa.bel.tr/rehber",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.osmangazi.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.osmangazi.bel.tr/iletisim/mobil-uygulama",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [
+        {
+          "url": "https://wa.me/905011531616",
+          "phone": "+905011531616",
+          "label": "",
+          "source": "https://www.bursa.bel.tr/iletisim"
+        }
+      ],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "TR-019": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.tobb.org.tr/Baskanimiz/Sayfalar/Iletisim.php",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-020": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.turcev.org.tr/v2/iletisim.aspx",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "TR-021": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-022": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-023": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-024": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-025": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-026": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-027": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-028": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-029": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-030": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-031": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-032": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-033": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-034": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-035": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-036": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-037": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-038": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-039": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-040": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-041": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-042": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-043": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-044": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-045": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-046": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-047": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-048": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-049": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-050": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-051": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-052": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-053": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-054": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-055": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-056": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-057": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-058": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-059": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-060": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-061": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-062": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-063": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-064": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-065": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-066": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-067": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-068": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-069": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-070": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-071": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-072": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-073": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-074": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-075": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-076": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-077": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-078": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-079": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-080": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-081": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-082": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-083": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-084": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-085": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-086": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-087": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-088": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-089": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-090": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-091": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-092": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-093": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-094": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-095": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-096": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-097": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-098": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-099": {
+      "status": "not_found",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.yesilay.org.tr/subeler/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/iletisim-ve-talep-formu/",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "https://www.yesilay.org.tr/iletisim/",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "TR-100": {
+      "status": "directory_only",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.bursa.bel.tr/rehber",
+          "http": 200,
+          "usable": true
+        },
+        {
+          "url": "http://www.yildirim.bel.tr/ ",
+          "http": 404,
+          "usable": false
+        },
+        {
+          "url": "https://www.bursa.bel.tr/iletisim",
+          "http": 200,
+          "usable": true
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [
+        {
+          "url": "https://wa.me/905011531616",
+          "phone": "+905011531616",
+          "label": "",
+          "source": "https://www.bursa.bel.tr/iletisim"
+        }
+      ],
+      "account_tested": false,
+      "purpose": "public_service_not_business_confirmed"
+    },
+    "IR-001": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://rebirth.ir/en/contact",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IR-002": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://toloo.org/",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IR-003": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "http://pasmand.tehran.ir/Default.aspx?tabid=577",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-004": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://raad-charity.org/تماس-با-ما/",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-005": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://enincas.tums.ac.ir/",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-006": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.iraneiap.ir/",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-007": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.irsprc.org/contactus",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-008": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://irpsychiatry.ir/",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "institutional_purpose_unconfirmed"
+    },
+    "IR-009": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://roozbeh.tums.ac.ir/ارتباط-با-ما",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    },
+    "IR-010": {
+      "status": "unavailable",
+      "checked": "2026-10-11",
+      "source_pages": [
+        {
+          "url": "https://www.congress60.org/Fa-IR/Controls/Weblogs.aspx",
+          "http": null,
+          "usable": false
+        }
+      ],
+      "channels": [],
+      "other_institution_channels": [],
+      "account_tested": false,
+      "purpose": "care_or_general_route_not_for_sales"
+    }
+  }
+}

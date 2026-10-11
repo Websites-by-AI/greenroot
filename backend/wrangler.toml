@@ -1,0 +1,13 @@
+name = "greenroot-followups"
+main = "worker.mjs"
+compatibility_date = "2026-10-11"
+
+[vars]
+WORKER_URL = "https://greenroot-followups.elasa2next.workers.dev"
+
+[durable_objects]
+bindings = [{ name = "STORE", class_name = "ReminderStore" }]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ReminderStore"]

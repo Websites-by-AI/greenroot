@@ -1,0 +1,7 @@
+{
+  "worker": "greenroot-followups",
+  "url": "https://greenroot-followups.elasa2next.workers.dev",
+  "private_storage": "Dedicated SQLite Durable Object / ReminderStore",
+  "timer": "Persistent Durable Object alarm, 30-minute ticks while subscribers exist",
+  "provider_configured_by_this_script": false
+}
