@@ -8,6 +8,7 @@ var store = (function(){ try{ var s=window.localStorage; s.setItem("__gr","1"); 
 /* ---------- language ---------- */
 var lang = "en";
 var saved = store ? store.getItem("gr-lang") : null;
+try { var requested = new URLSearchParams(location.search).get("lang"); if (["en","fa","tr"].indexOf(requested)>-1) saved=requested; } catch(e) {}
 if (saved && ["en","fa","tr"].indexOf(saved)>-1) lang = saved;
 else {
   var nav3 = (navigator.language||"");
@@ -72,6 +73,7 @@ function applyLang(){
   document.querySelectorAll(".links a").forEach(function(a){
     a.classList.toggle("active", a.getAttribute("href") === file);
   });
+  document.dispatchEvent(new CustomEvent("greenroot:language", {detail:{lang:lang}}));
 }
 
 function setLang(l){
@@ -92,9 +94,10 @@ document.addEventListener("DOMContentLoaded", function(){
   var nav = document.getElementById("nav");
   var burger = document.getElementById("burger");
   if (burger && nav){
-    burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+    burger.addEventListener("click", function(){ nav.classList.toggle("open"); burger.setAttribute("aria-expanded", String(nav.classList.contains("open"))); });
+    document.addEventListener("keydown", function(e){ if (e.key==="Escape" && nav.classList.contains("open")){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.focus(); } });
     nav.querySelectorAll(".links a").forEach(function(a){
-      a.addEventListener("click", function(){ nav.classList.remove("open"); });
+      a.addEventListener("click", function(){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); });
     });
   }
 
@@ -490,8 +493,9 @@ document.addEventListener("DOMContentLoaded", function(){
     /* sticky mobile CTA */
     if (window.matchMedia && window.matchMedia("(max-width:660px)").matches && !document.querySelector(".mobile-cta")){
       var cta = document.createElement("div"); cta.className = "mobile-cta";
-      var j = document.createElement("a"); j.className="btn small"; j.href="join.html"; j.innerHTML="🌱 "+t("nav.cta");
-      var p = document.createElement("a"); p.className="btn small ghost"; p.href="podcast.html"; p.innerHTML="🎧 "+t("nav.podcast");
+      var isDirectory = document.body.getAttribute("data-page")==="partners";
+      var j = document.createElement("a"); j.className="btn small"; j.href=isDirectory ? "#directory" : "join.html"; j.innerHTML=(isDirectory?"🔎 ":"🌱 ")+"<span data-i18n=\""+(isDirectory?"pf.browse":"nav.cta")+"\">"+t(isDirectory?"pf.browse":"nav.cta")+"</span>";
+      var p = document.createElement("a"); p.className="btn small ghost"; p.href=isDirectory ? "kit/GreenRoot-Outreach-210.xlsx" : "podcast.html"; p.innerHTML=(isDirectory?"⬇ ":"🎧 ")+"<span data-i18n=\""+(isDirectory?"pf.xlsshort":"nav.podcast")+"\">"+t(isDirectory?"pf.xlsshort":"nav.podcast")+"</span>";
       p.style.border = "1.5px solid rgba(217,249,157,.5)"; p.style.background="rgba(255,255,255,.08)";
       cta.appendChild(j); cta.appendChild(p);
       document.body.appendChild(cta);

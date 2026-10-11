@@ -360,6 +360,179 @@ details.faq:hover{border-color:#BBF7D0}
   .card,.panel{box-shadow:none;border:1px solid #ddd}
 }
 
+/* Partner finder: accessible, local-first, source-backed directory */
+.pf-hero .container{padding-block:60px 50px}
+.pf-hero .hero-grid{grid-template-columns:1.2fr .8fr;gap:48px}
+.pf-hero h1{font-size:clamp(34px,4.3vw,54px);letter-spacing:-.035em}
+.pf-hero .lead{font-size:18px;max-width:650px}
+.pf-hero-note{font-size:12px;line-height:1.7;color:#BBDCC8;max-width:540px;margin-top:22px}
+.pf-hero .hero-cta{gap:10px;margin-top:25px}
+.pf-hero .hero-cta .btn{font-size:14px;min-height:48px;padding:13px 22px}
+.pf-map{min-height:330px;position:relative;isolation:isolate;border:1px solid #ffffff25;border-radius:28px;padding:25px;background:linear-gradient(150deg,#1c574535,#0b271bba);box-shadow:0 20px 70px #001b1470;overflow:hidden}
+.pf-map::before{content:'';position:absolute;width:320px;height:320px;border:1px solid #88bd7770;border-radius:50%;inset-inline-start:calc(50% - 160px);top:38px;z-index:-1}
+.pf-map::after{content:'';position:absolute;inset:0;background-image:radial-gradient(#b8daa525 1px,transparent 1px);background-size:17px 17px;z-index:-1}
+.pf-map-top{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:10px;letter-spacing:.14em;color:#C6DBCA;font-weight:700;direction:ltr}
+.pf-map-live{display:flex;align-items:center;gap:7px;background:#a3e63518;padding:5px 10px;border-radius:20px;color:#D9F99D}
+.pf-map-live i{width:6px;height:6px;border-radius:50%;background:#BEF264}
+.pf-network{height:230px;position:relative;margin-top:8px;direction:ltr}
+.pf-network svg{width:100%;height:100%}
+.pf-orbit-card{position:absolute;border:1px solid #ffffff30;backdrop-filter:blur(8px);background:#164d3efa;padding:10px 15px;border-radius:13px;min-width:103px;box-shadow:0 8px 22px #00160e45;text-align:start}
+.pf-orbit-card strong{display:block;color:#D9F99D;font-size:21px;line-height:1.3;font-variant-numeric:tabular-nums}
+.pf-orbit-card span{display:block;color:#DDEFE1;font-size:10px;margin-top:3px}
+.pf-orbit-card.a{top:12px;left:5%}.pf-orbit-card.b{top:55px;right:0}.pf-orbit-card.c{bottom:0;left:13%}
+.pf-map-label{font-size:14px;color:#e1edda;font-weight:700;margin-top:9px}
+.pf-map-note{font-size:10px;color:#ABC4AF;margin-top:4px}
+.pf-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px;border-top:1px solid #ffffff24;padding-top:23px}
+.pf-counts a{color:#d8e7d7;display:block;font-size:12px;border-inline-end:1px solid #ffffff24;padding-inline-end:12px}
+.pf-counts a:last-child{border:0}
+.pf-counts strong{display:block;color:#C8EF8A;font-size:32px;line-height:1.2;margin-bottom:5px;direction:ltr;font-variant-numeric:tabular-nums}
+.pf-counts a:hover{color:white;opacity:1}
+.pf-truth{background:#E9EFE1;border-bottom:1px solid #D6E1CF;padding-block:24px}
+.pf-truth .container{display:grid;grid-template-columns:205px 1fr;gap:26px;align-items:start}
+.pf-truth strong{font-size:14px;color:#28432E;display:flex;align-items:center;gap:8px}
+.pf-truth p{font-size:12.5px;color:#41553F;line-height:1.8}
+.pf-directory{padding-block:48px 65px;background:linear-gradient(180deg,#F2F5ED 0,#F6F8F3 55%,#EEF3E8 100%);scroll-margin-top:80px}
+.pf-eyebrow{color:#267146;font-size:11px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+.pf-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+.pf-title-row h2{font-size:30px;margin-bottom:7px}
+.pf-title-row p{color:#61715E;font-size:14px}
+.pf-title-row .btn{font-size:12px;padding:11px 16px;white-space:nowrap;flex-shrink:0}
+.pf-panel{background:#fff;border:1px solid #DCE6D2;box-shadow:0 8px 28px #24422008;border-radius:22px;padding:23px}
+.pf-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:18px}
+.pf-tabs button{border:1px solid #E0E8D9;background:#F7F9F3;color:#52654C;padding:12px 8px;border-radius:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;min-height:46px;transition:.15s}
+.pf-tabs button[aria-pressed=true]{background:#0B3B2A;color:#D9F99D;border-color:#0B3B2A;box-shadow:0 3px 10px #0b3b2a18}
+.pf-tabs button:hover{border-color:#80B364}
+.pf-query-row{display:grid;grid-template-columns:1.45fr 1fr;gap:14px}
+.pf-field{min-width:0}
+.pf-field label{display:block;color:#65755C;font-size:11.5px;font-weight:700;margin-bottom:6px}
+.pf-field input,.pf-field select{display:block;width:100%;height:48px;border:1px solid #D5DFCA;border-radius:11px;background:#FBFCF9;color:#1A3623;font-family:inherit;font-size:14px;padding:10px 13px;min-width:0;outline:none}
+.pf-field input:focus,.pf-field select:focus{border-color:#3D9556;box-shadow:0 0 0 3px #46a46018;background:#fff}
+.pf-field .pf-searchwrap{position:relative}
+.pf-searchwrap svg{position:absolute;inset-inline-start:14px;top:15px;color:#719069;width:18px;height:18px;pointer-events:none}
+.pf-searchwrap input{padding-inline-start:43px}
+.pf-advanced{margin-top:16px;border-top:1px solid #EEF1E8;padding-top:12px}
+.pf-advanced summary{cursor:pointer;color:#385132;font-size:12.5px;font-weight:700;padding:6px 0;min-height:34px}
+.pf-more-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:11px}
+.pf-checks{display:flex;align-items:center;justify-content:flex-start;gap:8px 20px;flex-wrap:wrap;margin-top:14px}
+.pf-checks label{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#526349;cursor:pointer;min-height:34px}
+.pf-checks input{accent-color:#176A3D;width:16px;height:16px;flex:0 0 16px}
+.pf-reset{margin-inline-start:auto;background:none;border:0;text-decoration:underline;text-underline-offset:3px;color:#48653F;cursor:pointer;font:inherit;font-size:12px;min-height:34px}
+.pf-resultbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px;padding:25px 2px 16px;font-size:12px;color:#617056;scroll-margin-top:85px}
+.pf-resultbar strong{font-size:15px;color:#284528}
+.pf-saved-count{font-size:11px;background:#E6EDDD;border-radius:50px;padding:5px 12px}
+.pf-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;align-items:stretch}
+.pf-card{min-width:0;background:#fff;border:1px solid #DCE5D3;border-radius:18px;padding:21px;display:flex;flex-direction:column;box-shadow:0 4px 15px #28432106;transition:border-color .2s,box-shadow .2s;scroll-margin-top:90px}
+.pf-card:hover{border-color:#92B883;box-shadow:0 8px 23px #2843210d}
+.pf-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:16px}
+.pf-card-id{font-size:10px;letter-spacing:.1em;color:#718569;direction:ltr}
+.pf-cat-icon{width:40px;height:40px;border-radius:13px;background:#EAF2E1;color:#377244;display:grid;place-items:center;margin-top:7px}
+.pf-cat-icon svg{width:21px;height:21px}
+.pf-card[data-category=recovery] .pf-cat-icon{background:#DFF1EB;color:#28715E}
+.pf-card[data-category=research] .pf-cat-icon{background:#E6ECFA;color:#475C88}
+.pf-card[data-category=recycling] .pf-cat-icon{background:#FEF2D9;color:#8A7234}
+.pf-save{border:1px solid #E3EAD9;border-radius:9px;color:#5A7050;background:#FBFCF8;font-family:inherit;font-size:11px;font-weight:600;padding:7px 9px;cursor:pointer;display:flex;align-items:center;gap:5px;min-height:36px}
+.pf-save[aria-pressed=true]{background:#E4F2D2;color:#245B30;border-color:#BCD899}
+.pf-save svg{width:14px;height:14px}
+.pf-card h3{font-size:17px;line-height:1.5;letter-spacing:-.015em;color:#173721;overflow-wrap:anywhere;margin-bottom:6px}
+html[lang=fa] .pf-card h3{font-size:16.5px;letter-spacing:0;line-height:1.85}
+.pf-original{font-size:10.5px;color:#64745A;line-height:1.6;margin-bottom:10px;overflow-wrap:anywhere}
+.pf-location{display:flex;align-items:center;gap:5px;color:#648356;font-size:11.5px;margin-top:2px;margin-bottom:12px}
+.pf-location svg{width:13px;height:13px;flex-shrink:0}
+.pf-labels{display:flex;gap:5px;flex-wrap:wrap;font-size:9.5px;margin-bottom:12px}
+.pf-labels span{background:#F0F4E9;border:1px solid #E2EAD6;padding:3px 8px;border-radius:6px;color:#667458}
+.pf-labels .pf-priority{background:#EAF5D7;color:#3D621A;border-color:#D7EAB6}
+.pf-parent{font-size:10.5px;color:#738069;line-height:1.6;margin-bottom:12px;overflow-wrap:anywhere}
+.pf-ask{font-size:12px;line-height:1.8;color:#54634C;margin-bottom:17px;padding-bottom:16px;border-bottom:1px solid #EDF1E8}
+.pf-ask strong{display:block;color:#324C2B;font-size:10px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+.pf-phonebox{margin-top:auto;padding-top:0}
+.pf-phone{display:block;direction:ltr;unicode-bidi:isolate;font-size:18px;font-weight:750;line-height:1.4;color:#193C27;letter-spacing:.01em;margin-bottom:5px;text-align:start}
+html[dir=rtl] .pf-phone{text-align:right}
+.pf-phone-state{color:#819078;font-size:9.5px;margin-bottom:9px}
+.pf-call{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;background:#EFF5E7;color:#2B653C;border:1px solid #DAE8CC;border-radius:9px;font-size:12px;font-weight:700;margin-bottom:10px}
+.pf-call:hover{background:#E4F1D8;opacity:1}
+.pf-no-phone,.pf-number-note{font-size:11px;line-height:1.8;border-radius:9px;background:#FFF6DD;color:#78643A;padding:11px;margin-bottom:10px;border:1px solid #F1E4BC}
+.pf-number-note{padding:7px 9px;font-size:10px}
+.pf-links{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.pf-links a,.pf-copy{min-height:34px;border-radius:8px;border:1px solid #E4EBDA;color:#53654B;background:#fff;font-family:inherit;font-size:10px;padding:7px 9px;display:inline-flex;align-items:center;gap:4px;cursor:pointer}
+.pf-links a:hover,.pf-copy:hover{border-color:#83B468;opacity:1}
+.pf-card-source{border-top:1px dashed #E2E9D9;padding-top:11px;margin-top:14px;display:flex;justify-content:space-between;gap:7px;flex-wrap:wrap;font-size:9px;color:#8A9580}
+.pf-card-source a{font-weight:700;color:#4F7447}
+.pf-evidence{font-size:9px;color:#93A287;margin-top:5px}
+.pf-card-note{color:#7C8066;background:#F8F8EF;font-size:10px;border-radius:7px;padding:9px;line-height:1.8;margin-top:10px}
+.pf-pagination{display:flex;justify-content:center;align-items:center;gap:16px;margin:28px 0 12px;font-size:12px;color:#5B7150}
+.pf-pagination button{background:#fff;border:1px solid #D6E3CA;border-radius:9px;padding:10px 17px;min-height:42px;color:#315C36;font-weight:700;font-family:inherit;cursor:pointer}
+.pf-pagination button:disabled{opacity:.4;cursor:not-allowed}
+.pf-quiet-note{font-size:11px;color:#7A8771;text-align:center;margin-top:14px;max-width:850px;margin-inline:auto}
+.pf-empty{grid-column:1/-1;padding:50px 20px;text-align:center;color:#657B56;background:white;border:1px dashed #BDCFAB;border-radius:18px}
+.pf-plan{background:#E6EEDA;padding-block:56px}
+.pf-plan .title{font-size:29px;max-width:660px}
+.pf-plan .grid{margin-top:30px}
+.pf-step{border-inline-start:2px solid #B8CE9C;padding-inline-start:20px}
+.pf-step b{display:inline-grid;place-items:center;width:28px;height:28px;color:#D9F99D;background:#355F34;border-radius:50%;font-size:12px;margin-bottom:13px;direction:ltr}
+.pf-step h3{font-size:16px;margin-bottom:10px;color:#2B4925}
+.pf-step p{font-size:13px;color:#5D7153;line-height:1.9}
+.pf-message-section{padding-block:58px}
+.pf-message-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:44px;align-items:start}
+.pf-message-layout h2{font-size:28px;line-height:1.5;margin-bottom:12px}
+.pf-message-layout p{color:#6C7E61;font-size:13px;line-height:1.9}
+.pf-message-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.pf-message-tools .btn{min-height:44px;font-size:12px;padding:11px 18px}
+.pf-message-box{padding:24px;background:#fff;border:1px solid #DCE6D1;border-radius:20px;box-shadow:0 6px 25px #20441008}
+.pf-message-box textarea{width:100%;min-height:360px;resize:vertical;border:0;background:white;color:#49633F;font-family:inherit;font-size:12px;line-height:1.9;outline:none;overflow-wrap:anywhere}
+.pf-method{padding-block:48px;background:#ECF1E5;border-top:1px solid #D7E4CC}
+.pf-method summary{font-size:20px;font-weight:800;color:#2A4F2E;cursor:pointer;padding:10px 0;min-height:48px}
+.pf-method p{font-size:12.5px;color:#65785B;line-height:1.9;margin:14px 0;max-width:900px}
+.pf-method-links{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;margin-top:22px}
+.pf-method-links a{padding:9px 13px;background:#fff;border:1px solid #D4E2C8;border-radius:9px}
+.pf-toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#123E27;color:#E5F1D9;padding:11px 20px;border-radius:13px;box-shadow:0 8px 30px #183d2f30;font-size:12px;z-index:150;max-width:calc(100% - 30px);text-align:center;pointer-events:none;opacity:0;transition:opacity .2s}
+.pf-toast.show{opacity:1}
+.pf-home-callout{padding-block:40px;background:#E9F0DF;border-block:1px solid #D4E3C8}
+.pf-home-callout .container{display:flex;gap:25px;justify-content:space-between;align-items:center}
+.pf-home-callout h2{font-size:24px;margin-bottom:9px;max-width:700px}
+.pf-home-callout p{font-size:13.5px;color:#67795B;max-width:730px}
+.pf-home-callout .btn{flex-shrink:0;font-size:13px}
+/* Wider menu supports the added page without desktop overflow. */
+.nav .container{max-width:1460px}
+@media(min-width:1381px){.nav .links a{font-size:12.5px;padding:8px 8px}.nav .links{gap:1px}}
+@media(max-width:1380px){.nav .links{display:none}.nav .burger{display:block}.nav .nav-actions{margin-inline-start:auto}.nav.open .links{display:flex}}
+@media(max-width:1000px){.pf-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.pf-hero .hero-grid{gap:26px}.pf-message-layout{gap:25px}}
+@media(max-width:760px){
+ .pf-hero .hero-grid{grid-template-columns:1fr}.pf-map{min-height:280px}.pf-network{height:180px}.pf-orbit-card.c{bottom:-2px}
+ .pf-hero .lead{font-size:16px}.pf-hero .container{padding-block:38px 35px}.pf-hero h1{font-size:35px;line-height:1.35}
+ .pf-hero .hero-cta .btn{flex:1 1 100%;font-size:13px}.pf-hero-note{font-size:11px;margin-top:16px}
+ .pf-counts{gap:8px;margin-top:23px;padding-top:18px}.pf-counts strong{font-size:26px}.pf-counts a{font-size:10px;line-height:1.6}
+ .pf-map-top{font-size:9px}.pf-map-label{font-size:13px}.pf-map-note{font-size:10px}
+ .pf-truth .container{display:block}.pf-truth strong{margin-bottom:10px}.pf-truth p{font-size:11.5px}.pf-truth{padding-block:20px}
+ .pf-title-row{display:block}.pf-title-row h2{font-size:25px}.pf-title-row p{font-size:12.5px}.pf-title-row .btn{margin-top:14px;width:100%;min-height:44px}
+ .pf-directory{padding-block:30px 40px;scroll-margin-top:80px}.pf-panel{padding:15px;border-radius:17px}.pf-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:16px}.pf-tabs button{font-size:12px;min-height:46px;padding:9px}
+ .pf-query-row,.pf-more-row{grid-template-columns:1fr;gap:13px}.pf-field label{font-size:11px}.pf-field input,.pf-field select{font-size:16px;height:48px}.pf-advanced summary{font-size:12px;min-height:44px}
+ .pf-checks{display:block}.pf-checks label{font-size:12px;display:flex;min-height:44px}.pf-checks input{width:18px;height:18px;flex-basis:18px}.pf-reset{font-size:12px;min-height:44px;width:100%;text-align:start;margin-top:3px}
+ .pf-resultbar{padding-top:20px;padding-bottom:14px}.pf-resultbar strong{font-size:13px}.pf-saved-count{font-size:10px}
+ .pf-card{padding:19px}.pf-card h3{font-size:17px}.pf-original{font-size:11px}.pf-labels{font-size:10px}.pf-ask{font-size:12px}.pf-call{min-height:46px;font-size:12px}.pf-save{min-height:44px}.pf-links a,.pf-copy{min-height:42px;font-size:11px}.pf-card-source{font-size:10px}.pf-quiet-note{font-size:10px;line-height:1.9}.pf-phone-state{font-size:10px}
+ .pf-pagination{gap:10px}.pf-pagination button{padding:10px 13px;min-height:44px}.pf-pagination span{font-size:11px}
+ .pf-plan .grid{grid-template-columns:1fr;gap:26px}.pf-plan .title{font-size:25px}.pf-plan{padding-block:38px}
+ .pf-message-layout{grid-template-columns:1fr;gap:20px}.pf-message-section{padding-block:38px}.pf-message-layout h2{font-size:25px}.pf-message-box{padding:17px}.pf-message-box textarea{font-size:16px;min-height:420px}.pf-message-tools .btn{flex:1 1 100%;min-height:46px}
+ .pf-method summary{font-size:17px;line-height:1.7}.pf-method p{font-size:12px}.pf-toast{bottom:87px}
+ .pf-home-callout .container{display:block}.pf-home-callout .btn{margin-top:15px;min-height:46px;width:100%}.pf-home-callout h2{font-size:22px}
+}
+@media(max-width:620px){.pf-cards{grid-template-columns:1fr}.pf-map{min-height:270px}.pf-map-note{font-size:9.5px}.pf-network{height:175px}}
+@media(max-width:360px){.pf-orbit-card{padding:9px;min-width:88px}.pf-hero h1{font-size:30px}.pf-pagination{gap:5px}.pf-pagination button{font-size:11px;padding:10px}}
+@media(prefers-reduced-motion:reduce){.pf-card,.pf-tabs button,.pf-toast{transition:none}}
+@media print{.pf-panel,.pf-pagination,.pf-toast,.pf-message-tools{display:none}.pf-cards{grid-template-columns:repeat(2,1fr)}.pf-card{break-inside:avoid}.pf-map{display:none}.pf-hero{color:#000;background:#fff}.pf-hero .lead{color:#333}.pf-hero-note,.pf-counts{color:#333}.pf-method details{display:block}.pf-hero .hero-cta{display:none}}
+/* Compact language + menu controls fit 320px without concealing content. */
+@media(max-width:760px){
+ .nav .nav-inner{gap:8px}
+ .nav .brand{font-size:15px;gap:6px;flex-shrink:0}
+ .nav .brand .logo{width:26px;height:26px}
+ .nav .nav-actions{gap:6px}
+ .nav .nav-actions>.btn{display:none}
+ .nav .lang-sw{padding:3px;gap:2px}
+ .nav .lang-sw .lang{min-width:29px;min-height:36px;padding:6px 7px;font-size:11px}
+ .nav .burger{width:44px;min-height:44px;padding:11px;flex-shrink:0}
+ .mobile-cta .btn{min-width:0;white-space:normal;padding-inline:10px;font-size:12px;line-height:1.5;text-align:center}
+ .mobile-cta .btn span{min-width:0;overflow-wrap:anywhere}
+}
+
 </style>
 </head>
 <body data-page="cop31">
@@ -379,6 +552,7 @@ details.faq:hover{border-color:#BBF7D0}
       <a href="dashboard.html" data-i18n="nav.impact">Impact</a>
       <a href="cop31.html" data-i18n="nav.cop31">COP31</a>
       <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a>
+      <a href="partners.html" data-i18n="nav.partners">Partner finder</a>
       <a href="podcast.html" data-i18n="nav.podcast">Podcast</a>
       <a href="join.html" data-i18n="nav.join">Join</a>
     </nav>
@@ -528,7 +702,8 @@ details.faq:hover{border-color:#BBF7D0}
       <div>
         <h4 data-i18n="footer.links">Explore</h4>
         <p><a href="science.html" data-i18n="nav.science">Science</a> · <a href="program.html" data-i18n="nav.program">Program</a> · <a href="ai.html" data-i18n="nav.ai">AI companion</a></p>
-        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a> · <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Areas</a> · <a href="join.html" data-i18n="nav.join">Join</a></p>
+        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a> · <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Areas</a> · <a href="partners.html" data-i18n="nav.partners">Partner finder</a>
+        <a href="join.html" data-i18n="nav.join">Join</a></p>
       </div>
       <div>
         <h4 data-i18n="footer.contact">Contact</h4>
@@ -1852,6 +2027,16 @@ Object.assign(window.I18N.tr, {
 
 </script>
 <script>
+/* Researched outreach directory UI: EN / FA / TR. */
+(function(){
+var X={"en": {"pf.more": "More filters & saved leads", "pf.xlsshort": "Download Excel", "nav.partners": "Partner finder", "title.partners": "Partner finder — GreenRoot", "pf.kicker": "Research directory · 11 October 2026", "pf.title": "Find the people.<br>Build the pilot.", "pf.lead": "210 source-backed outreach leads for GreenRoot — recovery, recycling, green work and research. Start locally. Ask for one small, safe collaboration.", "pf.browse": "Explore the directory", "pf.download": "Download Excel · 210 leads", "pf.stat1": "Istanbul leads", "pf.stat2": "Other Türkiye leads", "pf.stat3": "Iran · Tehran leads", "pf.heroNote": "Potential collaborators, not confirmed partners. Branches and public units are labelled.", "pf.artLabel": "Three regions. One starting point.", "pf.artNote": "An outreach map, not a map of existing partnerships.", "pf.truth": "What these numbers mean", "pf.truthText": "210 contact entries across 88 parent institutions: 120 branches and 5 public units are included. 204 entries have a published public phone; 6 have no phone found in the checked source. No calls or messages have been sent. A listed number is not a tested line.", "pf.heading": "Your outreach workspace", "pf.sub": "Search official names, places or sectors. Open the source before your first call.", "pf.all": "All regions · 210", "pf.istanbul": "Istanbul · 100", "pf.turkey": "Other Türkiye · 100", "pf.iran": "Iran · 10", "pf.searchLabel": "Search the directory", "pf.searchPh": "Name, district, phone or topic…", "pf.categoryLabel": "Cooperation area", "pf.catAll": "All areas", "pf.cat.civic": "Municipalities", "pf.cat.recovery": "Recovery & mental health", "pf.cat.recycling": "Recycling & waste", "pf.cat.environment": "Environment & climate", "pf.cat.employment": "Work & enterprise", "pf.cat.research": "Research & evaluation", "pf.cat.family": "Families & safeguarding", "pf.placeLabel": "City / Istanbul district", "pf.placeAll": "All places", "pf.typeLabel": "Entry type", "pf.typeAll": "Organizations + branches + units", "pf.type.organization": "Institution / organization", "pf.type.branch": "Local branch", "pf.type.public_unit": "Public / university unit", "pf.sortLabel": "Sort", "pf.sort.priority": "Suggested first contacts", "pf.sort.name": "Name A–Z", "pf.shortlist": "Suggested first contacts only", "pf.phoneOnly": "Has a published phone", "pf.savedOnly": "My saved leads only", "pf.reset": "Reset filters", "pf.export": "Export filtered CSV", "pf.results": "{n} results · {p} parent institutions", "pf.savedCount": "{n} saved on this device", "pf.localNote": "Saved leads stay in this browser only. They are not sent to GreenRoot.", "pf.empty": "No matching leads. Clear a filter or try a different spelling.", "pf.prev": "Previous", "pf.next": "Next", "pf.page": "Page {p} of {n}", "pf.showing": "Showing {a}–{b} of {n}", "pf.start": "Suggested first contact", "pf.parent": "Parent institution", "pf.ask": "Proposed conversation", "pf.call": "Call public number", "pf.noPhone": "No public phone found — use the source / contact page.", "pf.domestic": "Türkiye domestic short line; may not connect from abroad.", "pf.email": "Email", "pf.website": "Website / contact route", "pf.source": "Source", "pf.checked": "Source checked: 11 Oct 2026", "pf.direct": "Official page retrieved", "pf.indexed": "Official source, search-index evidence", "pf.untested": "Published number · not called", "pf.save": "Save lead", "pf.unsave": "Saved", "pf.copy": "Copy contact", "pf.copied": "Contact copied", "pf.copyFailed": "Copy is unavailable here. Select the phone or download the spreadsheet.", "pf.priorityNote": "Priority is an editorial judgement of thematic fit — not a probability of funding or agreement.", "pf.method": "Sources, limits & a safe first approach", "pf.method1": "Names and contact routes come from official websites and public institutional directories. Original Turkish and Persian names are preserved. The check date records our review, not the source’s last update.", "pf.method2": "A public line can be a switchboard, a branch line or a domestic call centre. Ask to be connected to partnerships, environmental services, supported employment or the hospital administration. Do not use emergency or counselling hotlines for sales.", "pf.method3": "These are researched leads, not endorsements, signed agreements or an exhaustive census. Clinical licensing, foreign-founder eligibility, work permits and funding eligibility still need local professional checks. GreenRoot remains a concept prototype; other site metrics are demo data.", "pf.method4": "Keep outreach individual and respectful. Do not send patient names, diagnoses or recovery records. Clinical care must be independent of work output; any pilot needs lawful contracts, real wages, safety assessment, insurance and clinical oversight.", "pf.planTitle": "Turn a directory into a first meeting", "pf.plan1": "Choose five local leads", "pf.plan1p": "Start with one recovery organization, one recycler, one municipality, one employment route and one research team.", "pf.plan2": "Make a small, specific ask", "pf.plan2p": "Request a 20-minute introduction. Offer a written concept note, a waste-flow sketch and a safety-first pilot outline — no invented outcome claims.", "pf.plan3": "Record a real next step", "pf.plan3p": "Use the spreadsheet to record the date, contact owner and agreed follow-up. Follow up once after 5–7 business days; respect a decline.", "pf.templateTitle": "A first message you can adapt", "pf.templateSub": "Replace the bracketed fields before sending. This page never sends messages for you.", "pf.templateCopy": "Copy message", "pf.templateFile": "Download EN / FA / TR messages", "pf.homeTitle": "A source-backed way to find your first collaborators", "pf.homeText": "100 Istanbul leads, 100 elsewhere in Türkiye and 10 in Tehran — with public contact routes and clearly labelled branches.", "pf.homeButton": "Open the partner finder", "pf.note.branch": "Local Yeşilay branch. A branch is not a separate independent charity. Contact for a partnership introduction, not urgent care.", "pf.note.nophone": "The checked official branch directory does not publish a usable phone here. No headquarters phone has been passed off as a local number.", "pf.note.hqroute": "General institutional switchboard, also published by Yeşilay Akademi. Ask for cooperation / project staff; do not use 115 for business outreach.", "pf.note.switchboard": "Public switchboard / municipal line. Ask for the relevant team; this is not a direct partnership manager’s number.", "pf.note.sharedline": "Central İBB employment line, shared by its offices. Counted once; it is not a new independent organization.", "pf.note.eligibility": "Entrepreneurship support route, not a grant promise. Company registration and founder / programme eligibility need checking.", "pf.note.bugday": "The cited FAQ prints 349 99 93; older official pages print 349 99 33. Prefer email and reconfirm the phone before calling.", "pf.note.toloo": "The current homepage prints 8883 2002; older English contact pages show other numbers. Email first and reconfirm the route.", "pf.note.congress": "Peer-recovery organization, not a substitute for licensed medical care. The listed number is the website office, not an emergency service.", "pf.note.raad": "Vocational / disability inclusion expertise. An addiction-specific service or partnership has not been verified.", "pf.note.journal": "Published association telephone/fax via its journal office. Email the journal to ask for the association’s current project contact.", "pf.note.legacy": "Official municipal directory is legacy / intermittently inaccessible. Reconfirm the current number and authority before outreach."}, "fa": {"pf.more": "فیلترهای بیشتر و موارد ذخیره‌شده", "pf.xlsshort": "دانلود اکسل", "nav.partners": "بانک همکاری", "title.partners": "بانک همکاران پیشنهادی — گرین‌روت", "pf.kicker": "بانک پژوهش‌شده · ۱۱ اکتبر ۲۰۲۶", "pf.title": "همکار مناسب را پیدا کنید.<br>پایلوت را بسازید.", "pf.lead": "۲۱۰ مسیر تماس منبع‌دار برای گرین‌روت: بهبودی، بازیافت، کار سبز و پژوهش. از نزدیک‌ترین مجموعه‌ها شروع کنید و یک همکاری کوچک و ایمن پیشنهاد دهید.", "pf.browse": "جست‌وجوی مجموعه‌ها", "pf.download": "دانلود اکسل · ۲۱۰ مورد", "pf.stat1": "مسیر تماس در استانبول", "pf.stat2": "مسیر تماس در دیگر شهرهای ترکیه", "pf.stat3": "مسیر تماس در ایران · تهران", "pf.heroNote": "همکاران بالقوه، نه شرکای تأییدشده. شعب و واحدهای عمومی با برچسب مشخص شده‌اند.", "pf.artLabel": "سه منطقه؛ یک نقطه شروع.", "pf.artNote": "نقشه مسیرهای تماس؛ نه شبکه همکاری‌های موجود.", "pf.truth": "این تعداد دقیقاً به چه معناست؟", "pf.truthText": "۲۱۰ ردیف تماس زیرمجموعه ۸۸ نهاد مادر؛ شامل ۱۲۰ شعبه و ۵ واحد عمومی یا دانشگاهی. برای ۲۰۴ ردیف شماره عمومی منتشر شده و برای ۶ ردیف شماره‌ای در منبع بررسی‌شده پیدا نشد. هیچ تماس یا پیامی ارسال نشده؛ شماره منتشرشده به معنی خط آزمایش‌شده نیست.", "pf.heading": "میز کار ارتباط با همکاران", "pf.sub": "نام رسمی، شهر، منطقه یا حوزه فعالیت را جست‌وجو کنید. پیش از اولین تماس، منبع را باز کنید.", "pf.all": "همه مناطق · ۲۱۰", "pf.istanbul": "استانبول · ۱۰۰", "pf.turkey": "دیگر شهرهای ترکیه · ۱۰۰", "pf.iran": "ایران · ۱۰", "pf.searchLabel": "جست‌وجو در بانک تماس", "pf.searchPh": "نام، منطقه، تلفن یا موضوع…", "pf.categoryLabel": "زمینه همکاری", "pf.catAll": "همه زمینه‌ها", "pf.cat.civic": "شهرداری‌ها", "pf.cat.recovery": "بهبودی و سلامت روان", "pf.cat.recycling": "بازیافت و پسماند", "pf.cat.environment": "محیط‌زیست و اقلیم", "pf.cat.employment": "اشتغال و کسب‌وکار", "pf.cat.research": "پژوهش و ارزیابی", "pf.cat.family": "خانواده و حمایت ایمن", "pf.placeLabel": "شهر / منطقه استانبول", "pf.placeAll": "همه شهرها و مناطق", "pf.typeLabel": "نوع ردیف", "pf.typeAll": "نهادها + شعب + واحدها", "pf.type.organization": "نهاد / سازمان", "pf.type.branch": "شعبه محلی", "pf.type.public_unit": "واحد عمومی / دانشگاهی", "pf.sortLabel": "مرتب‌سازی", "pf.sort.priority": "پیشنهادهای شروع تماس", "pf.sort.name": "نام مجموعه", "pf.shortlist": "فقط پیشنهادهای شروع تماس", "pf.phoneOnly": "دارای شماره منتشرشده", "pf.savedOnly": "فقط موارد ذخیره‌شده من", "pf.reset": "حذف فیلترها", "pf.export": "دانلود CSV نتیجه‌ها", "pf.results": "{n} نتیجه · {p} نهاد مادر", "pf.savedCount": "{n} مورد ذخیره‌شده روی این دستگاه", "pf.localNote": "موارد ذخیره‌شده فقط در همین مرورگر می‌مانند و برای گرین‌روت ارسال نمی‌شوند.", "pf.empty": "نتیجه‌ای پیدا نشد. یک فیلتر را بردارید یا املای دیگری را امتحان کنید.", "pf.prev": "صفحه قبل", "pf.next": "صفحه بعد", "pf.page": "صفحه {p} از {n}", "pf.showing": "نمایش {a} تا {b} از {n}", "pf.start": "پیشنهاد شروع تماس", "pf.parent": "نهاد مادر", "pf.ask": "پیشنهاد گفت‌وگو", "pf.call": "تماس با شماره عمومی", "pf.noPhone": "شماره عمومی پیدا نشد؛ از منبع یا صفحه تماس استفاده کنید.", "pf.domestic": "شماره کوتاه داخل ترکیه؛ ممکن است از خارج وصل نشود.", "pf.email": "ایمیل", "pf.website": "وب‌سایت / مسیر تماس", "pf.source": "منبع", "pf.checked": "تاریخ بررسی منبع: ۱۱ اکتبر ۲۰۲۶", "pf.direct": "صفحه رسمی بازیابی شده", "pf.indexed": "منبع رسمی؛ شواهد از نمایه جست‌وجو", "pf.untested": "شماره منتشرشده · تماس آزمایش نشده", "pf.save": "ذخیره مورد", "pf.unsave": "ذخیره شد", "pf.copy": "کپی اطلاعات تماس", "pf.copied": "اطلاعات تماس کپی شد", "pf.copyFailed": "کپی در این محیط در دسترس نیست. شماره را انتخاب کنید یا فایل اکسل را بگیرید.", "pf.priorityNote": "اولویت‌ها برآورد موضوعی ما از تناسب همکاری‌اند؛ نه درصد احتمال دریافت پول یا موافقت مجموعه.", "pf.method": "منابع، محدودیت‌ها و روش تماس ایمن", "pf.method1": "نام‌ها و مسیرهای تماس از وب‌سایت‌های رسمی و فهرست‌های عمومی نهادها گرفته شده‌اند. نام اصلی ترکی و فارسی حفظ شده است. تاریخ بررسی ما لزوماً تاریخ آخرین به‌روزرسانی منبع نیست.", "pf.method2": "شماره ممکن است تلفنخانه، خط شعبه یا مرکز تماس داخلی باشد. درخواست اتصال به بخش همکاری، خدمات محیط‌زیست، اشتغال حمایتی یا مدیریت بیمارستان کنید. خطوط اضطراری و مشاوره را برای پیشنهاد تجاری اشغال نکنید.", "pf.method3": "این‌ها سرنخ‌های بررسی‌شده‌اند؛ نه تأیید کیفیت، قرارداد همکاری یا سرشماری کامل. مجوز درمان، شرایط مؤسس خارجی، اجازه کار و شرایط حمایت مالی نیازمند بررسی تخصصی محلی‌اند. گرین‌روت نمونه اولیه مفهومی است و آمار دیگر صفحات سایت داده نمایشی است.", "pf.method4": "تماس‌ها را شخصی‌سازی‌شده و محترمانه انجام دهید. نام بیمار، تشخیص یا سوابق بهبودی را ارسال نکنید. درمان نباید به میزان کار وابسته باشد. هر پایلوت به قرارداد قانونی، مزد واقعی، ارزیابی ایمنی، بیمه و نظارت بالینی نیاز دارد.", "pf.planTitle": "از فهرست تماس تا اولین جلسه", "pf.plan1": "پنج مسیر محلی انتخاب کنید", "pf.plan1p": "یک مجموعه بهبودی، یک بازیافت‌کننده، یک شهرداری، یک مسیر اشتغال و یک تیم پژوهشی را انتخاب کنید.", "pf.plan2": "درخواست کوچک و مشخص بدهید", "pf.plan2p": "یک جلسه آشنایی ۲۰ دقیقه‌ای بخواهید. معرفی مکتوب ایده، طرح جریان پسماند و چارچوب ایمن پایلوت را ارائه کنید؛ بدون ادعای نتیجه ساختگی.", "pf.plan3": "گام بعدی واقعی را ثبت کنید", "pf.plan3p": "تاریخ، مسئول پیگیری و اقدام توافق‌شده را در اکسل بنویسید. یک بار پس از ۵ تا ۷ روز کاری پیگیری کنید و پاسخ منفی را محترم بدانید.", "pf.templateTitle": "متن اولیه قابل ویرایش", "pf.templateSub": "قبل از ارسال، بخش‌های داخل کروشه را جایگزین کنید. این صفحه به جای شما پیام ارسال نمی‌کند.", "pf.templateCopy": "کپی متن پیام", "pf.templateFile": "دانلود متن انگلیسی / فارسی / ترکی", "pf.homeTitle": "مسیر منبع‌دار برای پیدا کردن اولین همکاران", "pf.homeText": "۱۰۰ مسیر تماس استانبول، ۱۰۰ مسیر دیگر شهرهای ترکیه و ۱۰ مسیر تهران؛ همراه تماس عمومی و برچسب روشن برای شعب.", "pf.homeButton": "باز کردن بانک همکاری", "pf.note.branch": "شعبه محلی یشیلای است، نه یک خیریه مستقل دیگر. برای معرفی همکاری تماس بگیرید، نه دریافت مراقبت فوری.", "pf.note.nophone": "فهرست رسمیِ بررسی‌شده برای این شعبه شماره قابل استفاده‌ای منتشر نکرده است. شماره دفتر مرکزی به عنوان شماره شعبه جا زده نشده است.", "pf.note.hqroute": "تلفن عمومی نهاد، در سایت آکادمی یشیلای هم منتشر شده است. بخش همکاری یا پروژه‌ها را بخواهید؛ از ۱۱۵ برای تماس تجاری استفاده نکنید.", "pf.note.switchboard": "تلفنخانه یا خط عمومی شهرداری؛ درخواست اتصال به تیم مربوطه کنید. این شماره مستقیم مدیر همکاری نیست.", "pf.note.sharedline": "خط مرکزی مشترک دفاتر اشتغال شهرداری استانبول؛ فقط یک بار شمرده شده و نهاد مستقل جدید نیست.", "pf.note.eligibility": "مسیر بررسی حمایت از کارآفرینی است، نه وعده کمک‌هزینه. شرایط ثبت شرکت، مؤسس و برنامه باید بررسی شود.", "pf.note.bugday": "صفحه پرسش‌های متداول شماره 349 99 93 و صفحات رسمی قدیمی‌تر 349 99 33 را نوشته‌اند. ابتدا ایمیل بزنید و شماره را دوباره تأیید کنید.", "pf.note.toloo": "صفحه اصلی فعلی 8883 2002 را نوشته است؛ صفحات تماس انگلیسی قدیمی شماره‌های دیگری دارند. ابتدا با ایمیل مسیر تماس را تأیید کنید.", "pf.note.congress": "مجموعه بهبودی همتاست، نه جایگزین مراقبت پزشکی مجاز. شماره درج‌شده دفتر وب‌سایت است، نه خدمات اضطراری.", "pf.note.raad": "تخصص آموزش شغلی و مشارکت افراد دارای معلولیت؛ خدمت اختصاصی اعتیاد یا همکاری با گرین‌روت تأیید نشده است.", "pf.note.journal": "تلفن/نمابر منتشرشده انجمن از طریق دفتر نشریه؛ با ایمیل از دفتر، راه ارتباط با مسئول فعلی پروژه‌ها را بخواهید.", "pf.note.legacy": "فهرست رسمی شهرداری قدیمی است یا گاهی در دسترس نیست؛ شماره و مسئولیت فعلی را پیش از ارتباط دوباره تأیید کنید."}, "tr": {"pf.more": "Diğer filtreler ve kaydedilenler", "pf.xlsshort": "Excel indir", "nav.partners": "Ortak bul", "title.partners": "Potansiyel ortak rehberi — GreenRoot", "pf.kicker": "Araştırma rehberi · 11 Ekim 2026", "pf.title": "Doğru kişileri bul.<br>Pilotu birlikte kur.", "pf.lead": "GreenRoot için kaynaklı 210 iletişim kaydı: bağımlılıktan toparlanma, geri dönüşüm, yeşil iş ve araştırma. Yerelden başlayın; küçük, güvenli bir iş birliği önerin.", "pf.browse": "Rehberi keşfet", "pf.download": "Excel indir · 210 kayıt", "pf.stat1": "İstanbul kaydı", "pf.stat2": "Diğer Türkiye illeri", "pf.stat3": "İran · Tahran kaydı", "pf.heroNote": "Potansiyel iş birlikleri; onaylanmış ortaklar değil. Şube ve kamu birimleri etiketlidir.", "pf.artLabel": "Üç bölge. Tek başlangıç.", "pf.artNote": "İletişim haritasıdır; mevcut ortaklık ağı değildir.", "pf.truth": "Sayılar ne anlama geliyor?", "pf.truthText": "88 ana kurum altında 210 iletişim kaydı; 120 şube ve 5 kamu/üniversite birimi dahil. 204 kayıtta yayımlanmış telefon vardır, 6 kayıt için incelenen kaynakta telefon bulunamadı. Hiç arama veya mesaj gönderilmedi. Yayımlanmış numara, test edilmiş hat değildir.", "pf.heading": "İş birliği çalışma alanınız", "pf.sub": "Resmî ad, yer veya sektör arayın. İlk aramadan önce kaynağı açın.", "pf.all": "Tüm bölgeler · 210", "pf.istanbul": "İstanbul · 100", "pf.turkey": "Diğer Türkiye · 100", "pf.iran": "İran · 10", "pf.searchLabel": "Rehberde ara", "pf.searchPh": "Ad, ilçe, telefon veya konu…", "pf.categoryLabel": "İş birliği alanı", "pf.catAll": "Tüm alanlar", "pf.cat.civic": "Belediyeler", "pf.cat.recovery": "Toparlanma & ruh sağlığı", "pf.cat.recycling": "Geri dönüşüm & atık", "pf.cat.environment": "Çevre & iklim", "pf.cat.employment": "İstihdam & girişim", "pf.cat.research": "Araştırma & değerlendirme", "pf.cat.family": "Aile & koruma", "pf.placeLabel": "İl / İstanbul ilçesi", "pf.placeAll": "Tüm yerler", "pf.typeLabel": "Kayıt türü", "pf.typeAll": "Kurumlar + şubeler + birimler", "pf.type.organization": "Kurum / kuruluş", "pf.type.branch": "Yerel şube", "pf.type.public_unit": "Kamu / üniversite birimi", "pf.sortLabel": "Sıralama", "pf.sort.priority": "Önerilen ilk temaslar", "pf.sort.name": "Ad A–Z", "pf.shortlist": "Yalnız önerilen ilk temaslar", "pf.phoneOnly": "Yayımlanmış telefonu var", "pf.savedOnly": "Yalnız kaydettiklerim", "pf.reset": "Filtreleri sıfırla", "pf.export": "Filtrelenen CSV’yi indir", "pf.results": "{n} sonuç · {p} ana kurum", "pf.savedCount": "Bu cihazda {n} kayıt", "pf.localNote": "Kaydedilenler yalnız bu tarayıcıda tutulur; GreenRoot’a gönderilmez.", "pf.empty": "Eşleşme bulunamadı. Bir filtreyi kaldırın veya farklı yazım deneyin.", "pf.prev": "Önceki", "pf.next": "Sonraki", "pf.page": "Sayfa {p} / {n}", "pf.showing": "{n} kaydın {a}–{b} arası", "pf.start": "Önerilen ilk temas", "pf.parent": "Ana kurum", "pf.ask": "Önerilen görüşme", "pf.call": "Yayımlanmış numarayı ara", "pf.noPhone": "Telefon bulunamadı; kaynak / iletişim sayfasını kullanın.", "pf.domestic": "Türkiye içi kısa hat; yurt dışından bağlanmayabilir.", "pf.email": "E-posta", "pf.website": "Web sitesi / iletişim", "pf.source": "Kaynak", "pf.checked": "Kaynak kontrolü: 11 Ekim 2026", "pf.direct": "Resmî sayfa alındı", "pf.indexed": "Resmî kaynak, arama dizini kanıtı", "pf.untested": "Yayımlanmış numara · aranmadı", "pf.save": "Kaydet", "pf.unsave": "Kaydedildi", "pf.copy": "İletişimi kopyala", "pf.copied": "İletişim kopyalandı", "pf.copyFailed": "Burada kopyalama kullanılamıyor. Telefonu seçin veya Excel’i indirin.", "pf.priorityNote": "Öncelik, konu uyumuna ilişkin editoryal değerlendirmedir; fon veya kabul olasılığı değildir.", "pf.method": "Kaynaklar, sınırlar ve güvenli ilk temas", "pf.method1": "İsim ve iletişim yolları resmî web sitelerinden ve kamu kurum rehberlerinden alınmıştır. Özgün Türkçe ve Farsça isimler korunur. Kontrol tarihi bizim incelememizdir; kaynağın son güncelleme tarihi değildir.", "pf.method2": "Numara santral, şube hattı veya ülke içi çağrı merkezi olabilir. İş birliği, çevre hizmetleri, destekli istihdam ya da hastane yönetimine bağlanmayı isteyin. Acil ve danışmanlık hatlarını ticari teklif için kullanmayın.", "pf.method3": "Bunlar araştırılmış adaylardır; tavsiye, anlaşma veya tam sayım değildir. Klinik ruhsat, yabancı kurucu uygunluğu, çalışma izni ve destek koşulları yerel uzmanlarla kontrol edilmelidir. GreenRoot bir konsept prototipidir; diğer sayfalardaki metrikler demo veridir.", "pf.method4": "Tek tek, saygılı ve kişiselleştirilmiş iletişim kurun. Hasta adı, tanı veya toparlanma kaydı paylaşmayın. Tedavi iş çıktısından bağımsız olmalıdır. Pilot; yasal sözleşme, gerçek ücret, güvenlik değerlendirmesi, sigorta ve klinik gözetim gerektirir.", "pf.planTitle": "Rehberden ilk toplantıya", "pf.plan1": "Beş yerel aday seçin", "pf.plan1p": "Bir toparlanma kuruluşu, bir geri dönüşümcü, bir belediye, bir istihdam kanalı ve bir araştırma ekibiyle başlayın.", "pf.plan2": "Küçük ve net bir talep iletin", "pf.plan2p": "20 dakikalık tanışma isteyin. Yazılı konsept, atık akışı taslağı ve güvenli pilot çerçevesi sunun; uydurma sonuç iddiaları kullanmayın.", "pf.plan3": "Gerçek bir sonraki adımı kaydedin", "pf.plan3p": "Tarihi, takip sorumlusunu ve mutabık kalınan adımı Excel’e yazın. 5–7 iş günü sonra bir kez takip edin; olumsuz yanıtı kabul edin.", "pf.templateTitle": "Uyarlayabileceğiniz ilk mesaj", "pf.templateSub": "Göndermeden önce köşeli parantezli alanları doldurun. Bu sayfa sizin adınıza mesaj göndermez.", "pf.templateCopy": "Mesajı kopyala", "pf.templateFile": "EN / FA / TR mesajlarını indir", "pf.homeTitle": "İlk iş birlikleri için kaynaklı bir başlangıç", "pf.homeText": "İstanbul’da 100, Türkiye’nin diğer illerinde 100, Tahran’da 10 kayıt; kamuya açık iletişim yolları ve açık şube etiketleri.", "pf.homeButton": "Ortak bulma rehberini aç", "pf.note.branch": "Yerel Yeşilay şubesi; ayrı ve bağımsız bir dernek değildir. Acil bakım için değil, iş birliği tanışması için iletişim kurun.", "pf.note.nophone": "İncelenen resmî şube rehberinde kullanılabilir telefon yoktur. Genel merkez numarası yerel numara gibi gösterilmemiştir.", "pf.note.hqroute": "Yeşilay Akademi’de de yayımlanan kurumsal santral. İş birliği / proje ekibini isteyin; ticari temas için 115’i kullanmayın.", "pf.note.switchboard": "Kamu santrali / belediye hattı. İlgili ekibi isteyin; doğrudan ortaklık yöneticisinin numarası değildir.", "pf.note.sharedline": "İBB istihdam ofislerinin ortak merkez hattı. Bir kez sayılmıştır; yeni bağımsız kurum değildir.", "pf.note.eligibility": "Girişimcilik desteği kanalıdır; hibe sözü değildir. Şirket, kurucu ve program uygunluğu kontrol edilmelidir.", "pf.note.bugday": "Atıf yapılan SSS 349 99 93; eski resmî sayfalar 349 99 33 yazıyor. Önce e-posta ile numarayı teyit edin.", "pf.note.toloo": "Güncel ana sayfada 8883 2002, eski İngilizce iletişim sayfalarında farklı numaralar var. Önce e-posta ile teyit edin.", "pf.note.congress": "Akran toparlanma kuruluşu; ruhsatlı tıbbi bakım yerine geçmez. Numara web sitesi ofisine aittir; acil hizmet değildir.", "pf.note.raad": "Mesleki eğitim ve engellilik kapsayıcılığı uzmanlığı. Bağımlılığa özel hizmet veya GreenRoot ortaklığı doğrulanmadı.", "pf.note.journal": "Dergi ofisi üzerinden yayımlanan dernek telefon/faksı. Güncel proje irtibatını e-posta ile isteyin.", "pf.note.legacy": "Eski / zaman zaman erişilemeyen resmî belediye rehberi. Güncel numara ve yetkiyi iletişim öncesi teyit edin."}};
+Object.keys(X).forEach(function(l){window.I18N[l]=Object.assign(window.I18N[l]||{},X[l]);});
+window.GR_MESSAGES={"en": "Subject: A 20-minute introduction — recovery + paid green work pilot\n\nHello [organization/team],\nI’m [name], developing GreenRoot: a concept linking addiction recovery support with safe, paid green work and transparent recycling income.\nWe are seeking a small local collaboration in [city/district], not claiming proven results or existing partnerships. Clinical care must stay independent of work output; participation would be voluntary, with lawful wages and professional safety oversight.\nCould we arrange a 20-minute introduction to discuss [one specific ask relevant to your organization] and whether this fits your remit?\nConcept note: https://greenroot-af0.pages.dev/program\nPartner research directory: https://greenroot-af0.pages.dev/partners\nThank you,\n[name / role / public contact]\n", "fa": "موضوع: جلسه آشنایی ۲۰ دقیقه‌ای — پایلوت بهبودی و کار سبز با مزد\n\nسلام به [نام مجموعه/تیم]،\nمن [نام] هستم و روی ایده گرین‌روت کار می‌کنم: پیوند حمایت از بهبودی اعتیاد با کار سبز ایمن و با مزد و درآمد شفاف بازیافت.\nبرای [شهر/منطقه] به دنبال یک همکاری کوچک محلی هستیم؛ نه ادعای نتیجه اثبات‌شده داریم و نه شریک تأییدشده. درمان باید مستقل از میزان کار بماند و مشارکت با رضایت، مزد قانونی و نظارت حرفه‌ای ایمنی انجام شود.\nآیا امکان یک جلسه آشنایی ۲۰ دقیقه‌ای برای بررسی [یک درخواست مشخص مرتبط با مجموعه] و تناسب آن با حوزه فعالیت شما وجود دارد؟\nمعرفی ایده: https://greenroot-af0.pages.dev/program\nبانک بررسی همکاران: https://greenroot-af0.pages.dev/partners?lang=fa\nبا سپاس،\n[نام / نقش / راه تماس عمومی]\n", "tr": "Konu: 20 dakikalık tanışma — toparlanma + ücretli yeşil iş pilotu\n\nMerhaba [kurum/ekip],\nBen [ad], bağımlılıktan toparlanma desteğini güvenli, ücretli yeşil işler ve şeffaf geri dönüşüm geliriyle ilişkilendiren GreenRoot konsepti üzerinde çalışıyorum.\n[İl/ilçe] için küçük bir yerel iş birliği arıyoruz; kanıtlanmış sonuç veya mevcut ortaklık iddiasında bulunmuyoruz. Klinik bakım iş çıktısından bağımsız kalmalı; katılım gönüllü olmalı, yasal ücret ve profesyonel güvenlik gözetimi sağlanmalıdır.\n[Kurumla ilgili tek somut talep] ve bunun görev alanınıza uyumunu görüşmek için 20 dakikalık bir tanışma mümkün mü?\nKonsept: https://greenroot-af0.pages.dev/program\nAday iş birliği rehberi: https://greenroot-af0.pages.dev/partners?lang=tr\nTeşekkürler,\n[ad / rol / kamuya açık iletişim]\n"};
+window.GR_PLACES_FA={"İstanbul": "استانبول", "Tehran": "تهران", "Antalya": "آنتالیا", "Ankara": "آنکارا", "Bursa": "بورسا", "İzmir": "ازمیر", "Balıkesir": "بالیکسیر", "Adalar": "آدالار", "Arnavutköy": "آرناووت‌کوی", "Ataşehir": "آتاشهیر", "Avcılar": "آوجیلار", "Bağcılar": "باغجیلار", "Bahçelievler": "باهچه‌لی‌اولر", "Bakırköy": "باکرکوی", "Başakşehir": "باشاک‌شهیر", "Bayrampaşa": "بایرام‌پاشا", "Beşiktaş": "بشیکتاش", "Beykoz": "بیکوز", "Beylikdüzü": "بیلیک‌دوزو", "Beyoğlu": "بی‌اوغلو", "Büyükçekmece": "بیوک‌چکمجه", "Çatalca": "چاتالجا", "Çekmeköy": "چکمه‌کوی", "Esenler": "اسنلر", "Esenyurt": "اسنیورت", "Eyüpsultan": "ایوب‌سلطان", "Fatih": "فاتح", "Gaziosmanpaşa": "قاضی‌عثمان‌پاشا", "Güngören": "گونگورن", "Kadıköy": "کادی‌کوی", "Kağıthane": "کاغیت‌خانه", "Kartal": "کارتال", "Küçükçekmece": "کوچوک‌چکمجه", "Maltepe": "مالتپه", "Pendik": "پندیک", "Sancaktepe": "سانجاک‌تپه", "Sarıyer": "ساری‌یر", "Silivri": "سیلیوری", "Sultanbeyli": "سلطان‌بیلی", "Sultangazi": "سلطان‌غازی", "Şile": "شیله", "Şişli": "شیشلی", "Tuzla": "توزلا", "Ümraniye": "عمرانیه", "Üsküdar": "اسکودار", "Zeytinburnu": "زیتین‌بورنو"};
+})();
+
+</script>
+<script>
 /* GreenRoot app: i18n engine, nav, counters, reveal, chat, career, mood, charts, form */
 (function(){
 "use strict";
@@ -1862,6 +2047,7 @@ var store = (function(){ try{ var s=window.localStorage; s.setItem("__gr","1"); 
 /* ---------- language ---------- */
 var lang = "en";
 var saved = store ? store.getItem("gr-lang") : null;
+try { var requested = new URLSearchParams(location.search).get("lang"); if (["en","fa","tr"].indexOf(requested)>-1) saved=requested; } catch(e) {}
 if (saved && ["en","fa","tr"].indexOf(saved)>-1) lang = saved;
 else {
   var nav3 = (navigator.language||"");
@@ -1926,6 +2112,7 @@ function applyLang(){
   document.querySelectorAll(".links a").forEach(function(a){
     a.classList.toggle("active", a.getAttribute("href") === file);
   });
+  document.dispatchEvent(new CustomEvent("greenroot:language", {detail:{lang:lang}}));
 }
 
 function setLang(l){
@@ -1946,9 +2133,10 @@ document.addEventListener("DOMContentLoaded", function(){
   var nav = document.getElementById("nav");
   var burger = document.getElementById("burger");
   if (burger && nav){
-    burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+    burger.addEventListener("click", function(){ nav.classList.toggle("open"); burger.setAttribute("aria-expanded", String(nav.classList.contains("open"))); });
+    document.addEventListener("keydown", function(e){ if (e.key==="Escape" && nav.classList.contains("open")){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.focus(); } });
     nav.querySelectorAll(".links a").forEach(function(a){
-      a.addEventListener("click", function(){ nav.classList.remove("open"); });
+      a.addEventListener("click", function(){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); });
     });
   }
 
@@ -2344,8 +2532,9 @@ document.addEventListener("DOMContentLoaded", function(){
     /* sticky mobile CTA */
     if (window.matchMedia && window.matchMedia("(max-width:660px)").matches && !document.querySelector(".mobile-cta")){
       var cta = document.createElement("div"); cta.className = "mobile-cta";
-      var j = document.createElement("a"); j.className="btn small"; j.href="join.html"; j.innerHTML="🌱 "+t("nav.cta");
-      var p = document.createElement("a"); p.className="btn small ghost"; p.href="podcast.html"; p.innerHTML="🎧 "+t("nav.podcast");
+      var isDirectory = document.body.getAttribute("data-page")==="partners";
+      var j = document.createElement("a"); j.className="btn small"; j.href=isDirectory ? "#directory" : "join.html"; j.innerHTML=(isDirectory?"🔎 ":"🌱 ")+"<span data-i18n=\""+(isDirectory?"pf.browse":"nav.cta")+"\">"+t(isDirectory?"pf.browse":"nav.cta")+"</span>";
+      var p = document.createElement("a"); p.className="btn small ghost"; p.href=isDirectory ? "kit/GreenRoot-Outreach-210.xlsx" : "podcast.html"; p.innerHTML=(isDirectory?"⬇ ":"🎧 ")+"<span data-i18n=\""+(isDirectory?"pf.xlsshort":"nav.podcast")+"\">"+t(isDirectory?"pf.xlsshort":"nav.podcast")+"</span>";
       p.style.border = "1.5px solid rgba(217,249,157,.5)"; p.style.background="rgba(255,255,255,.08)";
       cta.appendChild(j); cta.appendChild(p);
       document.body.appendChild(cta);

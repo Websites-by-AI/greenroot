@@ -1,0 +1,188 @@
+{
+  "Adalar": {
+    "website": "",
+    "http": 403,
+    "title": ""
+  },
+  "Arnavutköy": {
+    "website": "",
+    "http": 403,
+    "title": ""
+  },
+  "Ataşehir": {
+    "website": "https://www.atasehir.bel.tr/",
+    "http": 200,
+    "title": "T.C. Ataşehir Belediyesi"
+  },
+  "Avcılar": {
+    "website": "https://www.avcilar.bel.tr/",
+    "http": 200,
+    "title": "Avcılar Belediyesi"
+  },
+  "Bağcılar": {
+    "website": "https://www.bagcilar.bel.tr/",
+    "http": 200,
+    "title": "Bağcılar Belediyesi"
+  },
+  "Bahçelievler": {
+    "website": "https://www.bahcelievler.istanbul/",
+    "http": 200,
+    "title": "Bahçelievler Belediyesi"
+  },
+  "Bakırköy": {
+    "website": "https://www.bakirkoy.bel.tr/",
+    "http": 200,
+    "title": "Ana Sayfa - Bakırköy Belediyesi"
+  },
+  "Başakşehir": {
+    "website": "",
+    "error": "SSLError"
+  },
+  "Bayrampaşa": {
+    "website": "",
+    "http": 403,
+    "title": "Access denied | www.bayrampasa.bel.tr used Cloudflare to restrict access | www.bayrampasa.bel.tr | Cloudflare"
+  },
+  "Beşiktaş": {
+    "website": "https://besiktas.bel.tr/",
+    "http": 200,
+    "title": "Beşiktaş Belediyesi"
+  },
+  "Beykoz": {
+    "website": "https://www.beykoz.bel.tr/",
+    "http": 200,
+    "title": "T.C. Beykoz Belediyesi"
+  },
+  "Beylikdüzü": {
+    "website": "https://www.beylikduzu.istanbul/",
+    "http": 200,
+    "title": "Beylikdüzü Belediyesi"
+  },
+  "Beyoğlu": {
+    "website": "https://beyoglu.bel.tr/",
+    "http": 200,
+    "title": "Beyoğlu Belediyesi - Beyoğlu’nun hakkı #BizeEmanet"
+  },
+  "Büyükçekmece": {
+    "website": "https://www.bcekmece.bel.tr/",
+    "http": 200,
+    "title": "T.C. Büyükçekmece Belediyesi"
+  },
+  "Çatalca": {
+    "website": "https://catalca.bel.tr/",
+    "http": 200,
+    "title": "T.C. Çatalca Belediyesi"
+  },
+  "Çekmeköy": {
+    "website": "",
+    "error": "SSLError"
+  },
+  "Esenler": {
+    "website": "",
+    "http": 403,
+    "title": "Just a moment..."
+  },
+  "Esenyurt": {
+    "website": "",
+    "error": "SSLError"
+  },
+  "Eyüpsultan": {
+    "website": "https://www.eyupsultan.bel.tr/",
+    "http": 200,
+    "title": "T.C. Eyüpsultan Belediyesi Resmi Web Sitesi"
+  },
+  "Fatih": {
+    "website": "https://www.fatih.bel.tr/",
+    "http": 200,
+    "title": "T.C. Fatih Belediyesi"
+  },
+  "Gaziosmanpaşa": {
+    "website": "",
+    "http": 403,
+    "title": ""
+  },
+  "Güngören": {
+    "website": "",
+    "http": 200,
+    "title": "Güngören Yanında"
+  },
+  "Kadıköy": {
+    "website": "https://www.kadikoy.bel.tr/tr",
+    "http": 200,
+    "title": "Kadıköy Belediyesi - Anasayfa"
+  },
+  "Kağıthane": {
+    "website": "https://www.kagithane.istanbul/",
+    "http": 200,
+    "title": "Kağıthane Belediyesi"
+  },
+  "Kartal": {
+    "website": "",
+    "error": "SSLError"
+  },
+  "Küçükçekmece": {
+    "website": "https://kucukcekmece.istanbul/",
+    "http": 200,
+    "title": "Küçükçekmece Belediyesi"
+  },
+  "Maltepe": {
+    "website": "https://www.maltepe.bel.tr/",
+    "http": 200,
+    "title": "T.C. Maltepe  Belediyesi"
+  },
+  "Pendik": {
+    "website": "",
+    "error": "ReadTimeout"
+  },
+  "Sancaktepe": {
+    "website": "",
+    "error": "ReadTimeout"
+  },
+  "Sarıyer": {
+    "website": "",
+    "http": 403,
+    "title": "403 Forbidden"
+  },
+  "Silivri": {
+    "website": "https://www.silivri.bel.tr/",
+    "http": 200,
+    "title": "T.C. Silivri Belediyesi"
+  },
+  "Sultanbeyli": {
+    "website": "",
+    "error": "ReadTimeout"
+  },
+  "Sultangazi": {
+    "website": "https://www.sultangazi.bel.tr/",
+    "http": 200,
+    "title": "T.C. Sultangazi Belediyesi"
+  },
+  "Şile": {
+    "website": "https://sile.bel.tr/tr/",
+    "http": 200,
+    "title": "Anasayfa · Şile Belediyesi"
+  },
+  "Şişli": {
+    "website": "",
+    "error": "ReadTimeout"
+  },
+  "Tuzla": {
+    "website": "https://www.tuzla.bel.tr/",
+    "http": 200,
+    "title": "Tuzla Belediyesi"
+  },
+  "Ümraniye": {
+    "website": "https://umraniye.bel.tr/",
+    "http": 200,
+    "title": "Ümraniye Belediyesi | Ümraniye Municipality"
+  },
+  "Üsküdar": {
+    "website": "https://www.uskudar.bel.tr/",
+    "http": 200,
+    "title": "T.C. Üsküdar Belediyesi"
+  },
+  "Zeytinburnu": {
+    "website": "",
+    "error": "ReadTimeout"
+  }
+}

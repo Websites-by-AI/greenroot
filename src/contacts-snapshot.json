@@ -1,0 +1,1266 @@
+{
+  "checked": "2026-10-11",
+  "municipalities": [
+    {
+      "district": "Adalar",
+      "phone_raw": "0 216 382 3 382"
+    },
+    {
+      "district": "Arnavutköy",
+      "phone_raw": "444 4 597"
+    },
+    {
+      "district": "Ataşehir",
+      "phone_raw": "0 216 570 50 00"
+    },
+    {
+      "district": "Avcılar",
+      "phone_raw": "0 212 695 62 00"
+    },
+    {
+      "district": "Bağcılar",
+      "phone_raw": "0 212 410 06 00"
+    },
+    {
+      "district": "Bahçelievler",
+      "phone_raw": "0 212 484 38 00"
+    },
+    {
+      "district": "Bakırköy",
+      "phone_raw": "0 212 414 97 77"
+    },
+    {
+      "district": "Başakşehir",
+      "phone_raw": "444 06 69"
+    },
+    {
+      "district": "Bayrampaşa",
+      "phone_raw": "444 19 90"
+    },
+    {
+      "district": "Beşiktaş",
+      "phone_raw": "444 44 55"
+    },
+    {
+      "district": "Beykoz",
+      "phone_raw": "444 666 1"
+    },
+    {
+      "district": "Beylikdüzü",
+      "phone_raw": "0 212 866 70 00"
+    },
+    {
+      "district": "Beyoğlu",
+      "phone_raw": "444 0 160"
+    },
+    {
+      "district": "Büyükçekmece",
+      "phone_raw": "444 0 340"
+    },
+    {
+      "district": "Çatalca",
+      "phone_raw": "444 6 102"
+    },
+    {
+      "district": "Çekmeköy",
+      "phone_raw": "0 216 600 0 600"
+    },
+    {
+      "district": "Esenler",
+      "phone_raw": "444 00 73"
+    },
+    {
+      "district": "Esenyurt",
+      "phone_raw": "444 0 411"
+    },
+    {
+      "district": "Eyüpsultan",
+      "phone_raw": "0 212 440 0 500"
+    },
+    {
+      "district": "Fatih",
+      "phone_raw": "0 212 453 1453"
+    },
+    {
+      "district": "Gaziosmanpaşa",
+      "phone_raw": "444 0 467"
+    },
+    {
+      "district": "Güngören",
+      "phone_raw": "0 212 449 55 00"
+    },
+    {
+      "district": "Kadıköy",
+      "phone_raw": "0 216 542 50 00"
+    },
+    {
+      "district": "Kağıthane",
+      "phone_raw": "444 23 00"
+    },
+    {
+      "district": "Kartal",
+      "phone_raw": "444 4 578"
+    },
+    {
+      "district": "Küçükçekmece",
+      "phone_raw": "444 4 360"
+    },
+    {
+      "district": "Maltepe",
+      "phone_raw": "0 216 458 99 99"
+    },
+    {
+      "district": "Pendik",
+      "phone_raw": "444 81 80"
+    },
+    {
+      "district": "Sancaktepe",
+      "phone_raw": "0 216 622 33 33"
+    },
+    {
+      "district": "Sarıyer",
+      "phone_raw": "444 1 722"
+    },
+    {
+      "district": "Silivri",
+      "phone_raw": "0 212 444 20 47"
+    },
+    {
+      "district": "Sultanbeyli",
+      "phone_raw": "0 216 564 13 00"
+    },
+    {
+      "district": "Sultangazi",
+      "phone_raw": "444 23 32"
+    },
+    {
+      "district": "Şile",
+      "phone_raw": "0 216 712 12 75 - 77"
+    },
+    {
+      "district": "Şişli",
+      "phone_raw": "0 212 708 88 88"
+    },
+    {
+      "district": "Tuzla",
+      "phone_raw": "444 0 906"
+    },
+    {
+      "district": "Ümraniye",
+      "phone_raw": "0 216 443 56 00"
+    },
+    {
+      "district": "Üsküdar",
+      "phone_raw": "0 216 531 30 00"
+    },
+    {
+      "district": "Zeytinburnu",
+      "phone_raw": "444 19 84"
+    }
+  ],
+  "yesilay": [
+    {
+      "name": "Adana",
+      "city": "Adana",
+      "address": "Ulucamii mah. Ulus Cad. No:8 Kat:4 Daire:10 (Taşköprü karşısı) Seyhan/Adana",
+      "phones": [
+        "0(322) 232 00 03",
+        "03222320003"
+      ]
+    },
+    {
+      "name": "Adıyaman",
+      "city": "Adıyaman",
+      "address": "Alitaşı Mah. Gölbaşı Cad. MÜSİAD Binası Dış kapı No: 137 Daire: 3 Merkez / ADIYAMAN",
+      "phones": [
+        "5536239166",
+        "0553 623 91 66"
+      ]
+    },
+    {
+      "name": "Afyonkarahisar",
+      "city": "Afyonkarahisar",
+      "address": "Burmalı Mahallesi İnhisar Yokuşu No:3 Merkez/AFYONKARAHİSAR",
+      "phones": [
+        "02722159712",
+        "02722159712"
+      ]
+    },
+    {
+      "name": "Ağrı",
+      "city": "Ağrı",
+      "address": "Abide Mah. Yaşar Kemal Cad. Ağrı Kültür ve Kongre Mekezi Giriş Kat No: 3 Merkez/Ağrı",
+      "phones": [
+        "(472) 216 98 30",
+        "0543 262 56 05"
+      ]
+    },
+    {
+      "name": "Aksaray",
+      "city": "Aksaray",
+      "address": "Şeyh Hamit, 3302. Sk. No:1, 68200",
+      "phones": [
+        "03822134174",
+        "0 532 541 46 95"
+      ]
+    },
+    {
+      "name": "Amasya",
+      "city": "Amasya",
+      "address": "Nergis Mahallesi Çelebi Sokak No :7 Kazanasmazlar Konağı/ Merkez- Amasya",
+      "phones": [
+        "(358) 218 39 25",
+        "0542 301 29 69"
+      ]
+    },
+    {
+      "name": "Ankara",
+      "city": "Ankara",
+      "address": "Kocatepe Mah. İnkılap Sokak No:24-1 Çankaya-Ankara",
+      "phones": [
+        "0312 419 8863",
+        ""
+      ]
+    },
+    {
+      "name": "Antalya",
+      "city": "Antalya",
+      "address": "Altındağ Mah. 100.yıl Bulvarı Ece Apartmanı Apt No:43 Kat:3 Daire:10  Muratpaşa/Antalya",
+      "phones": [
+        "05066089972",
+        ""
+      ]
+    },
+    {
+      "name": "Ardahan",
+      "city": "Ardahan",
+      "address": "Kaptanpaşa Mah. Kazım Karabekir Cad. Ortaklar İş Merkezi No:9 Kat:3 Daire No:6 Merkez/Ardahan",
+      "phones": [
+        "0478 502 9928",
+        "0534 318 74 53"
+      ]
+    },
+    {
+      "name": "Artvin",
+      "city": "Artvin",
+      "address": "Çarşı Mah. Cumhuriyet-1 Cad. Cebeci Han Apt. No:11 D:1 Kat:1 Merkez/Artvin",
+      "phones": [
+        "466 212 24 46",
+        "0532 504 37 01"
+      ]
+    },
+    {
+      "name": "Aydın",
+      "city": "Aydın",
+      "address": "Güzelhisar Mah.35 Sok .No 8 . Pekmezcioğlu Apt. Kat 5 .Daire 10   Efeler/AYDIN",
+      "phones": [
+        "O(256) 215 05 09",
+        "05336831702"
+      ]
+    },
+    {
+      "name": "Balıkesir",
+      "city": "Balıkesir",
+      "address": "Yıldırım Mahallesi Çiviciler Sokak No:4 Gezer Apartmanı Karesi/Balıkesir",
+      "phones": [
+        "0506 801 5102",
+        ""
+      ]
+    },
+    {
+      "name": "Bartın",
+      "city": "Bartın",
+      "address": "Orta Mah. Rıfat Ilgaz Sok. No:6 Merkez/Bartın",
+      "phones": [
+        "03782213089",
+        "05069762651"
+      ]
+    },
+    {
+      "name": "Batman",
+      "city": "Batman",
+      "address": "Batman YEDAM",
+      "phones": [
+        "04882122199",
+        "04882122199"
+      ]
+    },
+    {
+      "name": "Bayburt",
+      "city": "Bayburt",
+      "address": "Şingah Mah. İbn-i Sina Cad. No: 25/7 Merkez/Bayburt",
+      "phones": [
+        "0458 211 98 00",
+        "0458 211 98 00"
+      ]
+    },
+    {
+      "name": "Bilecik",
+      "city": "Bilecik",
+      "address": "İstiklal Mah. Ali Rıza Özkay Cad. 24/5 Bilecik/ Merkez",
+      "phones": [
+        "02282129174-05053118215",
+        "05053118215"
+      ]
+    },
+    {
+      "name": "Bingöl",
+      "city": "Bingöl",
+      "address": "İnönü Mah. İnönü Cad.   Avva Center iş Merkezi Bina No: 10 Kat: 1 D:15 Bingöl/Merkez",
+      "phones": [
+        "04262132262",
+        "0505 928 22 12"
+      ]
+    },
+    {
+      "name": "Bitlis",
+      "city": "Bitlis",
+      "address": "Atatürk Mah. Feyzullah Ensari Cad. No:80/B Merkez /Bitlis",
+      "phones": [
+        "02123534440",
+        "02123534440"
+      ]
+    },
+    {
+      "name": "Bolu",
+      "city": "Bolu",
+      "address": "Gölyüzü Mah. Bahar Sok. Kat:2 No:3 Merkez/BOLU",
+      "phones": [
+        "03742543849",
+        "05066091203"
+      ]
+    },
+    {
+      "name": "Burdur",
+      "city": "Burdur",
+      "address": "Burç Mah. Kışla Cad. No:22/18  Merkez/Burdur",
+      "phones": [
+        "0248 212 35 69",
+        "0248 212 35 69"
+      ]
+    },
+    {
+      "name": "Bursa",
+      "city": "Bursa",
+      "address": "Meydancık Mah. Mecid Çıkmazı No:2 Yıldırım / Bursa",
+      "phones": [
+        "0224 222 88 77",
+        "0224 222 88 77"
+      ]
+    },
+    {
+      "name": "Çanakkale",
+      "city": "Çanakkale",
+      "address": "Kemalpaşa Mh. Kayserili Ahmet Paşa Cd. No: 4 Kat: 2 Çanakkale/ MERKEZ",
+      "phones": [
+        "0 505 812 92 03",
+        "0286 217 81 43"
+      ]
+    },
+    {
+      "name": "Çankırı",
+      "city": "Çankırı",
+      "address": "Mimar Sinan Mah. Sandıkçılar Sokak No: 1 Çankırı-Merkez",
+      "phones": [
+        "0 376 213 01 52",
+        "05554783120 (Başkan Cep)"
+      ]
+    },
+    {
+      "name": "Çorum",
+      "city": "Çorum",
+      "address": "Gulabibey Mah. Şeyh Eyüp Sk. No 10/2 Çorum/Merkez",
+      "phones": [
+        "0 530 858 72 74",
+        "03642135131"
+      ]
+    },
+    {
+      "name": "Denizli",
+      "city": "Denizli",
+      "address": "15 Mayıs mahallesi 763 sokak No:5 Pamukkale Denizli",
+      "phones": [
+        "0546 870 01 52",
+        "+90 545 520 07 29"
+      ]
+    },
+    {
+      "name": "Diyarbakır",
+      "city": "Diyarbakır",
+      "address": "Yenişehir Mah. Ekinciler Cad. Faik Ali Sokak No:17 Gür Apt. Kat:1 No:1 Yenişehir/Diyarbakır",
+      "phones": [
+        "04125051656",
+        "05303886416"
+      ]
+    },
+    {
+      "name": "Düzce",
+      "city": "Düzce",
+      "address": "Kültür mahallesi Bayan Emine sokak  No:4 Daire:2 Merkez/DÜZCE",
+      "phones": [
+        "03805292030",
+        "05303260054"
+      ]
+    },
+    {
+      "name": "Edirne",
+      "city": "Edirne",
+      "address": "Sarıcapaşa Mah. Çukur Sk. No:5 D:2 Merkez Edirne",
+      "phones": [
+        "0505 597 23 25",
+        "0284 214 80 52/0284 213 79 11"
+      ]
+    },
+    {
+      "name": "Elazığ",
+      "city": "Elazığ",
+      "address": "Yeni Mah. Kalkan Sk. Hayma Center No:5 Bağımsız Bölüm:33",
+      "phones": [
+        "0553 099 09 34",
+        ""
+      ]
+    },
+    {
+      "name": "Erzincan",
+      "city": "Erzincan",
+      "address": "Kızılay Mahallesi Halit Paşa Caddesi Tanoğlu Plaza Kat:4 No:23 Merkez/ERZİNCAN",
+      "phones": [
+        "0446 223 81 39",
+        ""
+      ]
+    },
+    {
+      "name": "Erzurum",
+      "city": "Erzurum",
+      "address": "Kazım Karabekir Paşa Mah Orhan Şerifsoy Cad Özlem İş Merkezi B Blok Kat: 5 No: 20 Yakutiye/ Erzurum",
+      "phones": [
+        "5333773579",
+        "4424425172"
+      ]
+    },
+    {
+      "name": "Eskişehir",
+      "city": "Eskişehir",
+      "address": "Akcami Mahallesi Cemalciler Sokak No:30 Odunpazarı/Eskişehir",
+      "phones": [
+        "0 2222307966",
+        "0222 234 18 15"
+      ]
+    },
+    {
+      "name": "Gaziantep",
+      "city": "Gaziantep",
+      "address": "Alleben Mahallesi Kemal Köker Caddesi No: 23/A Şahinbey/Gaziantep",
+      "phones": [
+        "0342 211 03 60",
+        ""
+      ]
+    },
+    {
+      "name": "Giresun",
+      "city": "Giresun",
+      "address": "Hacı Siyam Mahallesi 72 Evler Sokak Resul Yazar İş Merkezi No:21 D:202",
+      "phones": [
+        "04542154747",
+        "04542154747"
+      ]
+    },
+    {
+      "name": "Gümüşhane",
+      "city": "Gümüşhane",
+      "address": "Karaer Mah. Atatürk Cad. No:12/2 (Birinci Noter Üstü)  Merkez/Gümüşhane",
+      "phones": [
+        "0538 662 35 30",
+        "0456 213 7960"
+      ]
+    },
+    {
+      "name": "Hakkari",
+      "city": "Hakkari",
+      "address": "Bulak Mah. Cumhuriyet Cad. Bilgin İşhanı Merkezi. Kat:2 No:3/13 Hakkari/Merkez. Kat No:2 Bölüm No:3/13",
+      "phones": [
+        "0438 502 00 49",
+        "0438 502 00 49"
+      ]
+    },
+    {
+      "name": "Hatay",
+      "city": "Hatay",
+      "address": "Saraykent Mahallesi Şükrü Balcı Caddesi No:134/1",
+      "phones": [
+        "05387451739",
+        "05387451739"
+      ]
+    },
+    {
+      "name": "Iğdır",
+      "city": "Iğdır",
+      "address": "Bağlar Mah. 44 Sk. Hüseyin Güngör Apt. No:13/A Iğdır/Merkez",
+      "phones": [
+        "04765020096",
+        "04765020096"
+      ]
+    },
+    {
+      "name": "Isparta",
+      "city": "Isparta",
+      "address": "Pirimehmet Mah. Cumhuriyet Cad. İmamzade İşhanı Kat: 6 Merkez/Isparta",
+      "phones": [
+        "0 246 211 68 50",
+        "0 553 811 79 75"
+      ]
+    },
+    {
+      "name": "İstanbul Adalar",
+      "city": "İstanbul",
+      "address": "Büyükada İlçe Halk Kütüphanesi 23 Nisan Caddesi No : 25 Adalar/İstanbul (Büyükada) 34970",
+      "phones": [
+        "",
+        "0530 644 93 63"
+      ]
+    },
+    {
+      "name": "İstanbul Arnavutköy",
+      "city": "İstanbul",
+      "address": "Karlıbayır Mahallesi, Selçuklu Caddesi, Bina No:5 Kat.2 Daire:12 (SEA Plaza İş Merkezi) Arnavutköy/İstanbul",
+      "phones": [
+        "0532 241 21 58",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Ataşehir",
+      "city": "İstanbul",
+      "address": "Küçükbakkalköy Mahallesi.Başöğretmen Caddesi.Parlak Plaza No:9  Kat:3 Daire:5 Ataşehir/İstanbul",
+      "phones": [
+        "02165153681",
+        "0 555 365 69 22"
+      ]
+    },
+    {
+      "name": "İstanbul Avcılar",
+      "city": "İstanbul",
+      "address": "Merkez Mah. Reşitpaşa Cad. No: 6/2 Daire: 1 Avcılar İSTANBUL",
+      "phones": [
+        "",
+        "0212 590 14 14"
+      ]
+    },
+    {
+      "name": "İstanbul Bağcılar",
+      "city": "İstanbul",
+      "address": "Yavuzselim Mah.1020. sokak Kayalar İş Merkezi no:1 kat 3 60. ofis Bağcılar/ İstanbul",
+      "phones": [
+        "0 544 382 22 67",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Bahçelievler",
+      "city": "İstanbul",
+      "address": "Siyavuşpaşa Mahallesi, Çavuşpaşa Caddesi, Oğuzhan Sokak. No:19,  Kat:1, Siyavuşpaşa Kompleksi, Bahçelievler/İSTANBUL",
+      "phones": [
+        "0212 502 07 73",
+        "0212 502 07 73"
+      ]
+    },
+    {
+      "name": "İstanbul Bakırköy",
+      "city": "İstanbul",
+      "address": "Kartaltepe Mah. Gençler Cad. Atasaray Apt.No:14 Daire:3 Bakırköy/İstanbul",
+      "phones": [
+        "554 471 19 19",
+        "02125437989"
+      ]
+    },
+    {
+      "name": "İstanbul Başakşehir",
+      "city": "İstanbul",
+      "address": "kayabaşı mahallesi Adnan menderes bulvarı Kuzey yakası ofisleri B3 kat 2 Daire 16",
+      "phones": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Bayrampaşa",
+      "city": "İstanbul",
+      "address": "ORTA MAHALLESİ DEMİR KAPI CADDESİ 9/2 BAYRAMPAŞA İSTANBUL",
+      "phones": [
+        "0212 467 02 90",
+        "0212 467 02 90"
+      ]
+    },
+    {
+      "name": "İstanbul Beşiktaş",
+      "city": "İstanbul",
+      "address": "",
+      "phones": [
+        "05352066868",
+        "05334749645"
+      ]
+    },
+    {
+      "name": "İstanbul Beykoz",
+      "city": "İstanbul",
+      "address": "Merkez Mahallesi, Fevzi Paşa Caddesi, No:64/4 Kat: 2 Beykoz/İstanbul",
+      "phones": [
+        "02166931175",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Beylikdüzü",
+      "city": "İstanbul",
+      "address": "Kubist İstanbul Park Rez. Adnan Kahveci Mah. Avrupa Cad. No:108/276 Beylikdüzü/istanbul",
+      "phones": [
+        "0212 855 47 34",
+        "0533 392 63 15"
+      ]
+    },
+    {
+      "name": "İstanbul Beyoğlu",
+      "city": "İstanbul",
+      "address": "piyalepaşa mahallesi kuzey Sokak No:19 kat 1 Beyoğlu İstanbul",
+      "phones": [
+        "0535 476 29 83",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Büyükçekmece",
+      "city": "İstanbul",
+      "address": "Dizdariye Mah. İmaret Camii Arkası Sk. No:1 D:4 Büyükçekmece/İstanbul",
+      "phones": [
+        "0 554 590 76 00",
+        "0212 883 08 75"
+      ]
+    },
+    {
+      "name": "İstanbul Çatalca",
+      "city": "İstanbul",
+      "address": "Kaleiçi Mah Kaledışı Sokak Erez Apt No:2/A Çatalca/İstanbul",
+      "phones": [
+        "",
+        "0530 890 81 48"
+      ]
+    },
+    {
+      "name": "İstanbul Çekmeköy",
+      "city": "İstanbul",
+      "address": "Çamlık Mah. Erciyes Sk. 3/5 Çekmeköy İstanbul",
+      "phones": [
+        "0216 642 94 87",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Esenler",
+      "city": "İstanbul",
+      "address": "15 Temmuz Mahallesi Ticaret Caddesi no:116 Futbol Gelişim Merkezi Kat:2 Esenler/İstanbul",
+      "phones": [
+        "0535 953 19 16",
+        "0212 803 87 08"
+      ]
+    },
+    {
+      "name": "İstanbul Esenyurt",
+      "city": "İstanbul",
+      "address": "Bağlarçeşme, Doğan Araslı Blv. No:151/1, 34517 Esenyurt/İstanbul",
+      "phones": [
+        "05344287869",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Eyüp",
+      "city": "İstanbul",
+      "address": "İslambey mah . Durak Sk.  N:15/6 Eyüpsultan",
+      "phones": [
+        "(0212) 600 02 01",
+        "(0212) 600 02 01"
+      ]
+    },
+    {
+      "name": "İstanbul Fatih",
+      "city": "İstanbul",
+      "address": "Balat Mah. Fener Kireçhane Sok. No:10 Kat:2 , 34087 Fatih/İSTANBUL",
+      "phones": [
+        "0506 965 42 04",
+        "2125875332"
+      ]
+    },
+    {
+      "name": "İstanbul Gaziosmanpaşa",
+      "city": "İstanbul",
+      "address": "Merkez mah. Cumhuriyet Meydanı Kamil Yalgın İş merkezi No:23/9 Gaziosmanpaşa/ İstanbul",
+      "phones": [
+        "0212 892 19 88",
+        "0212 892 19 88"
+      ]
+    },
+    {
+      "name": "İstanbul Güngören",
+      "city": "İstanbul",
+      "address": "Mehmet Nezihi Özmen mah.Fatih cad.Ihlamur Sk.No:5 Kat:3\nGüngören/İstanbul",
+      "phones": [
+        "02125567823",
+        "0212 556 7823"
+      ]
+    },
+    {
+      "name": "İstanbul Kadıköy",
+      "city": "İstanbul",
+      "address": "Osmanağa mahallesi General Asım Gündüz Caddesi No:35 Kat:1 D:3 Kadıköy/ İstanbul",
+      "phones": [
+        "02166296441",
+        "05323163838"
+      ]
+    },
+    {
+      "name": "İstanbul Kağıthane",
+      "city": "İstanbul",
+      "address": "",
+      "phones": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Kartal",
+      "city": "İstanbul",
+      "address": "Karlıktepe mah. Soğanlık cad.No:3/2 Kartal",
+      "phones": [
+        "0216 517 2103",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Küçükçekmece",
+      "city": "İstanbul",
+      "address": "Halkalı Caddesi Osmanbey Sokak Şemenoğlu İş Merkezi No:2 Kat:1 D:2  Sefaköy Küçükçekmece/İstanbul",
+      "phones": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Maltepe",
+      "city": "İstanbul",
+      "address": "Bağlarbaşı Mah. Bağdat Cad. No:449/38 Maltepe/ İstanbul",
+      "phones": [
+        "",
+        "02163704210"
+      ]
+    },
+    {
+      "name": "İstanbul Pendik",
+      "city": "İstanbul",
+      "address": "Batı Mah.Vişne Sok. 21/2 Pendik / İSTANBUL",
+      "phones": [
+        "(0216) 3547940",
+        "0 533 550 67 66"
+      ]
+    },
+    {
+      "name": "İstanbul Sancaktepe",
+      "city": "İstanbul",
+      "address": "Abdurrahmangazi mah. Alparslan cad.  Selma Sokak Şeref plaza No:1 D:7 Sancaktepe / İstanbul",
+      "phones": [
+        "0532 345 03 86",
+        "0216 621 40 55"
+      ]
+    },
+    {
+      "name": "İstanbul Sarıyer",
+      "city": "İstanbul",
+      "address": "Maden Mahallesi Kuğu Caddesi No:7/A Sarıyer/İstanbul",
+      "phones": [
+        "0532 266 27 10",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Silivri",
+      "city": "İstanbul",
+      "address": "Selimpaşa Merkez Mahallesi Yeşilay Sokak No:6 Daire:1 Silivri/İstanbul",
+      "phones": [
+        "0212 731 73 28",
+        "0539 311 40 82"
+      ]
+    },
+    {
+      "name": "İstanbul Sultanbeyli",
+      "city": "İstanbul",
+      "address": "Adil Mah. Vahdet Cad. No:13 K:3 Sultanbeyli/ İstanbul",
+      "phones": [
+        "0216 621 40 55",
+        "0533 572 64 53"
+      ]
+    },
+    {
+      "name": "İstanbul Sultangazi",
+      "city": "İstanbul",
+      "address": "Cebeci mahallesi 1. Cebeci yolu no: 2/A kat : 3 Sultangazi İstanbul ",
+      "phones": [
+        "0212 594 29 83",
+        "0212 606 00 28"
+      ]
+    },
+    {
+      "name": "İstanbul Şile",
+      "city": "İstanbul",
+      "address": "Çavuş Mah. Üsküdar Cad. Albayrak Pasajı No:194 Şile Dernekler Federasyonu, Şile/İstanbul",
+      "phones": [
+        "",
+        "0532 462 51 44"
+      ]
+    },
+    {
+      "name": "İstanbul Şişli",
+      "city": "İstanbul",
+      "address": "",
+      "phones": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Tuzla",
+      "city": "İstanbul",
+      "address": "Aydıntepe Mah. Aydınlı Yolu Cd. No:43 Tuzla Belediyesi Şelale Eğitim Parkı Tuzla/İstanbul",
+      "phones": [
+        "0533 764 1180",
+        "0216 395 67 85"
+      ]
+    },
+    {
+      "name": "İstanbul Ümraniye",
+      "city": "İstanbul",
+      "address": "Atatürk Mah. Nefis sok. No:7/4 Ümraniye /İstanbul",
+      "phones": [
+        "0216 520 50 65",
+        "0 532 284 97 70"
+      ]
+    },
+    {
+      "name": "İstanbul Üsküdar",
+      "city": "İstanbul",
+      "address": "Sultantepe Mah. Selmanipak Cad. Alptekin İşhanı No: 21 Kat: 2-3 Üsküdar/İstanbul",
+      "phones": [
+        "0216 201 1292",
+        ""
+      ]
+    },
+    {
+      "name": "İstanbul Zeytinburnu",
+      "city": "İstanbul",
+      "address": "Gökalp Mah. 54/2 Sok. No:2 Zeytinburnu/ İstanbul",
+      "phones": [
+        "0212 558 9405",
+        ""
+      ]
+    },
+    {
+      "name": "İzmir",
+      "city": "İzmir",
+      "address": "Akdeniz Mah. 1343. Sk. No:31 İ.Mumcu İş Merkezi K:2 Konak İzmir",
+      "phones": [
+        "0 232 441 56 61",
+        "0 232 441 56 61"
+      ]
+    },
+    {
+      "name": "Kahramanmaraş",
+      "city": "Kahramanmaraş",
+      "address": "Yusuflar Mah. Hacıarifoğlu Cad. No:6 Daire/2 KOMDER Onikişubat \\ Kahramanmaraş",
+      "phones": [
+        "0505 479 70 22",
+        "yok"
+      ]
+    },
+    {
+      "name": "Karabük",
+      "city": "Karabük",
+      "address": "100.Yıl 28 Evler Mahallesi 1019. Sokak 28 Evler Cami Altı",
+      "phones": [
+        "0370 433 33 93",
+        ""
+      ]
+    },
+    {
+      "name": "Karaman",
+      "city": "Karaman",
+      "address": "Topucak Mah. 62 Sok. No:3  K:1 Merkez/Karaman",
+      "phones": [
+        "0532 568 01 08",
+        "0532 568 01 08"
+      ]
+    },
+    {
+      "name": "Kars",
+      "city": "Kars",
+      "address": "CUMHURİYET MAHALLESİ ŞEHİT YUSUF BEY CADDESİ NO:42 DAİRE :1Merkez/KARS",
+      "phones": [
+        "0474 502 32 18",
+        "04745023218"
+      ]
+    },
+    {
+      "name": "Kastamonu",
+      "city": "Kastamonu",
+      "address": "Ellezler Konağı – Saraçlar                                  Sanat Okulu Cd. No:4 Merkez/Kastamonu",
+      "phones": [
+        "03662137165",
+        "0 544  977 41 36"
+      ]
+    },
+    {
+      "name": "Kayseri",
+      "city": "Kayseri",
+      "address": "Hunat Mahallesi Zenneci Sokak. No:28, Gevremoğlu Konağı Melikgazi/Kayseri",
+      "phones": [
+        "0536 685 19 20",
+        "0536 685 19 20"
+      ]
+    },
+    {
+      "name": "Kırıkkale",
+      "city": "Kırıkkale",
+      "address": "Yeni doğan Mah. Barboros Hayrettin Cad. No:21/1 Çarşı Cami Altı Kırıkkale",
+      "phones": [
+        "0 318 218 34 56",
+        "05055156404 (Başkan Cep)"
+      ]
+    },
+    {
+      "name": "Kırklareli",
+      "city": "Kırklareli",
+      "address": "Karakaş Mah. İstiklal Cad. İl Özel İdare İş Hanı 2. Kat Dış Kapı No:3 İç Kapı No:25/26/27/28  Merkez Kırklareli",
+      "phones": [
+        "02882219814",
+        "05072102901"
+      ]
+    },
+    {
+      "name": "Kırşehir",
+      "city": "Kırşehir",
+      "address": "Yenice Mah. Terme Cad. No:10 Ulucanlar Apt. Kırşehir/Merkez",
+      "phones": [
+        "05558796685",
+        "05439010946"
+      ]
+    },
+    {
+      "name": "Kilis",
+      "city": "Kilis",
+      "address": "Şıh Abdullah Mah. Çorap Ören Sokak No:7 Kilis/Merkez",
+      "phones": [
+        "0543 856 12 00",
+        "0543 856 12 00"
+      ]
+    },
+    {
+      "name": "Kocaeli",
+      "city": "Kocaeli",
+      "address": "Ömerağa Mah. Şahabettin Bilgisu Cad. No:76 İzmit/KOCAELİ",
+      "phones": [
+        "02623211543",
+        "0262 321 15 43"
+      ]
+    },
+    {
+      "name": "Konya",
+      "city": "Konya",
+      "address": "Konevi Mahallesi Alay Caddesi No: 39 Meram KONYA",
+      "phones": [
+        "0555 878 10 31",
+        "0332 321 69 44"
+      ]
+    },
+    {
+      "name": "Kütahya",
+      "city": "Kütahya",
+      "address": "30 Ağustos Mahallesi 1. Bahar Sokak No: 16 Kütahya/Merkez",
+      "phones": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Malatya",
+      "city": "Malatya",
+      "address": "Özalper mah. Yüzük cad. No: 43/ 1 Yeşilyurt/ Malatya",
+      "phones": [
+        "0422 502 04 22",
+        "0422 502 04 22"
+      ]
+    },
+    {
+      "name": "Manisa",
+      "city": "Manisa",
+      "address": "Yarhasanlar mah.2319 Sk. No:12/A D:4 Şehzadeler/ Manisa",
+      "phones": [
+        "0 236 234 7964",
+        "0 236 234 7964"
+      ]
+    },
+    {
+      "name": "Mardin",
+      "city": "Mardin",
+      "address": "Kotek Mahallesi Nusaybin Caddesi Cezaevi Yanı No: 112 Artuklu/Mardin",
+      "phones": [
+        "0482 502 65 78",
+        "0482 502 65 78"
+      ]
+    },
+    {
+      "name": "Mersin",
+      "city": "Mersin",
+      "address": "Bahçe Mahallesi 4601 Nolu sokak No: 10/A-1-2 Akdeniz/MERSİN",
+      "phones": [
+        "05071677401",
+        "05364515796"
+      ]
+    },
+    {
+      "name": "Muğla",
+      "city": "Muğla",
+      "address": "EMİRBEYAZIT MAH. RECAİ GÜRELİ CD. ANI APT.KAT;2,NO: 5 /6 MENTEŞE/MUĞLA",
+      "phones": [
+        "02522144148",
+        "02522144148"
+      ]
+    },
+    {
+      "name": "Muş",
+      "city": "Muş",
+      "address": "SUNAY MAH. ATATÜRK BULVARI DEMİRKENT SİT. A BLOK NO:153 DAİRE NO: 4",
+      "phones": [
+        "0 543 803 10 35",
+        "0 544 745 99 12"
+      ]
+    },
+    {
+      "name": "Nevşehir",
+      "city": "Nevşehir",
+      "address": "Yenimahalle Lise Cad. No:6 Büro No:5 Merkez/Nevşehir",
+      "phones": [
+        "03842142570",
+        "03842142570"
+      ]
+    },
+    {
+      "name": "Niğde",
+      "city": "Niğde",
+      "address": "Yukarı Kayabaşı Mah. Feridun Zeren Caddesi Eski Askeri Gazinosu Merkez NİGDE",
+      "phones": [
+        "0388 213 7297",
+        "0388 213 7297"
+      ]
+    },
+    {
+      "name": "Ordu",
+      "city": "Ordu",
+      "address": "Şarkiye mah.Fatma Hatun. Sok. No:26/1 Altınordu/Ordu",
+      "phones": [
+        "04522251457",
+        "4522251457"
+      ]
+    },
+    {
+      "name": "Osmaniye",
+      "city": "Osmaniye",
+      "address": "Rauf Bey Mah.Adnan Menderes Cad. no21 Doğa Plaza Kat:1 D:3 Merkez/Osmaniye",
+      "phones": [
+        "05309687474",
+        ""
+      ]
+    },
+    {
+      "name": "Rize",
+      "city": "Rize",
+      "address": "Dörtyol Mahallesi,Dörtyol İç Yolu,NO:198A Rize Yeşilay Yaşam Kampüsü Merkez/Rize",
+      "phones": [
+        "0464 213 06 67",
+        "0536 889 00 00"
+      ]
+    },
+    {
+      "name": "Sakarya",
+      "city": "Sakarya",
+      "address": "İstiklal Mah. Sanayi Cad. No:10 K:1 D:6 Serdivan/SAKARYA",
+      "phones": [
+        "02645025785",
+        "05315997637"
+      ]
+    },
+    {
+      "name": "Samsun",
+      "city": "Samsun",
+      "address": "19 Mayıs Mahallesi Hürriyet Sok. No:7 İlkadım\\Samsun",
+      "phones": [
+        "",
+        "5051126230"
+      ]
+    },
+    {
+      "name": "Siirt",
+      "city": "Siirt",
+      "address": "Bahçelievler Mah. Çalapçıkay Cad. No:8 Kızılay İş Hanı K:4 Merkez- Siirt",
+      "phones": [
+        "05443910594",
+        ""
+      ]
+    },
+    {
+      "name": "Sinop",
+      "city": "Sinop",
+      "address": "MEYDAN KAPI MAH. SAKARYA CAD. NO: 10/2 MERKEZ/SİNOP",
+      "phones": [
+        "yok",
+        "yok"
+      ]
+    },
+    {
+      "name": "Sivas",
+      "city": "Sivas",
+      "address": "Camii Kebir Mahallesi Osman Paşa Caddesi Gamzenur Apartmanı 20/1     Sivas/Merkez",
+      "phones": [
+        "03462220724",
+        "5428310350"
+      ]
+    },
+    {
+      "name": "Şanlıurfa",
+      "city": "Şanlıurfa",
+      "address": "Kamberiye Mahallesi, Atatürk Bulvarı, No57 Haliliye/Şanlıurfa",
+      "phones": [
+        "0414  316 16 57",
+        "0551 509 19 20"
+      ]
+    },
+    {
+      "name": "Şırnak",
+      "city": "Şırnak",
+      "address": "Cumhuriyet Mah. Şh. Dr. Ulucan Dayan Cad. (AB1-1) No:2 D:3 Şırnak/Merkez",
+      "phones": [
+        "04865029618",
+        "05422218269"
+      ]
+    },
+    {
+      "name": "Tekirdağ",
+      "city": "Tekirdağ",
+      "address": "Hürriyet Mah. Şehit Şaban Öztürk Sk. No: 3-2/A",
+      "phones": [
+        "0 282 263 20 71",
+        "0 532 732 87 97"
+      ]
+    },
+    {
+      "name": "Tokat",
+      "city": "Tokat",
+      "address": "Alipaşa Mah. Cumhuriyet Cad. 1. Sokak No:1/A K:2 Merkez/Tokat",
+      "phones": [
+        "03562172050",
+        "5468700660"
+      ]
+    },
+    {
+      "name": "Trabzon",
+      "city": "Trabzon",
+      "address": "Çarşı Mah. Maraş Cad. Emek Apt. No:45 Kat:2 Ortahisar/Trabzon",
+      "phones": [
+        "0 462 326 71 20",
+        "0 532 573 39 19"
+      ]
+    },
+    {
+      "name": "Tunceli",
+      "city": "Tunceli",
+      "address": "Moğultay Mahallesi Sanat Sokak Kardeşler İş Merkezi 10/42 Tunceli Merkez",
+      "phones": [
+        "04282124299",
+        "04282124299"
+      ]
+    },
+    {
+      "name": "Uşak",
+      "city": "Uşak",
+      "address": "Karağaç Mah. Gediz Uluyolu No:61 Tarihi Karagaç Evi Merkez/Uşak",
+      "phones": [
+        "0276 502 48 26",
+        "05326613960"
+      ]
+    },
+    {
+      "name": "Van",
+      "city": "Van",
+      "address": "Şerefiye Mah. Mareşal Fevzi Çakmak Cad. Caner İş Merkezi  Kat :3 No:322",
+      "phones": [
+        "04324865751",
+        "04324865751"
+      ]
+    },
+    {
+      "name": "Yalova",
+      "city": "Yalova",
+      "address": "Süleymanbey Mah. İstiklal Cad. No: 9/2 Merkez/YALOVA",
+      "phones": [
+        "02268146284",
+        "05322212439"
+      ]
+    },
+    {
+      "name": "Yozgat",
+      "city": "Yozgat",
+      "address": "Medrese Mah. Lise Cad. Saat Kulesi Karşısı Özel İdare İş Hanı Kat:1 No :1 YOZGAT",
+      "phones": [
+        "(0354) 212 57 22",
+        "(0354) 212 57 22"
+      ]
+    },
+    {
+      "name": "Zonguldak",
+      "city": "Zonguldak",
+      "address": "Mithatpaşa Mahallesi Defterdar Sokak 12 Katlı İş Merkezi Kat:6 No:79, Zonguldak/ Merkez",
+      "phones": [
+        "03722511607",
+        "05303291114"
+      ]
+    }
+  ],
+  "bursa": [
+    {
+      "name": "Gemlik Belediyesi",
+      "phone_raw": "444 16 05",
+      "website": "http://www.gemlik.bel.tr "
+    },
+    {
+      "name": "İnegöl Belediyesi",
+      "phone_raw": "0224 715 10 10",
+      "website": "http://www.inegol.bel.tr/ "
+    },
+    {
+      "name": "Nilüfer Belediyesi",
+      "phone_raw": "444 16 03",
+      "website": "http://www.nilufer.bel.tr "
+    },
+    {
+      "name": "Osmangazi Belediyesi",
+      "phone_raw": "444 16 01",
+      "website": "http://www.osmangazi.bel.tr/ "
+    },
+    {
+      "name": "Yıldırım Belediyesi",
+      "phone_raw": "444 16 02",
+      "website": "http://www.yildirim.bel.tr/ "
+    }
+  ],
+  "sources": {
+    "municipalities": "https://ibb.istanbul/ibb/belediye-hakkinda/yetki-alani/",
+    "yesilay": "https://www.yesilay.org.tr/subeler/",
+    "bursa": "https://www.bursa.bel.tr/rehber"
+  }
+}

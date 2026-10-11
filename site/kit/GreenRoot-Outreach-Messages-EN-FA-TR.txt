@@ -1,0 +1,42 @@
+GREENROOT | FIRST CONTACT MESSAGES
+Source-backed concept outreach; no automatic sending. Replace every bracketed placeholder.
+
+========== EN ==========
+
+Subject: A 20-minute introduction — recovery + paid green work pilot
+
+Hello [organization/team],
+I’m [name], developing GreenRoot: a concept linking addiction recovery support with safe, paid green work and transparent recycling income.
+We are seeking a small local collaboration in [city/district], not claiming proven results or existing partnerships. Clinical care must stay independent of work output; participation would be voluntary, with lawful wages and professional safety oversight.
+Could we arrange a 20-minute introduction to discuss [one specific ask relevant to your organization] and whether this fits your remit?
+Concept note: https://greenroot-af0.pages.dev/program
+Partner research directory: https://greenroot-af0.pages.dev/partners
+Thank you,
+[name / role / public contact]
+
+========== FA ==========
+
+موضوع: جلسه آشنایی ۲۰ دقیقه‌ای — پایلوت بهبودی و کار سبز با مزد
+
+سلام به [نام مجموعه/تیم]،
+من [نام] هستم و روی ایده گرین‌روت کار می‌کنم: پیوند حمایت از بهبودی اعتیاد با کار سبز ایمن و با مزد و درآمد شفاف بازیافت.
+برای [شهر/منطقه] به دنبال یک همکاری کوچک محلی هستیم؛ نه ادعای نتیجه اثبات‌شده داریم و نه شریک تأییدشده. درمان باید مستقل از میزان کار بماند و مشارکت با رضایت، مزد قانونی و نظارت حرفه‌ای ایمنی انجام شود.
+آیا امکان یک جلسه آشنایی ۲۰ دقیقه‌ای برای بررسی [یک درخواست مشخص مرتبط با مجموعه] و تناسب آن با حوزه فعالیت شما وجود دارد؟
+معرفی ایده: https://greenroot-af0.pages.dev/program
+بانک بررسی همکاران: https://greenroot-af0.pages.dev/partners?lang=fa
+با سپاس،
+[نام / نقش / راه تماس عمومی]
+
+========== TR ==========
+
+Konu: 20 dakikalık tanışma — toparlanma + ücretli yeşil iş pilotu
+
+Merhaba [kurum/ekip],
+Ben [ad], bağımlılıktan toparlanma desteğini güvenli, ücretli yeşil işler ve şeffaf geri dönüşüm geliriyle ilişkilendiren GreenRoot konsepti üzerinde çalışıyorum.
+[İl/ilçe] için küçük bir yerel iş birliği arıyoruz; kanıtlanmış sonuç veya mevcut ortaklık iddiasında bulunmuyoruz. Klinik bakım iş çıktısından bağımsız kalmalı; katılım gönüllü olmalı, yasal ücret ve profesyonel güvenlik gözetimi sağlanmalıdır.
+[Kurumla ilgili tek somut talep] ve bunun görev alanınıza uyumunu görüşmek için 20 dakikalık bir tanışma mümkün mü?
+Konsept: https://greenroot-af0.pages.dev/program
+Aday iş birliği rehberi: https://greenroot-af0.pages.dev/partners?lang=tr
+Teşekkürler,
+[ad / rol / kamuya açık iletişim]
+

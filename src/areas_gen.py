@@ -105,6 +105,7 @@ HEAD = '''<!doctype html>
       <a href="dashboard.html" data-i18n="nav.impact">Impact</a>
       <a href="cop31.html" data-i18n="nav.cop31">COP31</a>
       <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a>
+      <a href="partners.html" data-i18n="nav.partners">Partner finder</a>
       <a href="join.html" data-i18n="nav.join">Join</a>
     </nav>
     <div class="nav-actions">
@@ -157,7 +158,8 @@ HEAD = '''<!doctype html>
       <div>
         <h4 data-i18n="footer.links">Explore</h4>
         <p><a href="science.html" data-i18n="nav.science">Science</a> · <a href="program.html" data-i18n="nav.program">Program</a> · <a href="ai.html" data-i18n="nav.ai">AI companion</a></p>
-        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a> · <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a></p>
+        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a> · <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a>
+      <a href="partners.html" data-i18n="nav.partners">Partner finder</a></p>
       </div>
       <div>
         <h4 data-i18n="footer.contact">Contact</h4>
