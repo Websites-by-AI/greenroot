@@ -464,4 +464,59 @@ function initJoin(){
     f.querySelector("button[type=submit]").disabled = true;
   });
 }
+
+/* ============================================================
+   UX pass: progress bar, back-to-top, mobile CTA, share, a11y
+============================================================ */
+document.addEventListener("DOMContentLoaded", function(){
+  safe(function(){
+    /* scroll progress + back-to-top visibility */
+    var bar = document.createElement("div"); bar.id = "progress"; bar.setAttribute("aria-hidden","true");
+    document.body.appendChild(bar);
+    var top = document.createElement("button"); top.id = "toTop"; top.type = "button";
+    top.setAttribute("aria-label", lang==="fa" ? "بازگشت به بالا" : (lang==="tr" ? "Yukarı dön" : "Back to top"));
+    top.innerHTML = "&#8593;";
+    top.addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+    document.body.appendChild(top);
+    var upd = function(){
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max>0 ? (h.scrollTop/max)*100 : 0) + "%";
+      top.classList.toggle("show", h.scrollTop > 600);
+    };
+    document.addEventListener("scroll", upd, {passive:true});
+    upd();
+
+    /* sticky mobile CTA */
+    if (window.matchMedia && window.matchMedia("(max-width:660px)").matches && !document.querySelector(".mobile-cta")){
+      var cta = document.createElement("div"); cta.className = "mobile-cta";
+      var j = document.createElement("a"); j.className="btn small"; j.href="join.html"; j.innerHTML="🌱 "+t("nav.cta");
+      var p = document.createElement("a"); p.className="btn small ghost"; p.href="podcast.html"; p.innerHTML="🎧 "+t("nav.podcast");
+      p.style.border = "1.5px solid rgba(217,249,157,.5)"; p.style.background="rgba(255,255,255,.08)";
+      cta.appendChild(j); cta.appendChild(p);
+      document.body.appendChild(cta);
+    }
+
+    /* share / copy-link buttons */
+    document.querySelectorAll("[data-share]").forEach(function(b){
+      b.addEventListener("click", function(){
+        var url = location.href.split("#")[0];
+        var span = b.querySelector("span");
+        if (navigator.share){
+          navigator.share({title:document.title, url:url}).catch(function(){});
+        } else if (navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(url).then(function(){
+            if (span){ var old=span.textContent; span.textContent="✓ "+t("pod.copied");
+              setTimeout(function(){ span.textContent=old; },1800); }
+          }).catch(function(){});
+        }
+      });
+    });
+
+    /* burger a11y */
+    var burger = document.getElementById("burger");
+    if (burger) burger.setAttribute("aria-expanded","false");
+  });
+});
+
 })();
