@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upload to HF Space
+      - name: Upload to HF Space (Python API)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           pip install -U huggingface_hub
-          huggingface-cli upload SoSa123456/greenroot site --repo-type=space --commit-message="auto-sync from GitHub (Websites-by-AI/greenroot)"
+          python3 -c "from huggingface_hub import HfApi; import os; api=HfApi(token=os.environ['HF_TOKEN']); api.upload_folder(folder_path='site', repo_id='SoSa123456/greenroot', repo_type='space', commit_message='auto-sync from GitHub (Websites-by-AI/greenroot)')"
