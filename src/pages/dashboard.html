@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impact dashboard — GreenRoot</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='88'>%F0%9F%8C%B1</text></svg>">
+<!--STYLE-->
+</head>
+<body data-page="dashboard">
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="#0B3B2A"/><path d="M24 38c0-9 2-14 9-19-1 8-3 13-9 19Z" fill="#A3E635"/><path d="M24 38c0-9-2-14-9-19 1 8 3 13 9 19Z" fill="#4ADE80"/><path d="M24 38V22" stroke="#D9F99D" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>GreenRoot</span>
+    </a>
+    <nav class="links" id="links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="science.html" data-i18n="nav.science">Science</a>
+      <a href="program.html" data-i18n="nav.program">Program</a>
+      <a href="ai.html" data-i18n="nav.ai">AI companion</a>
+      <a href="dashboard.html" data-i18n="nav.impact">Impact</a>
+      <a href="cop31.html" data-i18n="nav.cop31">COP31</a>
+      <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a>
+      <a href="join.html" data-i18n="nav.join">Join</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-sw"><button class="lang on" data-lang="en" type="button">EN</button><button class="lang" data-lang="fa" type="button">فا</button><button class="lang" data-lang="tr" type="button">TR</button></div>
+      <a class="btn small" href="join.html" data-i18n="nav.cta">Join the pilot</a>
+      <button class="burger" id="burger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <span class="badge dark" data-i18n="dash.hero.badge">📊 Demo data — pilot concept</span>
+    <h1 data-i18n="dash.hero.h1" style="margin-top:14px">Impact dashboard</h1>
+    <p class="lead" data-i18n="dash.hero.p">Recovery is only real if you can measure it. This dashboard shows the numbers GreenRoot publishes for every cohort — here with demo data.</p>
+  </div>
+</section>
+
+<!-- Big stats -->
+<section>
+  <div class="container">
+    <div class="band rv">
+      <div class="grid g4 center">
+        <div class="stat"><span class="n" data-count="120" data-suffix="">0</span><div class="l" data-i18n="dash.s1">People in program</div></div>
+        <div class="stat"><span class="n" data-count="18400" data-suffix=" kg">0</span><div class="l" data-i18n="dash.s2">Waste collected</div></div>
+        <div class="stat"><span class="n amber" data-count="41000" data-prefix="€">0</span><div class="l" data-i18n="dash.s3">To therapy &amp; medicine</div></div>
+        <div class="stat"><span class="n amber" data-count="3200" data-suffix="">0</span><div class="l" data-i18n="dash.s4">Medical items produced</div></div>
+      </div>
+      <div class="grid g4 center mt">
+        <div class="stat"><span class="n" data-count="31" data-suffix="%">0</span><div class="l" data-i18n="dash.s5">GreenRoot 6-month relapse*</div></div>
+        <div class="stat"><span class="n" data-count="60" data-suffix="%">0</span><div class="l" data-i18n="dash.s6">Typical 6-month relapse*</div></div>
+        <div class="stat"><span class="n" data-count="26" data-suffix=" t">0</span><div class="l" data-i18n="dash.s7">CO₂e saved by recycling</div></div>
+        <div class="stat"><span class="n" data-count="87" data-suffix="%">0</span><div class="l" data-i18n="dash.s8">Program completion</div></div>
+      </div>
+      <p class="center small mt-s" style="color:#9DBCA8" data-i18n="dash.note">*Illustrative comparison: internal pilot cohort vs. commonly reported 6-month relapse ranges. Demo figures, not clinical claims.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Charts -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="grid g2">
+      <div class="panel rv">
+        <h3 data-i18n="dash.ch1.t">Monthly collection (kg)</h3>
+        <p class="sub" data-i18n="dash.ch1.s">Crew output grows as recovery grows — momentum you can weigh.</p>
+        <div id="chartMonthly" dir="ltr"></div>
+      </div>
+      <div class="panel rv">
+        <h3 data-i18n="dash.ch2.t">Waste mix (%)</h3>
+        <p class="sub" data-i18n="dash.ch2.s">What the crews collect — and what each stream becomes.</p>
+        <div id="chartMix" dir="ltr"></div>
+        <div class="legend" id="mixLegend"></div>
+      </div>
+      <div class="panel rv">
+        <h3 data-i18n="dash.ch3.t">Treatment fund allocation</h3>
+        <p class="sub" data-i18n="dash.ch3.s">Where the recycling money goes, per month (demo).</p>
+        <div id="chartFund" dir="ltr"></div>
+      </div>
+      <div class="panel rv">
+        <h3 data-i18n="dash.ch4.t">Monthly report — pilot cohort</h3>
+        <p class="sub" data-i18n="dash.ch4.s">Published openly every month.</p>
+        <div style="overflow-x:auto"><table class="tbl" style="box-shadow:none">
+          <thead><tr><th data-i18n="dash.ch4.th1">Month</th><th data-i18n="dash.ch4.th2">Active</th><th data-i18n="dash.ch4.th3">kg</th><th data-i18n="dash.ch4.th4">Fund (€)</th></tr></thead>
+          <tbody id="reportBody"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transparency -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="grid g3">
+      <div class="card rv"><div class="ic green">🧾</div><h3 data-i18n="dash.tr.c1t">Open budget</h3><p data-i18n="dash.tr.c1p">Every euro of recycling revenue is traced: wages, treatment fund, operations. Published monthly.</p></div>
+      <div class="card rv"><div class="ic amber">🔍</div><h3 data-i18n="dash.tr.c2t">Independent evaluation</h3><p data-i18n="dash.tr.c2p">Health outcomes are assessed with university partners, not by us alone.</p></div>
+      <div class="card rv"><div class="ic teal">🛡️</div><h3 data-i18n="dash.tr.c3t">Privacy-safe metrics</h3><p data-i18n="dash.tr.c3p">All participant data is aggregated and anonymized. No individual is ever visible in these numbers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-band rv">
+      <h2 data-i18n="dash.cta.h2">Want this dashboard for your city?</h2>
+      <p data-i18n="dash.cta.p">Municipalities, waste companies and clinics: let's build a cohort together.</p>
+      <a class="btn" href="join.html" data-i18n="dash.cta.b">Partner with us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid g3">
+      <div>
+        <div class="fbrand"><svg class="logo" viewBox="0 0 48 48" fill="none" width="34" height="34"><circle cx="24" cy="24" r="23" fill="#0E4D36"/><path d="M24 38c0-9 2-14 9-19-1 8-3 13-9 19Z" fill="#A3E635"/><path d="M24 38c0-9-2-14-9-19 1 8 3 13 9 19Z" fill="#4ADE80"/><path d="M24 38V22" stroke="#D9F99D" stroke-width="2" stroke-linecap="round"/></svg>GreenRoot</div>
+        <p data-i18n="footer.tag">Healing people, healing the planet — recovery through environmental work, funded by recycling, guided by AI.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Explore</h4>
+        <p><a href="science.html" data-i18n="nav.science">Science</a> · <a href="program.html" data-i18n="nav.program">Program</a> · <a href="ai.html" data-i18n="nav.ai">AI companion</a></p>
+        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a>
+      <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Areas</a> · <a href="join.html" data-i18n="nav.join">Join</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <p>hello@greenroot.example</p>
+        <p data-i18n="footer.contact2">Frankfurt · Tehran (pilot cities)</p>
+      </div>
+    </div>
+    <p class="disclaimer" data-i18n="footer.disclaimer">GreenRoot is a concept prototype. Nothing on this site is medical advice. Addiction is a medical condition — always work with qualified doctors and licensed treatment services. In an emergency, contact your local emergency number.</p>
+    <p class="copy">© <span id="year">2026</span> GreenRoot.</p>
+  </div>
+</footer>
+
+<!--APP-->
+</body>
+</html>

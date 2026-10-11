@@ -1,0 +1,17 @@
+name: Sync site to Hugging Face Space
+on:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload to HF Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install -U huggingface_hub
+          huggingface-cli upload SoSa123456/greenroot site --repo-type=space --commit-message="auto-sync from GitHub (Websites-by-AI/greenroot)"

@@ -1,0 +1,2128 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raha, the AI companion — GreenRoot</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='88'>%F0%9F%8C%B1</text></svg>">
+<style>
+/* ============ GreenRoot design system ============ */
+:root{
+  --bg:#F6F8F3; --card:#FFFFFF; --ink:#0C2318; --muted:#54685C; --line:#E2E9DD;
+  --green:#16A34A; --green-soft:#DCFCE7; --deep:#0B3B2A; --deep-2:#0E4D36; --darker:#07271C;
+  --lime:#A3E635; --amber:#F59E0B; --amber-soft:#FEF3C7; --teal:#0D9488; --teal-soft:#CCFBF1;
+  --red:#E11D48;
+  --r:20px; --r-sm:12px;
+  --shadow:0 10px 30px rgba(7,39,28,.08);
+  --shadow-lg:0 24px 60px rgba(7,39,28,.16);
+  --font-en:'Segoe UI',system-ui,-apple-system,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+  --font-fa:'Vazirmatn','Vazir',Tahoma,'Segoe UI',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-en);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+html[lang="fa"] body{font-family:var(--font-fa);line-height:1.95}
+img,svg{max-width:100%;vertical-align:middle}
+a{color:var(--green);text-decoration:none}
+a:hover{opacity:.85}
+h1,h2,h3,h4{line-height:1.25;font-weight:800;letter-spacing:-.01em}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3{letter-spacing:0}
+.container{max-width:1140px;margin-inline:auto;padding-inline:22px}
+section{padding-block:78px}
+.kicker{display:inline-block;color:var(--green);font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.kicker.light{color:var(--lime)}
+h2.title{font-size:clamp(26px,3.6vw,38px);margin-bottom:14px}
+p.lead{font-size:18.5px;color:var(--muted);max-width:760px}
+.center{text-align:center}
+.center p.lead{margin-inline:auto}
+.muted{color:var(--muted)}
+.small{font-size:13.5px}
+.mt{margin-top:26px}.mt-s{margin-top:14px}.mb-s{margin-bottom:12px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--green-soft);color:#166534;border:1px solid #BBF7D0;padding:4px 12px;border-radius:999px;font-size:12.5px;font-weight:700}
+.badge.amber{background:var(--amber-soft);color:#92400E;border-color:#FDE68A}
+.badge.teal{background:var(--teal-soft);color:#115E59;border-color:#99F6E4}
+.badge.dark{background:rgba(255,255,255,.12);color:#D9F99D;border-color:rgba(217,249,157,.3)}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#22C55E,#15803D);color:#fff;font-weight:700;font-size:15.5px;padding:13px 26px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 8px 22px rgba(22,163,74,.35);transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(22,163,74,.42);opacity:1}
+.btn.ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.45);box-shadow:none;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.16)}
+.btn.outline{background:#fff;border:1.5px solid var(--line);color:var(--ink);box-shadow:none}
+.btn.small{padding:9px 18px;font-size:13.5px}
+
+/* ============ Nav ============ */
+.nav{position:sticky;top:0;z-index:60;background:rgba(246,248,243,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--deep)}
+.brand .logo{width:36px;height:36px;flex:0 0 auto}
+.nav .links{display:flex;gap:4px;margin-inline-start:auto}
+.nav .links a{color:var(--ink);font-weight:600;font-size:14.5px;padding:8px 13px;border-radius:999px;transition:background .15s}
+.nav .links a:hover{background:var(--green-soft);opacity:1}
+.nav .links a.active{background:var(--deep);color:#D9F99D}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:800;font-size:13.5px;cursor:pointer;color:var(--deep);font-family:inherit;transition:border-color .15s}
+.lang:hover{border-color:var(--green)}
+.lang-sw{display:flex;gap:4px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:3px}
+.lang-sw .lang{border:0;padding:6px 12px;font-size:12.5px;border-radius:999px;background:transparent}
+.lang-sw .lang.on{background:var(--deep);color:#D9F99D}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2.5px;background:var(--deep);margin:5px 0;border-radius:2px;transition:.2s}
+.nav.open .links{display:flex;position:absolute;top:68px;inset-inline:0;background:#fff;flex-direction:column;padding:14px 22px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.nav.open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ============ Hero ============ */
+.hero{position:relative;background:linear-gradient(160deg,var(--deep) 0%,var(--darker) 100%);color:#fff;overflow:hidden;padding-block:0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 380px at 82% 12%,rgba(163,230,53,.14),transparent 60%),
+  radial-gradient(600px 420px at 8% 90%,rgba(13,148,136,.2),transparent 60%)}
+.hero .container{position:relative;padding-block:86px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(32px,4.6vw,52px);margin:10px 0 18px}
+.hero .lead{color:#C8E6CF;font-size:18.5px;max-width:560px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:10px 16px;font-size:13.5px;color:#D1FAE5}
+.chip b{color:#BEF264;display:block;font-size:17px}
+.loop-wrap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:30px 22px;backdrop-filter:blur(6px)}
+.loop-wrap h3{font-size:15px;text-align:center;margin-bottom:6px;color:#D9F99D}
+.loop{position:relative;width:min(330px,100%);aspect-ratio:1;margin:10px auto 0;direction:ltr}
+.loop svg.ring{position:absolute;inset:0}
+.loop .node{position:absolute;width:92px;text-align:center;transform:translate(-50%,-50%)}
+.loop .node .ic{width:58px;height:58px;margin:0 auto 6px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.28)}
+.loop .node span{font-size:12.5px;font-weight:700;color:#ECFDF5;display:block}
+.loop .node.n1{left:50%;top:9%}.loop .node.n2{left:91%;top:50%}
+.loop .node.n3{left:50%;top:91%}.loop .node.n4{left:9%;top:50%}
+
+/* ============ Cards & grids ============ */
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px}
+.ic.green{background:var(--green-soft)}.ic.amber{background:var(--amber-soft)}.ic.teal{background:var(--teal-soft)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{margin:10px 0 0;padding-inline-start:20px;color:var(--muted);font-size:15px}
+.card ul li{margin-bottom:7px}
+
+/* ============ Steps / timeline ============ */
+.steps{counter-reset:st;display:grid;gap:18px}
+.step{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;box-shadow:var(--shadow);align-items:flex-start}
+.step .num{counter-increment:st;flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#22C55E,#15803D);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .num::before{content:counter(st)}
+.step h3{font-size:17.5px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+.step .when{font-size:12.5px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;display:block}
+
+/* ============ Stats band ============ */
+.band{background:linear-gradient(135deg,var(--deep-2),var(--deep));border-radius:26px;color:#fff;padding:44px 38px;box-shadow:var(--shadow-lg)}
+.band .grid{gap:26px}
+.stat .n{font-size:clamp(28px,3.4vw,40px);font-weight:800;color:#BEF264;direction:ltr;display:inline-block}
+.stat .n.amber{color:#FCD34D}
+.stat .l{font-size:13.5px;color:#C8E6CF;margin-top:4px}
+
+/* ============ Tables ============ */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);font-size:14.5px}
+.tbl th{background:var(--deep);color:#D9F99D;text-align:start;padding:14px 18px;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+.tbl td{padding:14px 18px;border-top:1px solid var(--line);color:var(--ink)}
+.tbl tr:nth-child(even) td{background:#FAFCF8}
+.tbl td:first-child{font-weight:700}
+
+/* ============ Loop infographic (science) ============ */
+.flow{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;justify-content:center}
+.flow .f{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;text-align:center;flex:1 1 150px;max-width:200px;box-shadow:var(--shadow)}
+.flow .f .e{font-size:30px}
+.flow .f b{display:block;font-size:14px;margin-top:6px}
+.flow .f small{color:var(--muted);font-size:12px;line-height:1.5;display:block;margin-top:3px}
+.flow .arr{align-self:center;font-size:22px;color:var(--green);font-weight:800}
+
+/* ============ Chat ============ */
+.chat-shell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow-lg);overflow:hidden;max-width:680px;margin-inline:auto}
+.chat-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--deep-2),var(--deep));padding:16px 22px;color:#fff}
+.avatar{width:44px;height:44px;border-radius:50%;background:#D9F99D;display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 auto}
+.chat-head b{font-size:16px}
+.chat-head small{display:block;color:#A7D7B5;font-size:12px}
+.chat-head .dot{margin-inline-start:auto;width:9px;height:9px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
+.chat-body{height:380px;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;background:#FBFDF9}
+.msg{max-width:78%;padding:11px 16px;border-radius:18px;font-size:14.5px;line-height:1.55;white-space:pre-line}
+.msg.bot{background:#EEF6EC;color:var(--ink);border-start-start-radius:4px;align-self:flex-start}
+.msg.user{background:linear-gradient(135deg,#22C55E,#15803D);color:#fff;border-start-end-radius:4px;align-self:flex-end}
+.msg.typing span{display:inline-block;width:7px;height:7px;background:#94A88F;border-radius:50%;margin-inline-end:3px;animation:blink 1.2s infinite}
+.msg.typing span:nth-child(2){animation-delay:.2s}.msg.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.chat-chips{display:flex;gap:8px;flex-wrap:wrap;padding:12px 18px 4px;background:#fff}
+.chat-chips button{background:var(--green-soft);color:#166534;border:1px solid #BBF7D0;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.chat-chips button:hover{background:#BBF7D0}
+.chat-input{display:flex;gap:10px;padding:14px 18px 18px;background:#fff}
+.chat-input input{flex:1;border:1.5px solid var(--line);border-radius:999px;padding:12px 20px;font-size:14.5px;font-family:inherit;outline:none;background:#FBFDF9}
+.chat-input input:focus{border-color:var(--green)}
+.chat-input button{border-radius:999px;padding:0 22px}
+
+/* ============ Career widget / selects / forms ============ */
+.picker{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+.picker button{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink);transition:.15s}
+.picker button:hover{border-color:var(--green)}
+.picker button.on{background:var(--deep);color:#D9F99D;border-color:var(--deep)}
+.plan{max-width:640px;margin-inline:auto;text-align:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.plan h4{margin-bottom:12px;color:var(--deep)}
+.plan ol{padding-inline-start:22px;color:var(--muted);font-size:15px}
+.plan ol li{margin-bottom:9px}
+form .frow{margin-bottom:16px}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select,form textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 16px;font-size:15px;font-family:inherit;background:#fff;outline:none;color:var(--ink)}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--green)}
+.form-ok{display:none;background:var(--green-soft);border:1px solid #BBF7D0;color:#166534;border-radius:14px;padding:16px 20px;font-weight:600;margin-top:14px}
+
+/* ============ Accordion ============ */
+details.faq{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 22px;margin-bottom:12px;box-shadow:var(--shadow)}
+details.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:18px 0;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";font-size:22px;color:var(--green);font-weight:400}
+details.faq[open] summary::after{content:"–"}
+details.faq p{color:var(--muted);font-size:14.5px;padding-bottom:18px}
+
+/* ============ Charts / mood ============ */
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.panel h3{font-size:16.5px;margin-bottom:4px}
+.panel .sub{font-size:13px;color:var(--muted);margin-bottom:16px}
+.mood-row{display:flex;gap:10px;justify-content:center;margin:16px 0}
+.mood-row button{font-size:26px;background:#fff;border:1.5px solid var(--line);border-radius:14px;width:54px;height:54px;cursor:pointer;transition:.15s}
+.mood-row button:hover{transform:scale(1.12);border-color:var(--green)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-inline-end:6px}
+
+/* ============ CTA ============ */
+.cta-band{background:linear-gradient(135deg,var(--deep-2),var(--darker));border-radius:30px;color:#fff;text-align:center;padding:64px 34px;position:relative;overflow:hidden}
+.cta-band h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:12px}
+.cta-band p{color:#C8E6CF;max-width:600px;margin:0 auto 26px}
+
+/* ============ Footer ============ */
+footer{background:var(--darker);color:#9DBCA8;margin-top:40px;padding:56px 0 30px;font-size:14px}
+footer .grid{gap:34px}
+footer h4{color:#D9F99D;font-size:15px;margin-bottom:12px}
+footer a{color:#C8E6CF}
+footer .fbrand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:19px;margin-bottom:12px}
+footer .disclaimer{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;font-size:12.5px;color:#7FA18D;line-height:1.7}
+footer .copy{margin-top:10px;font-size:13px}
+
+/* ============ Reveal animation ============ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ============ Responsive ============ */
+@media(max-width:960px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .loop-wrap{max-width:420px;margin-inline:auto}
+}
+@media(max-width:660px){
+  .nav .links{display:none}
+  .burger{display:block}
+  .nav .links a.active{background:var(--green-soft);color:#166534}
+  .g3,.g2,.g4{grid-template-columns:1fr}
+  section{padding-block:56px}
+  .hero .container{padding-block:56px}
+  .band{padding:32px 24px}
+  .chat-body{height:320px}
+}
+
+</style>
+</head>
+<body data-page="ai">
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="#0B3B2A"/><path d="M24 38c0-9 2-14 9-19-1 8-3 13-9 19Z" fill="#A3E635"/><path d="M24 38c0-9-2-14-9-19 1 8 3 13 9 19Z" fill="#4ADE80"/><path d="M24 38V22" stroke="#D9F99D" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>GreenRoot</span>
+    </a>
+    <nav class="links" id="links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="science.html" data-i18n="nav.science">Science</a>
+      <a href="program.html" data-i18n="nav.program">Program</a>
+      <a href="ai.html" data-i18n="nav.ai">AI companion</a>
+      <a href="dashboard.html" data-i18n="nav.impact">Impact</a>
+      <a href="cop31.html" data-i18n="nav.cop31">COP31</a>
+      <a href="areas.html" data-i18n="nav.areas">Istanbul areas</a>
+      <a href="join.html" data-i18n="nav.join">Join</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-sw"><button class="lang on" data-lang="en" type="button">EN</button><button class="lang" data-lang="fa" type="button">فا</button><button class="lang" data-lang="tr" type="button">TR</button></div>
+      <a class="btn small" href="join.html" data-i18n="nav.cta">Join the pilot</a>
+      <button class="burger" id="burger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="kicker light" data-i18n="ai.hero.kicker">AI that walks beside you</span>
+      <h1 data-i18n="ai.hero.h1">Meet Raha</h1>
+      <p class="lead" data-i18n="ai.hero.p">Raha (رهاء — "freedom") is GreenRoot's AI recovery companion: a craving coach in the hard moments, a mood tracker between sessions, and a career guide that leads you back to the job you had before addiction.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#demo" data-i18n="ai.hero.cta1">Try the demo chat</a>
+        <a class="btn ghost" href="#career" data-i18n="ai.hero.cta2">Career rewind demo</a>
+      </div>
+    </div>
+    <div class="loop-wrap center">
+      <div style="font-size:64px;margin:8px 0 4px">🤖</div>
+      <p class="lead" style="font-size:15.5px;color:#C8E6CF" data-i18n="ai.hero.side">"Cravings last about 20 minutes. You never have to face one alone."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section>
+  <div class="container">
+    <div class="center rv">
+      <span class="kicker" data-i18n="ai.f.kicker">What Raha does</span>
+      <h2 class="title" data-i18n="ai.f.h2">Six jobs, one companion</h2>
+    </div>
+    <div class="grid g3 mt">
+      <div class="card rv"><div class="ic teal">🆘</div><h3 data-i18n="ai.f.c1t">Craving SOS</h3><p data-i18n="ai.f.c1p">Urge-surfing coach, breathing exercises and a delay timer — plus one-tap call to your buddy or counselor when it's too much.</p></div>
+      <div class="card rv"><div class="ic green">📊</div><h3 data-i18n="ai.f.c2t">Mood &amp; relapse watch</h3><p data-i18n="ai.f.c2p">Daily 30-second check-ins. Raha spots risky patterns — bad sleep, missed shifts, isolation — and alerts your counselor (only if you opt in).</p></div>
+      <div class="card rv"><div class="ic amber">🪙</div><h3 data-i18n="ai.f.c3t">Token wallet &amp; goals</h3><p data-i18n="ai.f.c3p">See tokens earned per shift, set goals (a course, a bicycle, family gifts) and celebrate milestones — small wins, wired into the habit loop.</p></div>
+      <div class="card rv"><div class="ic green">💼</div><h3 data-i18n="ai.f.c4t">Career rewind</h3><p data-i18n="ai.f.c4p">The signature feature: Raha maps the job you had before addiction, finds your skill gaps, builds a refresh plan and practises interviews with you.</p></div>
+      <div class="card rv"><div class="ic teal">👨‍👩‍👧</div><h3 data-i18n="ai.f.c5t">Family bridge</h3><p data-i18n="ai.f.c5p">Opt-in updates for family: milestones reached, shifts worked, mood trends — rebuilding trust with facts, not promises.</p></div>
+      <div class="card rv"><div class="ic amber">🔐</div><h3 data-i18n="ai.f.c6t">Private by design</h3><p data-i18n="ai.f.c6p">Your data belongs to you. Encrypted, opt-in for every share, never shared with police or employers. Delete everything with one tap.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Chat demo -->
+<section id="demo" style="background:#EFF5EA">
+  <div class="container">
+    <div class="center rv">
+      <span class="kicker" data-i18n="ai.demo.kicker">Interactive demo</span>
+      <h2 class="title" data-i18n="ai.demo.h2">Talk to Raha (prototype)</h2>
+      <p class="lead" data-i18n="ai.demo.lead">This is a scripted demo that runs fully offline in your browser — the real Raha will be an AI model with human oversight.</p>
+    </div>
+    <div class="mt rv">
+      <div class="chat-shell" dir="ltr">
+        <div class="chat-head">
+          <div class="avatar">🌱</div>
+          <div><b>Raha</b><small data-i18n="ai.chat.sub">GreenRoot AI companion · demo</small></div>
+          <div class="dot" title="online"></div>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-chips" id="chatChips"></div>
+        <div class="chat-input">
+          <input id="chatInput" type="text" data-i18n-ph="ai.chat.ph" placeholder="Type a message…">
+          <button class="btn" id="chatSend" type="button" data-i18n="ai.chat.send">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career rewind demo -->
+<section id="career">
+  <div class="container">
+    <div class="center rv">
+      <span class="kicker" data-i18n="ai.cr.kicker">Career rewind</span>
+      <h2 class="title" data-i18n="ai.cr.h2">Back to the job you had before</h2>
+      <p class="lead" data-i18n="ai.cr.lead">Pick a previous profession and see a sample 3-step rewind plan Raha would build with you.</p>
+    </div>
+    <div class="picker mt rv" id="careerPicker">
+      <button type="button" data-job="driver">🚚 <span data-i18n="ai.cr.j1">Driver</span></button>
+      <button type="button" data-job="nurse">🧑‍⚕️ <span data-i18n="ai.cr.j2">Nurse / health worker</span></button>
+      <button type="button" data-job="accountant">🧾 <span data-i18n="ai.cr.j3">Accountant</span></button>
+      <button type="button" data-job="mechanic">🔧 <span data-i18n="ai.cr.j4">Mechanic</span></button>
+      <button type="button" data-job="teacher">🧑‍🏫 <span data-i18n="ai.cr.j5">Teacher</span></button>
+      <button type="button" data-job="cook">🍳 <span data-i18n="ai.cr.j6">Cook</span></button>
+    </div>
+    <div class="plan rv" id="careerPlan" style="display:none"></div>
+  </div>
+</section>
+
+<!-- Mood demo -->
+<section style="background:#EFF5EA">
+  <div class="container">
+    <div class="grid g2" style="align-items:stretch">
+      <div class="panel rv">
+        <h3 data-i18n="ai.mood.t">Daily check-in (try it)</h3>
+        <p class="sub" data-i18n="ai.mood.s">Tap today's mood — Raha tracks the trend and watches for relapse-risk patterns.</p>
+        <div class="mood-row" id="moodRow">
+          <button type="button" data-mood="1" title="very low">😞</button>
+          <button type="button" data-mood="2" title="low">😕</button>
+          <button type="button" data-mood="3" title="okay">😐</button>
+          <button type="button" data-mood="4" title="good">🙂</button>
+          <button type="button" data-mood="5" title="great">😄</button>
+        </div>
+        <div id="moodMsg" class="center small muted" data-i18n="ai.mood.hint">Your streak and trend will appear here.</div>
+      </div>
+      <div class="panel rv">
+        <h3 data-i18n="ai.priv.t">Safety &amp; honesty</h3>
+        <ul style="color:var(--muted);font-size:15px;padding-inline-start:20px">
+          <li data-i18n="ai.priv.l1">Raha is an assistant, not a therapist — licensed humans make clinical decisions.</li>
+          <li data-i18n="ai.priv.l2">Crisis messages always route to a human, fast.</li>
+          <li data-i18n="ai.priv.l3">This demo is scripted and stores nothing.</li>
+          <li data-i18n="ai.priv.l4">The production version would require clinical validation and strict data-protection review (GDPR and local law).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-band rv">
+      <h2 data-i18n="ai.cta.h2">Twenty minutes. One craving. One companion.</h2>
+      <p data-i18n="ai.cta.p">Join the pilot and Raha walks with you from the first shift to the first day back at your old job.</p>
+      <a class="btn" href="join.html" data-i18n="nav.cta">Join the pilot</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid g3">
+      <div>
+        <div class="fbrand"><svg class="logo" viewBox="0 0 48 48" fill="none" width="34" height="34"><circle cx="24" cy="24" r="23" fill="#0E4D36"/><path d="M24 38c0-9 2-14 9-19-1 8-3 13-9 19Z" fill="#A3E635"/><path d="M24 38c0-9-2-14-9-19 1 8 3 13 9 19Z" fill="#4ADE80"/><path d="M24 38V22" stroke="#D9F99D" stroke-width="2" stroke-linecap="round"/></svg>GreenRoot</div>
+        <p data-i18n="footer.tag">Healing people, healing the planet — recovery through environmental work, funded by recycling, guided by AI.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Explore</h4>
+        <p><a href="science.html" data-i18n="nav.science">Science</a> · <a href="program.html" data-i18n="nav.program">Program</a> · <a href="ai.html" data-i18n="nav.ai">AI companion</a></p>
+        <p class="mt-s"><a href="dashboard.html" data-i18n="nav.impact">Impact</a>
+      <a href="cop31.html" data-i18n="nav.cop31">COP31</a> · <a href="areas.html" data-i18n="nav.areas">Areas</a> · <a href="join.html" data-i18n="nav.join">Join</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <p>hello@greenroot.example</p>
+        <p data-i18n="footer.contact2">Frankfurt · Tehran (pilot cities)</p>
+      </div>
+    </div>
+    <p class="disclaimer" data-i18n="footer.disclaimer">GreenRoot is a concept prototype. Nothing on this site is medical advice. Addiction is a medical condition — always work with qualified doctors and licensed treatment services. In an emergency, contact your local emergency number.</p>
+    <p class="copy">© <span id="year">2026</span> GreenRoot.</p>
+  </div>
+</footer>
+
+<script>
+/* GreenRoot i18n dictionary — English & فارسی */
+window.I18N = {
+en: {
+  "title.home":"GreenRoot — Healing people, healing the planet",
+  "title.science":"The Science — GreenRoot",
+  "title.program":"The Program — GreenRoot",
+  "title.ai":"Raha, the AI companion — GreenRoot",
+  "title.dashboard":"Impact dashboard — GreenRoot",
+  "title.join":"Join us — GreenRoot",
+
+  "nav.home":"Home","nav.science":"Science","nav.program":"Program","nav.ai":"AI companion","nav.impact":"Impact","nav.join":"Join","nav.cta":"Join the pilot",
+  "footer.tag":"Healing people, healing the planet — recovery through environmental work, funded by recycling, guided by AI.",
+  "footer.links":"Explore","footer.contact":"Contact","footer.contact2":"Frankfurt · Tehran (pilot cities)",
+  "footer.disclaimer":"GreenRoot is a concept prototype. Nothing on this site is medical advice. Addiction is a medical condition — always work with qualified doctors and licensed treatment services. In an emergency, contact your local emergency number.",
+
+  "home.hero.kicker":"Addiction recovery × green work × AI",
+  "home.hero.h1":"Heal yourself.<br>Heal your city.",
+  "home.hero.p":"GreenRoot turns recovery from addiction into paid environmental work: every bag of waste collected funds therapy and medicine — and an AI companion guides each person back to the career they had before.",
+  "home.hero.cta1":"Explore the program","home.hero.cta2":"Try the AI companion",
+  "home.chip1":"people in recovery","home.chip2":"waste collected","home.chip3":"less relapse at 6 months",
+  "home.loop.title":"The GreenRoot Loop",
+  "home.loop.n1":"Collect","home.loop.n2":"Earn","home.loop.n3":"Heal","home.loop.n4":"Return",
+
+  "home.prob.kicker":"Why GreenRoot exists","home.prob.h2":"Three crises, one root",
+  "home.prob.lead":"Addiction, unemployment and waste feed each other. GreenRoot attacks all three at once.",
+  "home.prob.c1t":"Addiction thrives in emptiness",
+  "home.prob.c1p":"Recovery fails when days are empty — no structure, no purpose, no people. Most relapses happen in long, unstructured hours alone.",
+  "home.prob.c2t":"The job trap",
+  "home.prob.c2p":"Employers reject gaps in a CV, so people in recovery stay jobless — and joblessness pushes them back to use. The door stays closed from both sides.",
+  "home.prob.c3t":"Cities are drowning in waste",
+  "home.prob.c3p":"Parks, riverbanks and streets collect litter faster than cities can clean it. Meanwhile recyclable material worth millions is lost every year.",
+
+  "home.sol.kicker":"Our answer","home.sol.h2":"One program, three engines",
+  "home.sol.lead":"Each engine makes the other two stronger. That is the whole idea.",
+  "home.sol.c1t":"Evidence-based recovery",
+  "home.sol.c1p":"Contingency management, behavioral activation and therapeutic community — psychology's most proven tools for addiction, built into every workday.",
+  "home.sol.c1l":"Read the science →",
+  "home.sol.c2t":"Paid green work",
+  "home.sol.c2p":"Real wages for cleanup crews, sorting lines and upcycling workshops. Recycling income funds therapy, medicine — and the participants themselves.",
+  "home.sol.c2l":"See the program →",
+  "home.sol.c3t":"AI career rewind",
+  "home.sol.c3p":"Our AI companion, Raha, coaches cravings, tracks mood and maps each person's skills back to their previous profession — the job they had before addiction.",
+  "home.sol.c3l":"Meet Raha →",
+
+  "home.med.kicker":"From street to ward","home.med.h2":"Waste in, medicine out",
+  "home.med.lead":"The trash participants collect literally becomes part of their cure — twice.",
+  "home.med.c1t":"1. Recycling income funds treatment",
+  "home.med.c1p":"Sold recyclables — PET, metal, paper, glass — generate revenue. That revenue pays for therapy sessions, psychiatric care and essential medicines for the crew. Every kilo collected is a kilo of treatment funded.",
+  "home.med.c2t":"2. Materials become medical supplies",
+  "home.med.c2p":"In our upcycling line, collected plastics are cleaned, shredded and re-manufactured — with certified partners — into medical products: face shields, splint components and sterile-grade packaging for clinics.",
+
+  "home.s1":"People in recovery","home.s2":"Waste collected & sorted","home.s3":"Relapse reduction at 6 months*","home.s4":"Toward therapy & medicine*",
+  "home.demonote":"*Pilot cohort, demo figures for the concept.",
+
+  "home.aud.kicker":"Who it's for","home.aud.h2":"Everybody wins",
+  "home.aud.c1t":"For you in recovery","home.aud.c1p":"Structure, income, therapy and a path back to your old career — with dignity.",
+  "home.aud.c2t":"For families","home.aud.c2p":"A safe, monitored program your loved one can be proud to be part of.",
+  "home.aud.c3t":"For cities & companies","home.aud.c3p":"Cleaner public space, ESG impact and a proven social-return model.",
+  "home.aud.c4t":"For partners & investors","home.aud.c4p":"A dual-revenue circular economy with measurable health outcomes.",
+  "home.cta.h2":"One bag of trash. One brick of recovery.",
+  "home.cta.p":"Join the pilot city program — as a participant, a partner, or a supporter.",
+
+  "sci.hero.kicker":"The psychology behind the model",
+  "sci.hero.h1":"Why work in nature heals addiction",
+  "sci.hero.p":"GreenRoot is not \"a job as therapy\" as a slogan. Every element of the program maps onto a well-studied mechanism in addiction science.",
+  "sci.m1t":"Contingency management & the token economy",
+  "sci.m1p":"Contingency management (CM) — rewarding drug-free behaviour immediately and consistently — is among the most evidence-based psychosocial treatments for substance use disorder, especially stimulants. GreenRoot is a working token economy: every shift, every sorted kilo and every clean screen earns tokens with real value (medicine credit, essentials, skills courses).",
+  "sci.m2t":"Behavioral activation & meaningful work",
+  "sci.m2p":"Behavioral activation shows that scheduling rewarding, value-driven activities lifts mood and reduces substance use as effectively as some formal therapies. Supported-employment research goes further: for people in recovery, meaningful work improves abstinence, quality of life and treatment retention.",
+  "sci.m3t":"Rewiring the reward system",
+  "sci.m3p":"Addiction hijacks the brain's dopamine loop: cue → use → relief. Recovery means building a new loop: cue → routine → reward. The cleanup shift does exactly that — stress and empty hours (the cues) are replaced by crew work (the routine), and the payoff is visible, immediate and social: pay, tokens, a clean street, pride.",
+  "sci.m4t":"Green care: nature as medicine",
+  "sci.m4p":"Time in green space measurably lowers cortisol and rumination and restores attention (\"attention restoration theory\"). Outdoor physical work adds exercise — which trials link to reduced craving intensity and better sleep. Nature is not decoration in GreenRoot; it is the treatment room.",
+  "sci.m5t":"Community & identity",
+  "sci.m5p":"Therapeutic communities — where people recover together, in roles that matter — have decades of evidence behind them. In GreenRoot every member is not \"a patient\" but a crew member with a contribution the whole city can see. Identity shifts from addict to environmental worker; stigma shrinks with every clean park.",
+  "sci.m6t":"The dual-impact loop",
+  "sci.m6p":"Each element feeds the next: work → income → treatment → stability → better work → lower relapse risk. Meanwhile the city gets cleaner and clinics get supplies. Recovery and environment compound like interest.",
+
+  "sci.flow.kicker":"The mechanism, end to end","sci.flow.h2":"From craving to career, in one loop",
+  "sci.flow.f1":"Cue: empty day, craving","sci.flow.f1s":"High-risk moment",
+  "sci.flow.f2":"Crew shift outdoors","sci.flow.f2s":"Structure + exercise + nature",
+  "sci.flow.f3":"Wages + tokens","sci.flow.f3s":"Immediate, earned reward",
+  "sci.flow.f4":"Therapy & medicine funded","sci.flow.f4s":"Clinical care continues",
+  "sci.flow.f5":"Raha AI coaching","sci.flow.f5s":"Cravings, mood, relapse alerts",
+  "sci.flow.f6":"Return to old career","sci.flow.f6s":"Identity restored",
+
+  "sci.ev.kicker":"Evidence base","sci.ev.h2":"What the research says",
+  "sci.ev.lead":"A summary of the key findings GreenRoot is built on.",
+  "sci.ev.th1":"Intervention","sci.ev.th2":"Evidence in brief","sci.ev.th3":"In GreenRoot",
+  "sci.ev.r1a":"Contingency management",
+  "sci.ev.r1b":"Strong randomized-trial evidence; reliably increases abstinence and treatment retention, including for stimulant use disorder.",
+  "sci.ev.r1c":"Token economy with real rewards for shifts and milestones",
+  "sci.ev.r2a":"Supported employment / social enterprise",
+  "sci.ev.r2b":"Work-integrated programs improve employment outcomes, self-esteem and quality of life for people in recovery.",
+  "sci.ev.r2c":"Paid cleanup, sorting and upcycling roles",
+  "sci.ev.r3a":"Behavioral activation",
+  "sci.ev.r3b":"Structured, value-driven activity reduces depressive symptoms and substance use.",
+  "sci.ev.r3c":"Scheduled meaningful shifts replace empty hours",
+  "sci.ev.r4a":"Nature / green exercise",
+  "sci.ev.r4b":"Green-space time lowers stress hormones and improves mood and attention; exercise is linked to reduced craving.",
+  "sci.ev.r4c":"All shifts outdoors in parks, riverbanks and streets",
+  "sci.ev.r5a":"Therapeutic community",
+  "sci.ev.r5b":"Peer community with meaningful roles shows long-term gains in abstinence and social reintegration.",
+  "sci.ev.r5c":"Crew identity, peer mentors, alumni network",
+  "sci.ev.note":"GreenRoot cites established scientific literature to explain its design; it does not claim these studies evaluated GreenRoot itself. Pilot outcomes shown elsewhere are demo figures.",
+
+  "sci.eth.t1":"Dignity first — our ethical red lines",
+  "sci.eth.l1":"Real wages, never \"therapy tokens\" alone.",
+  "sci.eth.l2":"Therapy and medicine are never conditional on work output or quotas.",
+  "sci.eth.l3":"Trauma-informed supervision; the pace is set by the participant's health team.",
+  "sci.eth.l4":"Full consent and privacy: participation data is never shared with police or employers without consent.",
+  "sci.eth.l5":"Recovery comes first — a hard day is a reason to rest, not a reason to lose your place.",
+  "sci.eth.t2":"What GreenRoot is not",
+  "sci.eth.l6":"Not a replacement for medical detox or psychiatric care — we fund and coordinate it.",
+  "sci.eth.l7":"Not unpaid labor disguised as therapy.",
+  "sci.eth.l8":"Not a surveillance program — Raha the AI is opt-in and its data belongs to the participant.",
+  "sci.eth.l9":"Not a cure — addiction is chronic; we build the structure that makes remission stick.",
+
+  "sci.cta.h2":"Science is the root. People are the growth.",
+  "sci.cta.p":"See how the mechanisms become a real 12-month program.",
+  "sci.cta.b":"Explore the program",
+
+  "prog.hero.kicker":"Twelve months, four phases",
+  "prog.hero.h1":"The GreenRoot program",
+  "prog.hero.p":"A structured journey from stabilization to a paid green job to the career you had before — with therapy and medicine funded by the work itself.",
+  "prog.ph.kicker":"The four phases","prog.ph.h2":"Your path through GreenRoot",
+  "prog.ph1w":"Weeks 0–4","prog.ph1t":"Stabilize",
+  "prog.ph1p":"Medical check-up and psychiatric assessment; medication-assisted treatment where indicated; a personal safety and craving plan; first meeting with Raha, your AI companion. No shifts yet — health first.",
+  "prog.ph2w":"Weeks 2–12","prog.ph2t":"Work & heal",
+  "prog.ph2p":"Three supported cleanup shifts a week in a small crew with a peer mentor. Group therapy twice a week. Tokens for every shift; weekly token review with your counselor.",
+  "prog.ph3w":"Months 3–6","prog.ph3t":"Build",
+  "prog.ph3p":"Move to the sorting line: materials handling, machine basics, the upcycling workshop, quality control. Raha maps your skills and drafts your career-rewind plan toward your previous profession.",
+  "prog.ph4w":"Months 6–12","prog.ph4t":"Return",
+  "prog.ph4p":"CV rebuild with honest gap-framing, mock interviews, a supported internship or direct placement, and the alumni network. You leave with a job and a community — not just a certificate.",
+
+  "prog.day.kicker":"A shift day","prog.day.h2":"Structure is the therapy",
+  "prog.day.lead":"Every hour has a purpose — that's the point.",
+  "prog.day.c1":"Crew meet-up & check-in: mood, cravings, safety gear. Raha logs your check-in.",
+  "prog.day.c2":"Cleanup shift in park / riverbank / street. Breaks built in; mentor nearby.",
+  "prog.day.c3":"Weigh & sort: PET, metal, paper, glass. Tokens credited on the spot.",
+  "prog.day.c4":"Lunch, then group therapy, an AI session, or a skills class — your schedule.",
+
+  "prog.eco.kicker":"The circular economy of recovery","prog.eco.h2":"Where the money goes",
+  "prog.eco.c1t":"Recycling revenue",
+  "prog.eco.c1p":"Sold materials (PET, metal, paper, glass) plus upcycled medical products generate income for the program.",
+  "prog.eco.c2t":"Participant rewards",
+  "prog.eco.c2p":"Fair wages plus tokens redeemable for essentials, transport, phone credit and skills courses.",
+  "prog.eco.c3t":"Treatment fund",
+  "prog.eco.c3p":"A transparent share funds each crew's therapy, psychiatric care and essential medicines — published on the Impact page.",
+  "prog.b1":"🧾 Open budget: crew revenue → 40% wages · 30% treatment · 30% operations",
+  "prog.b2":"No quotas used against participants — ever",
+  "prog.b3":"Wages at or above local minimum",
+
+  "prog.wtw.kicker":"Waste → ward",
+  "prog.wtw.h2":"The upcycling line: from litter to medical supplies",
+  "prog.wtw.lead":"The most symbolic job in the program: making the material of the street useful to the hospital.",
+  "prog.wtw.c1t":"1 · Collect & sort","prog.wtw.c1p":"PET and HDPE plastics separated on the sorting line, weighed and logged.",
+  "prog.wtw.c2t":"2 · Clean & shred","prog.wtw.c2p":"Wash, sanitize and shred into certified flake at the micro-factory.",
+  "prog.wtw.c3t":"3 · Remanufacture","prog.wtw.c3p":"With certified manufacturing partners: face shields, splint components, clinical packaging.",
+  "prog.wtw.c4t":"4 · Deliver","prog.wtw.c4p":"Supplies donated or sold to clinics; proceeds feed the treatment fund.",
+  "prog.wtw.note":"Safety note: medical-grade remanufacturing happens with certified partners under regulatory standards; GreenRoot crews handle collection, sorting and pre-processing only.",
+
+  "prog.ai.kicker":"Raha, through every phase","prog.ai.h2":"An AI companion in your pocket",
+  "prog.ai.p":"Raha is with you from day one: craving SOS in the hard moments, daily mood check-ins, relapse-risk alerts shared (only with your consent) with your counselor, token wallet, and the career-rewind plan that maps your old job skills back into reach.",
+  "prog.ai.b":"Try the Raha demo",
+  "prog.ai.l1":"Craving SOS: urge-surfing coach, 24/7",
+  "prog.ai.l2":"Mood & sleep check-ins with relapse-risk alerts",
+  "prog.ai.l3":"Token wallet, goals and milestone celebrations",
+  "prog.ai.l4":"Career rewind: résumé, skills map, interview practice",
+  "prog.ai.l5":"Private by design: opt-in, encrypted, participant-owned",
+
+  "prog.cta.h2":"Ready for a structured year?",
+  "prog.cta.p":"Spots in the pilot cohort are limited. Talk to us — no commitment needed.",
+
+  "ai.hero.kicker":"AI that walks beside you","ai.hero.h1":"Meet Raha",
+  "ai.hero.p":"Raha (رهاء — \"freedom\") is GreenRoot's AI recovery companion: a craving coach in the hard moments, a mood tracker between sessions, and a career guide that leads you back to the job you had before addiction.",
+  "ai.hero.cta1":"Try the demo chat","ai.hero.cta2":"Career rewind demo",
+  "ai.hero.side":"\"Cravings last about 20 minutes. You never have to face one alone.\"",
+
+  "ai.f.kicker":"What Raha does","ai.f.h2":"Six jobs, one companion",
+  "ai.f.c1t":"Craving SOS","ai.f.c1p":"Urge-surfing coach, breathing exercises and a delay timer — plus one-tap call to your buddy or counselor when it's too much.",
+  "ai.f.c2t":"Mood & relapse watch","ai.f.c2p":"Daily 30-second check-ins. Raha spots risky patterns — bad sleep, missed shifts, isolation — and alerts your counselor (only if you opt in).",
+  "ai.f.c3t":"Token wallet & goals","ai.f.c3p":"See tokens earned per shift, set goals (a course, a bicycle, family gifts) and celebrate milestones — small wins, wired into the habit loop.",
+  "ai.f.c4t":"Career rewind","ai.f.c4p":"The signature feature: Raha maps the job you had before addiction, finds your skill gaps, builds a refresh plan and practises interviews with you.",
+  "ai.f.c5t":"Family bridge","ai.f.c5p":"Opt-in updates for family: milestones reached, shifts worked, mood trends — rebuilding trust with facts, not promises.",
+  "ai.f.c6t":"Private by design","ai.f.c6p":"Your data belongs to you. Encrypted, opt-in for every share, never shared with police or employers. Delete everything with one tap.",
+
+  "ai.demo.kicker":"Interactive demo","ai.demo.h2":"Talk to Raha (prototype)",
+  "ai.demo.lead":"This is a scripted demo that runs fully offline in your browser — the real Raha will be an AI model with human oversight.",
+  "ai.chat.sub":"GreenRoot AI companion · demo",
+  "ai.chat.ph":"Type a message…","ai.chat.send":"Send",
+
+  "ai.cr.kicker":"Career rewind","ai.cr.h2":"Back to the job you had before",
+  "ai.cr.lead":"Pick a previous profession and see a sample 3-step rewind plan Raha would build with you.",
+  "ai.cr.j1":"Driver","ai.cr.j2":"Nurse / health worker","ai.cr.j3":"Accountant","ai.cr.j4":"Mechanic","ai.cr.j5":"Teacher","ai.cr.j6":"Cook",
+
+  "ai.mood.t":"Daily check-in (try it)",
+  "ai.mood.s":"Tap today's mood — Raha tracks the trend and watches for relapse-risk patterns.",
+  "ai.mood.hint":"Your streak and trend will appear here.",
+  "ai.priv.t":"Safety & honesty",
+  "ai.priv.l1":"Raha is an assistant, not a therapist — licensed humans make clinical decisions.",
+  "ai.priv.l2":"Crisis messages always route to a human, fast.",
+  "ai.priv.l3":"This demo is scripted and stores nothing.",
+  "ai.priv.l4":"The production version would require clinical validation and strict data-protection review (GDPR and local law).",
+
+  "ai.cta.h2":"Twenty minutes. One craving. One companion.",
+  "ai.cta.p":"Join the pilot and Raha walks with you from the first shift to the first day back at your old job.",
+
+  "dash.hero.badge":"📊 Demo data — pilot concept",
+  "dash.hero.h1":"Impact dashboard",
+  "dash.hero.p":"Recovery is only real if you can measure it. This dashboard shows the numbers GreenRoot publishes for every cohort — here with demo data.",
+  "dash.s1":"People in program","dash.s2":"Waste collected","dash.s3":"To therapy & medicine","dash.s4":"Medical items produced",
+  "dash.s5":"GreenRoot 6-month relapse*","dash.s6":"Typical 6-month relapse*","dash.s7":"CO₂e saved by recycling","dash.s8":"Program completion",
+  "dash.note":"*Illustrative comparison: internal pilot cohort vs. commonly reported 6-month relapse ranges. Demo figures, not clinical claims.",
+  "dash.ch1.t":"Monthly collection (kg)","dash.ch1.s":"Crew output grows as recovery grows — momentum you can weigh.",
+  "dash.ch2.t":"Waste mix (%)","dash.ch2.s":"What the crews collect — and what each stream becomes.",
+  "dash.ch2.t1":"18.4 t","dash.ch2.t2":"collected",
+  "dash.ch3.t":"Treatment fund allocation","dash.ch3.s":"Where the recycling money goes, per month (demo).",
+  "dash.ch3.l1":"Therapy sessions","dash.ch3.l2":"Medicines","dash.ch3.l3":"Coordination",
+  "dash.ch4.t":"Monthly report — pilot cohort","dash.ch4.s":"Published openly every month.",
+  "dash.ch4.th1":"Month","dash.ch4.th2":"Active","dash.ch4.th3":"kg","dash.ch4.th4":"Fund (€)",
+  "dash.tr.c1t":"Open budget","dash.tr.c1p":"Every euro of recycling revenue is traced: wages, treatment fund, operations. Published monthly.",
+  "dash.tr.c2t":"Independent evaluation","dash.tr.c2p":"Health outcomes are assessed with university partners, not by us alone.",
+  "dash.tr.c3t":"Privacy-safe metrics","dash.tr.c3p":"All participant data is aggregated and anonymized. No individual is ever visible in these numbers.",
+  "dash.cta.h2":"Want this dashboard for your city?",
+  "dash.cta.p":"Municipalities, waste companies and clinics: let's build a cohort together.",
+  "dash.cta.b":"Partner with us",
+
+  "join.hero.kicker":"Join GreenRoot","join.hero.h1":"There's a place for you here",
+  "join.hero.p":"Whether you're fighting for your own recovery, supporting someone you love, running a city — or ready to fund the model — start here.",
+  "join.a.c1t":"I need help","join.a.c1p":"Confidential, no commitment. We'll call you back within 48 hours and explain everything — in your language.",
+  "join.a.c2t":"I'm a family member","join.a.c2p":"Ask us anything. We'll explain the program, safety rules and how family updates work.",
+  "join.a.c3t":"City / company","join.a.c3p":"Host a crew, supply waste streams, or sponsor a cohort. Measurable ESG with human depth.",
+  "join.a.c4t":"Investor / partner","join.a.c4p":"Circular revenue plus health outcomes. Ask for the full pilot report and model.",
+  "join.form.kicker":"Contact","join.form.h2":"Send us a message",
+  "join.form.lead":"Demo form — in production this connects to our confidential intake line.",
+  "join.form.name":"Your name (or a nickname)","join.form.contact":"Email or phone","join.form.role":"I am…","join.form.msg":"Message","join.form.send":"Send message",
+  "join.form.o1":"Someone in recovery","join.form.o2":"A family member","join.form.o3":"A city / municipality","join.form.o4":"A company / recycler","join.form.o5":"An investor / NGO","join.form.o6":"Just curious",
+  "join.form.ok":"✓ Thank you! This demo doesn't send data anywhere — but in production our team would contact you within 48 hours, confidentially.",
+  "join.faq.h2":"Honest questions, honest answers",
+  "join.q1":"Is this real employment or just \"therapy theater\"?",
+  "join.a1":"Real employment. Participants sign a contract, earn at or above local minimum wage, and tokens are additional rewards on top — never a replacement for pay.",
+  "join.q2":"What if I relapse during the program?",
+  "join.a2":"You keep your place. Relapse is part of how addiction works medically. We pause the work, restart clinical support, and return when your health team agrees. You are not fired for being sick.",
+  "join.q3":"Do I have to quit my medication to join?",
+  "join.a3":"No — the opposite. Medication-assisted treatment is funded and encouraged where medically indicated. Our program coordinates with your doctor.",
+  "join.q4":"Will the AI report me to anyone?",
+  "join.a4":"Never without your consent. Raha's data belongs to you. Only opt-in alerts to your counselor exist, and crisis escalations go to humans who care for you — not to authorities.",
+  "join.q5":"Can I really go back to my old career?",
+  "join.a5":"In many cases, yes. Raha's career-rewind plan rebuilds skills honestly, frames the gap truthfully, and arranges supported internships with partner employers who hire for ability, not history.",
+  "join.q6":"Which cities does the pilot run in?",
+  "join.a6":"We are scoping pilot cohorts in Frankfurt and Tehran. Sign up and we'll tell you what's active near you.",
+  "join.crisis.t":"🆘 In crisis right now?",
+  "join.crisis.p":"If you or someone near you is in immediate danger (overdose, suicidal thoughts), contact your local emergency number now. In Iran, the state social-emergency addiction hotline is 09628. In Germany, you can call 112 for emergencies. You matter. One call can start everything."
+},
+fa: {
+  "title.home":"گرین‌روت — انسان‌ها را شفا بده، سیاره را شفا بده",
+  "title.science":"علم پشت گرین‌روت — گرین‌روت",
+  "title.program":"برنامه — گرین‌روت",
+  "title.ai":"رها، همیار هوش مصنوعی — گرین‌روت",
+  "title.dashboard":"داشبورد اثرگذاری — گرین‌روت",
+  "title.join":"به ما بپیوندید — گرین‌روت",
+
+  "nav.home":"خانه","nav.science":"علم","nav.program":"برنامه","nav.ai":"همیار هوش مصنوعی","nav.impact":"اثرگذاری","nav.join":"پیوستن","nav.cta":"عضویت در پایلوت",
+  "footer.tag":"انسان‌ها را شفا می‌دهیم، سیاره را هم — بهبودی از طریق کار محیط‌زیستی، تأمین‌شده با بازیافت، هدایت‌شده با هوش مصنوعی.",
+  "footer.links":"بخش‌ها","footer.contact":"تماس","footer.contact2":"فرانکفورت · تهران (شهرهای پایلوت)",
+  "footer.disclaimer":"گرین‌روت یک نمونهٔ مفهومی است. هیچ محتوایی در این سایت توصیهٔ پزشکی نیست. اعتیاد یک بیماری پزشکی است — همیشه با پزشکان واجد شرایط و مراکز درمانی مجاز همکاری کنید. در موارد اورژانسی با شمارهٔ اورژانس محلی خود تماس بگیرید.",
+
+  "home.hero.kicker":"بهبودی از اعتیاد × کار سبز × هوش مصنوعی",
+  "home.hero.h1":"خودت را شفا بده.<br>شهرت را شفا بده.",
+  "home.hero.p":"گرین‌روت بهبودی از اعتیاد را به کار محیط‌زیستیِ حقوق‌دار تبدیل می‌کند: هر کیسه زباله‌ای که جمع می‌شود، هزینهٔ درمان و دارو می‌شود — و همیار هوش مصنوعی، هر فرد را به شغلی که روزی داشت برمی‌گرداند.",
+  "home.hero.cta1":"برنامه را ببینید","home.hero.cta2":"همیار هوش مصنوعی را امتحان کنید",
+  "home.chip1":"فرد در مسیر بهبودی","home.chip2":"کیلوگرم زباله جمع‌آوری‌شده","home.chip3":"کاهش لغزش در ۶ ماه",
+  "home.loop.title":"چرخهٔ گرین‌روت",
+  "home.loop.n1":"جمع‌آوری","home.loop.n2":"درآمد","home.loop.n3":"درمان","home.loop.n4":"بازگشت",
+
+  "home.prob.kicker":"چرا گرین‌روت وجود دارد","home.prob.h2":"سه بحران، یک ریشه",
+  "home.prob.lead":"اعتیاد، بیکاری و زباله به هم غذا می‌دهند. گرین‌روت هر سه را هم‌زمان هدف می‌گیرد.",
+  "home.prob.c1t":"اعتیاد در خلأ رشد می‌کند",
+  "home.prob.c1p":"وقتی روزها خالی باشند، بهبود شکست می‌خورد — نه نظمی، نه هدفی، نه کسی. بیشتر لغزش‌ها در ساعات طولانیِ بی‌ساختار و در تنهایی رخ می‌دهند.",
+  "home.prob.c2t":"تلهٔ شغل",
+  "home.prob.c2p":"کارفرماها جای خالی رزومه را نمی‌پذیرند؛ پس فردِ در حال بهبودی بیکار می‌ماند — و بیکاری او را به مصرف برمی‌گرداند. در، از هر دو سو بسته است.",
+  "home.prob.c3t":"شهرها در زباله غرق می‌شوند",
+  "home.prob.c3p":"پارک‌ها، حاشیهٔ رودها و خیابان‌ها سریع‌تر از توان شهرداری‌ها آلوده می‌شوند. در همین حال، مواد بازیافتیِ به‌ارزش میلیون‌ها هر سال از دست می‌رود.",
+
+  "home.sol.kicker":"پاسخ ما","home.sol.h2":"یک برنامه، سه موتور",
+  "home.sol.lead":"هر موتور، دو موتور دیگر را قوی‌تر می‌کند. کل ایده همین است.",
+  "home.sol.c1t":"بهبودی مبتنی بر شواهد",
+  "home.sol.c1p":"مدیریت پیامد، فعال‌سازی رفتاری و جامعهٔ درمانی — اثبات‌شده‌ترین ابزارهای روان‌شناسی در اعتیاد، درون هر روزِ کاری.",
+  "home.sol.c1l":"علم پشت آن را بخوانید ←",
+  "home.sol.c2t":"کار سبز حقوق‌دار",
+  "home.sol.c2p":"دستمزد واقعی برای تیم‌های پاک‌سازی، خطوط جداسازی و کارگاه‌های بازیافت خلاق. درآمد بازیافت، درمان و دارو — و خودِ اعضا — را تأمین می‌کند.",
+  "home.sol.c2l":"برنامه را ببینید ←",
+  "home.sol.c3t":"بازگشت شغلی با هوش مصنوعی",
+  "home.sol.c3p":"همیار هوش مصنوعی ما، رها، برای هوس‌ها مربیگری می‌کند، خلق را رصد می‌کند و مهارت‌های هر فرد را به حرفهٔ قبلی‌اش وصل می‌کند — شغلی که قبل از اعتیاد داشت.",
+  "home.sol.c3l":"با رها آشنا شوید ←",
+
+  "home.med.kicker":"از خیابان تا بیمارستان","home.med.h2":"زباله داخل، دارو خارج",
+  "home.med.lead":"زباله‌ای که اعضا جمع می‌کنند، واقعاً بخشی از درمان خودشان می‌شود — دو بار.",
+  "home.med.c1t":"۱. درآمد بازیافت، هزینهٔ درمان",
+  "home.med.c1p":"فروش مواد بازیافتی — پت، فلز، کاغذ، شیشه — درآمد ایجاد می‌کند. این درآمد، جلسات درمان، مراقبت روان‌پزشکی و داروهای ضروری تیم را تأمین می‌کند. هر کیلو زباله، یک واحد درمانِ تأمین‌شده است.",
+  "home.med.c2t":"۲. مواد، تبدیل به تجهیزات پزشکی",
+  "home.med.c2p":"در خط بازیافت خلاق ما، پلاستیک‌های جمع‌شده شسته، خرد و — با شرکای معتبر — به محصولات پزشکی تبدیل می‌شوند: شیلد صورت، قطعات اسپلینت و بسته‌بندی باکیفیت برای کلینیک‌ها.",
+
+  "home.s1":"فرد در بهبودی","home.s2":"زباله جمع‌آوری و جداسازی‌شده","home.s3":"کاهش لغزش در ۶ ماه*","home.s4":"صرف‌شده برای درمان و دارو*",
+  "home.demonote":"*گروه پایلوت؛ ارقام نمایشی برای معرفی مفهوم.",
+
+  "home.aud.kicker":"برای چه کسی","home.aud.h2":"همه برنده‌اند",
+  "home.aud.c1t":"برای تو که در بهبودی هستی","home.aud.c1p":"نظم، درآمد، درمان و مسیری برای بازگشت به شغل قبلی‌ات — با عزت.",
+  "home.aud.c2t":"برای خانواده‌ها","home.aud.c2p":"برنامه‌ای امن و تحت نظارت که عزیزتان به بودن در آن افتخار کند.",
+  "home.aud.c3t":"برای شهرها و شرکت‌ها","home.aud.c3p":"فضای عمومی تمیزتر، اثر ESG قابل‌اندازه‌گیری و مدلی با بازده اجتماعی اثبات‌شده.",
+  "home.aud.c4t":"برای شرکا و سرمایه‌گذاران","home.aud.c4p":"اقتصاد چرخشی با درآمد دوگانه و پیامدهای سلامتِ قابل‌سنجش.",
+  "home.cta.h2":"یک کیسه زباله. یک آجر بهبودی.",
+  "home.cta.p":"به برنامهٔ پایلوت شهری بپیوندید — به‌عنوان عضو، شریک یا حامی.",
+
+  "sci.hero.kicker":"روان‌شناسی پشت این مدل",
+  "sci.hero.h1":"چرا کار در طبیعت، اعتیاد را شفا می‌دهد",
+  "sci.hero.p":"گرین‌روت شعارِ «کار به‌جای درمان» نیست. هر عنصر برنامه به یک سازوکارِ مطالعه‌شده در علم اعتیاد گره خورده است.",
+  "sci.m1t":"مدیریت پیامد و اقتصاد توکنی",
+  "sci.m1p":"مدیریت پیامد (CM) — پاداش دادنِ فوری و منظم به رفتار پرهیز از مصرف — از اثبات‌شده‌ترین درمان‌های روانی-اجتماعی اختلال مصرف مواد است، به‌ویژه برای محرک‌ها. گرین‌روت یک اقتصاد توکنیِ در حال کار است: هر شیفت، هر کیلوی جداسازی‌شده و هر تست تمیز، توکنی با ارزش واقعی می‌سازد (اعتبار دارو، اقلام ضروری، دوره‌های مهارتی).",
+  "sci.m2t":"فعال‌سازی رفتاری و کارِ معنادار",
+  "sci.m2p":"فعال‌سازی رفتاری نشان می‌دهد برنامه‌ریزی فعالیت‌های لذت‌بخش و هم‌راستا با ارزش‌ها، خلق را بهبود می‌دهد و مصرف مواد را به‌اندازهٔ برخی درمان‌های رسمی کاهش می‌دهد. پژوهش‌های اشتغال حمایتی هم فراتر می‌روند: برای افراد در بهبودی، کارِ معنادار، پرهیز از مصرف، کیفیت زندگی و ماندگاری در درمان را بهتر می‌کند.",
+  "sci.m3t":"بازسازی سیستم پاداش مغز",
+  "sci.m3p":"اعتیاد حلقهٔ دوپامین مغز را می‌دزدد: محرک ← مصرف ← تسکین. بهبود یعنی ساختن حلقه‌ای تازه: محرک ← عمل ← پاداش. شیفت پاک‌سازی دقیقاً همین است — استرس و ساعت‌های خالی (محرک‌ها) با کار تیمی (عمل) جایگزین می‌شود و پاداش، مرئی و فوری و اجتماعی است: دستمزد، توکن، خیابانی تمیز، غرور.",
+  "sci.m4t":"مراقبت سبز: طبیعت به‌مثابهٔ دارو",
+  "sci.m4p":"وقت گذراندن در فضای سبز به‌طور قابل‌اندازه‌گیری کورتیزول و نشخوار ذهنی را کم و توجه را بازیابی می‌کند (نظریهٔ بازیابی توجه). کارِ بدنی در فضای باز، ورزش را هم اضافه می‌کند — که کارآزمایی‌ها آن را به کاهش شدت هوس و خواب بهتر پیوند می‌زنند. طبیعت در گرین‌روت تزئین نیست؛ اتاق درمان است.",
+  "sci.m5t":"جامعه و هویت",
+  "sci.m5p":"جامعه‌های درمانی — جایی که افراد با هم و در نقش‌های اثرگذار بهبود می‌یابند — دهه‌ها شواهد پشتشان است. در گرین‌روت هر عضو «بیمار» نیست؛ عضو تیمی است که سهمش را همهٔ شهر می‌بیند. هویت از «معتاد» به «کارگر محیط‌زیست» تغییر می‌کند و با هر پارک تمیز، انگ اجتماعی کوچک‌تر می‌شود.",
+  "sci.m6t":"حلقهٔ اثر دوگانه",
+  "sci.m6p":"هر حلقه، حلقهٔ بعد را تغذیه می‌کند: کار ← درآمد ← درمان ← ثبات ← کار بهتر ← کاهش خطر لغزش. در همین حین شهر تمیزتر می‌شود و کلینیک‌ها تجهیزات می‌گیرند. بهبودی و محیط‌زیست مثل بهرهٔ مرکب با هم رشد می‌کنند.",
+
+  "sci.flow.kicker":"سازوکار، از ابتدا تا انتها","sci.flow.h2":"از هوس تا حرفه، در یک چرخه",
+  "sci.flow.f1":"محرک: روز خالی، هوس","sci.flow.f1s":"لحظهٔ پرخطر",
+  "sci.flow.f2":"شیفت تیمی در فضای باز","sci.flow.f2s":"نظم + ورزش + طبیعت",
+  "sci.flow.f3":"دستمزد + توکن","sci.flow.f3s":"پاداش فوری و اوده‌شده",
+  "sci.flow.f4":"درمان و دارو تأمین شد","sci.flow.f4s":"مراقبت بالینی ادامه دارد",
+  "sci.flow.f5":"مربی‌گری رها (AI)","sci.flow.f5s":"هوس، خلق، هشدار لغزش",
+  "sci.flow.f6":"بازگشت به شغل قبلی","sci.flow.f6s":"هویت بازیابی شد",
+
+  "sci.ev.kicker":"مبانی شواهد","sci.ev.h2":"پژوهش‌ها چه می‌گویند",
+  "sci.ev.lead":"خلاصهٔ یافته‌های کلیدی که گرین‌روت روی آن‌ها بنا شده.",
+  "sci.ev.th1":"مداخله","sci.ev.th2":"شواهد در یک نگاه","sci.ev.th3":"در گرین‌روت",
+  "sci.ev.r1a":"مدیریت پیامد",
+  "sci.ev.r1b":"شواهد قوی از کارآزمایی‌های تصادفی‌سازی‌شده؛ افزایش قابل‌اتکای پرهیز از مصرف و ماندگاری در درمان، از جمله در اختلال مصرف محرک.",
+  "sci.ev.r1c":"اقتصاد توکنی با پاداش واقعی برای شیفت‌ها و نقاط عطف",
+  "sci.ev.r2a":"اشتغال حمایتی / کارآفرینی اجتماعی",
+  "sci.ev.r2b":"برنامه‌های کار-محور برای افراد در بهبودی، نتایج اشتغال، عزت‌نفس و کیفیت زندگی را بهبود می‌دهند.",
+  "sci.ev.r2c":"نقش‌های حقوق‌دار: پاک‌سازی، جداسازی، بازیافت خلاق",
+  "sci.ev.r3a":"فعال‌سازی رفتاری",
+  "sci.ev.r3b":"فعالیت ساخت‌یافته و ارزش‌محور، علائم افسردگی و مصرف مواد را کاهش می‌دهد.",
+  "sci.ev.r3c":"شیفت‌های معنادارِ زمان‌بندی‌شده به‌جای ساعت‌های خالی",
+  "sci.ev.r4a":"طبیعت / ورزش سبز",
+  "sci.ev.r4b":"حضور در فضای سبز، هورمون‌های استرس را کم و خلق و توجه را بهتر می‌کند؛ ورزش با کاهش هوس پیوند دارد.",
+  "sci.ev.r4c":"همهٔ شیفت‌ها در فضای باز: پارک، حاشیهٔ رود، خیابان",
+  "sci.ev.r5a":"جامعهٔ درمانی",
+  "sci.ev.r5b":"جامعهٔ همتا با نقش‌های معنادار، دستاوردهای بلندمدت در پرهیز از مصرف و بازگشت اجتماعی دارد.",
+  "sci.ev.r5c":"هویت تیمی، مربیان همتا، شبکهٔ فارغ‌التحصیلان",
+  "sci.ev.note":"گرین‌روت برای توضیح طراحی‌اش به ادبیات علمیِ تثبیت‌شده ارجاع می‌دهد؛ ادعا نمی‌کند این مطالعات خودِ گرین‌روت را ارزیابی کرده‌اند. نتایج پایلوتِ نشان‌داده‌شده در صفحات دیگر، ارقام نمایشی است.",
+
+  "sci.eth.t1":"اول عزت — خطوط قرمز اخلاقی ما",
+  "sci.eth.l1":"دستمزد واقعی؛ هرگز فقط «توکن درمانی».",
+  "sci.eth.l2":"درمان و دارو هرگز مشروط به خروجی کار یا سهمیه نیست.",
+  "sci.eth.l3":"نظارتِ مبتنی بر آگاهی از تروما؛ سرعتِ مسیر را تیم سلامتِ خودِ فرد تعیین می‌کند.",
+  "sci.eth.l4":"رضایت کامل و حریم خصوصی: داده‌های مشارکت بدون رضایت، هرگز با پلیس یا کارفرما به اشتراک گذاشته نمی‌شود.",
+  "sci.eth.l5":"بهبود مقدم است — روزِ سخت، دلیل استراحت است، نه دلیل از دست دادن جایگاه.",
+  "sci.eth.t2":"گرین‌روت چه چیزی نیست",
+  "sci.eth.l6":"جایگزین سم‌زدایی پزشکی یا مراقبت روان‌پزشکی نیست — ما آن را تأمین مالی و هماهنگ می‌کنیم.",
+  "sci.eth.l7":"کارِ بی‌مزدِ پوشیده در لباس درمان نیست.",
+  "sci.eth.l8":"برنامهٔ نظارتی نیست — رها اختیاری است و داده‌اش مالِ خودِ فرد است.",
+  "sci.eth.l9":"شفا نیست — اعتیاد مزمن است؛ ما ساختاری می‌سازیم که بهبودی را پایدار کند.",
+
+  "sci.cta.h2":"علم، ریشه است. آدم‌ها، رشد.",
+  "sci.cta.p":"ببینید سازوکارها چطور به یک برنامهٔ واقعی ۱۲ماهه تبدیل می‌شوند.",
+  "sci.cta.b":"برنامه را ببینید",
+
+  "prog.hero.kicker":"دوازده ماه، چهار فاز",
+  "prog.hero.h1":"برنامهٔ گرین‌روت",
+  "prog.hero.p":"مسیری ساخت‌یافته از تثبیت تا شغل سبزِ حقوق‌دار تا حرفه‌ای که قبلاً داشتید — با درمان و دارویی که خودِ کار تأمینشان می‌کند.",
+  "prog.ph.kicker":"چهار فاز","prog.ph.h2":"مسیر شما در گرین‌روت",
+  "prog.ph1w":"هفته‌های ۰–۴","prog.ph1t":"تثبیت",
+  "prog.ph1p":"چکاپ پزشکی و ارزیابی روان‌پزشکی؛ درمان با دارو در صورت لزوم؛ برنامهٔ شخصی ایمنی و هوس؛ اولین دیدار با رها، همیار هوش مصنوعی‌تان. هنوز شیفت نه — اول سلامت.",
+  "prog.ph2w":"هفته‌های ۲–۱۲","prog.ph2t":"کار و شفا",
+  "prog.ph2p":"هفته‌ای سه شیفت پاک‌سازیِ همراهی‌شده در تیمی کوچک با مربی همتا. دو جلسهٔ گروهی درمان در هفته. توکن برای هر شیفت؛ مرور هفتگی توکن با مشورتان.",
+  "prog.ph3w":"ماه‌های ۳–۶","prog.ph3t":"ساختن",
+  "prog.ph3p":"رفتن به خط جداسازی: کار با مواد، مبانی ماشین، کارگاه بازیافت خلاق، کنترل کیفیت. رها نقشهٔ مهارت‌هایتان را می‌کشد و طرحِ بازگشت شغلی به سمت حرفهٔ قبلی‌تان را می‌نویسد.",
+  "prog.ph4w":"ماه‌های ۶–۱۲","prog.ph4t":"بازگشت",
+  "prog.ph4p":"بازسازی رزومه با روایتِ صادقانهٔ وقفه، مصاحبهٔ تمرینی، کارآموزی حمایتی یا استخدام مستقیم، و شبکهٔ فارغ‌التحصیلان. با شغل و یک جامعه بیرون می‌روید — نه فقط گواهی.",
+
+  "prog.day.kicker":"یک روزِ شیفت","prog.day.h2":"نظم، خودِ درمان است",
+  "prog.day.lead":"هر ساعت یک هدف دارد — این دقیقاً نکته است.",
+  "prog.day.c1":"قرار تیم و چک-این: خلق، هوس‌ها، تجهیزات ایمنی. رها چک-این را ثبت می‌کند.",
+  "prog.day.c2":"شیفت پاک‌سازی در پارک / حاشیهٔ رود / خیابان. استراحت‌های برنامه‌ریزی‌شده؛ مربی در دسترس.",
+  "prog.day.c3":"توزین و جداسازی: پت، فلز، کاغذ، شیشه. توکن‌ها همان‌جا شارژ می‌شوند.",
+  "prog.day.c4":"ناهار، سپس گروه‌درمانی، جلسه با هوش مصنوعی یا کلاس مهارت — طبق برنامهٔ خودتان.",
+
+  "prog.eco.kicker":"اقتصاد چرخه‌ایِ بهبودی","prog.eco.h2":"پول کجا می‌رود",
+  "prog.eco.c1t":"درآمد بازیافت",
+  "prog.eco.c1p":"فروش مواد (پت، فلز، کاغذ، شیشه) به‌علاوهٔ محصولات پزشکیِ بازیافت‌شده، درآمد برنامه را می‌سازد.",
+  "prog.eco.c2t":"پاداش اعضا",
+  "prog.eco.c2p":"دستمزد منصفانه به‌علاوهٔ توکن قابل‌خرج برای اقلام ضروری، حمل‌ونقل، شارژ و دوره‌های مهارتی.",
+  "prog.eco.c3t":"صندوق درمان",
+  "prog.eco.c3p":"سهمی شفاف، درمان، مراقبت روان‌پزشکی و داروهای ضروریِ هر تیم را تأمین می‌کند — و در صفحهٔ اثرگذاری منتشر می‌شود.",
+  "prog.b1":"🧾 بودجهٔ باز: درآمد تیم ← ۴۰٪ دستمزد · ۳۰٪ درمان · ۳۰٪ عملیات",
+  "prog.b2":"هیچ سهمیه‌ای علیه اعضا استفاده نمی‌شود — هرگز",
+  "prog.b3":"دستمزد در حد یا بالای حداقلِ محلی",
+
+  "prog.wtw.kicker":"زباله ← بیمارستان",
+  "prog.wtw.h2":"خط بازیافت خلاق: از آشغال تا تجهیزات پزشکی",
+  "prog.wtw.lead":"نمادین‌ترین شغل برنامه: تبدیل مادّهٔ خیابان به چیزِ مفید برای بیمارستان.",
+  "prog.wtw.c1t":"۱ · جمع‌آوری و جداسازی","prog.wtw.c1p":"پلاستیک‌های پت و HDPE در خط جداسازی تفکیک، توزین و ثبت می‌شوند.",
+  "prog.wtw.c2t":"۲ · شست‌وشو و خردایش","prog.wtw.c2p":"شست‌وشو، ضدعفونی و خردایش به فلِیکِ استاندارد در ریز-کارخانه.",
+  "prog.wtw.c3t":"۳ · ساخت دوباره","prog.wtw.c3p":"با شرکای تولیدی معتبر: شیلد صورت، قطعات اسپلینت، بسته‌بندی کلینیکال.",
+  "prog.wtw.c4t":"۴ · تحویل","prog.wtw.c4p":"تجهیزات به کلینیک‌ها اهدا یا فروخته می‌شود؛ عواید به صندوق درمان برمی‌گردد.",
+  "prog.wtw.note":"نکتهٔ ایمنی: تولید دوباره با گرید پزشکی توسط شرکای معتبر و زیر استانداردهای قانونی انجام می‌شود؛ تیم‌های گرین‌روت فقط جمع‌آوری، جداسازی و پیش‌پردازش را بر عهده دارند.",
+
+  "prog.ai.kicker":"رها، در تمام فازها","prog.ai.h2":"همیار هوش مصنوعی در جیبتان",
+  "prog.ai.p":"رها از روز اول کنار شماست: SOS هوس در لحظه‌های سخت، چک-این روزانهٔ خلق، هشدارهای خطر لغزش (فقط با رضایت شما) برای مشورتان، کیف توکن، و طرحِ بازگشت شغلی که مهارت‌های شغل قبلی‌تان را دوباره در دسترس می‌کند.",
+  "prog.ai.b":"دموی رها را امتحان کنید",
+  "prog.ai.l1":"SOS هوس: مربی موج‌سواریِ هوس، شبانه‌روزی",
+  "prog.ai.l2":"چک-این خلق و خواب با هشدار خطر لغزش",
+  "prog.ai.l3":"کیف توکن، اهداف و جشنِ نقاط عطف",
+  "prog.ai.l4":"بازگشت شغلی: رزومه، نقشهٔ مهارت، تمرین مصاحبه",
+  "prog.ai.l5":"خصوصی از پایه: اختیاری، رمزنگاری‌شده، متعلق به خودتان",
+
+  "prog.cta.h2":"برای یک سالِ ساخت‌یافته آماده‌اید؟",
+  "prog.cta.p":"ظرفیت گروه پایلوت محدود است. با ما حرف بزنید — بدون هیچ تعهدی.",
+
+  "ai.hero.kicker":"هوش مصنوعی که کنارتان قدم می‌زند","ai.hero.h1":"با رها آشنا شوید",
+  "ai.hero.p":"رها («رهاء» یعنی آزادی) همیار بهبودیِ گرین‌روت است: مربی هوس در لحظه‌های سخت، ردیاب خلق بین جلسات، و راهنمای شغلی که شما را به کاری که قبل از اعتیاد داشتید برمی‌گرداند.",
+  "ai.hero.cta1":"دموی چت را امتحان کنید","ai.hero.cta2":"دموی بازگشت شغلی",
+  "ai.hero.side":"«هوس‌ها حدود ۲۰ دقیقه طول می‌کشند. شما هرگز مجبور نیستید تنها با یکی روبه‌رو شوید.»",
+
+  "ai.f.kicker":"رها چه می‌کند","ai.f.h2":"شش کار، یک همیار",
+  "ai.f.c1t":"SOS هوس","ai.f.c1p":"مربی موج‌سواریِ هوس، تمرین تنفس و تایمر تأخیر — و تماس یک‌ضربه‌ای با همراه یا مشورتان وقتی از حد می‌گذرد.",
+  "ai.f.c2t":"رصد خلق و لغزش","ai.f.c2p":"چک-این روزانهٔ ۳۰ثانیه‌ای. رها الگوهای پرخطر را می‌بیند — بدخوابی، شیفت جاافتاده، انزوا — و به مشورتان هشدار می‌دهد (فقط اگر خودتان بخواهید).",
+  "ai.f.c3t":"کیف توکن و اهداف","ai.f.c3p":"توکن‌های هر شیفت را ببینید، هدف تعیین کنید (یک دوره، دوچرخه، هدیه برای خانواده) و نقاط عطف را جشن بگیرید — برد کوچک، قلاب‌شده در حلقهٔ عادت.",
+  "ai.f.c4t":"بازگشت شغلی","ai.f.c4p":"ویژگی امضا: رها شغلی که قبل از اعتیاد داشتید را نقشه می‌کشد، شکاف مهارتی را پیدا می‌کند، طرحِ به‌روزرسانی می‌سازد و با شما مصاحبه تمرین می‌کند.",
+  "ai.f.c5t":"پل خانواده","ai.f.c5p":"به‌روزرسانیِ اختیاری برای خانواده: نقاط عطف، شیفت‌های انجام‌شده، روند خلق — بازسازی اعتماد با واقعیت، نه قول.",
+  "ai.f.c6t":"خصوصی از پایه","ai.f.c6p":"داده‌هایتان مال شماست. رمزنگاری‌شده، به‌اشتراک‌گذاری فقط اختیاری، هرگز با پلیس یا کارفرما نه. حذف همه‌چیز با یک لمس.",
+
+  "ai.demo.kicker":"دموی تعاملی","ai.demo.h2":"با رها حرف بزنید (نمونهٔ اولیه)",
+  "ai.demo.lead":"این یک دموی اسکریپت‌شده است که کاملاً آفلاین در مرورگر شما اجرا می‌شود — رهای واقعی، یک مدل هوش مصنوعی با نظارت انسانی خواهد بود.",
+  "ai.chat.sub":"همیار هوش مصنوعی گرین‌روت · دمو",
+  "ai.chat.ph":"پیامی بنویسید…","ai.chat.send":"بفرست",
+
+  "ai.cr.kicker":"بازگشت شغلی","ai.cr.h2":"به شغلی که قبل‌تر داشتید",
+  "ai.cr.lead":"یک حرفهٔ قبلی انتخاب کنید و نمونهٔ طرح ۳مرحله‌ای که رها با شما می‌سازد را ببینید.",
+  "ai.cr.j1":"راننده","ai.cr.j2":"پرستار / کارمند سلامت","ai.cr.j3":"حسابدار","ai.cr.j4":"مکانیک","ai.cr.j5":"معلم","ai.cr.j6":"آشپز",
+
+  "ai.mood.t":"چک-این روزانه (امتحان کنید)",
+  "ai.mood.s":"خلق امروز را لمس کنید — رها روند را رصد و الگوهای خطر لغزش را می‌پاید.",
+  "ai.mood.hint":"رشته و روند شما اینجا ظاهر می‌شود.",
+  "ai.priv.t":"ایمنی و صداقت",
+  "ai.priv.l1":"رها دستیار است، نه درمانگر — تصمیم‌های بالینی را انسان‌های مجاز می‌گیرند.",
+  "ai.priv.l2":"پیام‌های بحرانی همیشه سریع به یک انسان می‌رسند.",
+  "ai.priv.l3":"این دمو اسکریپت‌شده است و چیزی ذخیره نمی‌کند.",
+  "ai.priv.l4":"نسخهٔ تولیدی نیازمند اعتبارسنجی بالینی و بازبینی سخت‌گیرانهٔ حفاظت داده (GDPR و قوانین محلی) است.",
+
+  "ai.cta.h2":"بیست دقیقه. یک هوس. یک همیار.",
+  "ai.cta.p":"به پایلوت بپیوندید و رها از اولین شیفت تا اولین روزِ برگشتن به شغل قبلی‌تان همراهتان است.",
+
+  "dash.hero.badge":"📊 دادهٔ نمایشی — مفهوم پایلوت",
+  "dash.hero.h1":"داشبورد اثرگذاری",
+  "dash.hero.p":"بهبودی فقط وقتی واقعی است که قابل اندازه‌گیری باشد. این داشبورد عددهایی را نشان می‌دهد که گرین‌روت برای هر گروه منتشر می‌کند — اینجا با دادهٔ نمایشی.",
+  "dash.s1":"فرد در برنامه","dash.s2":"زباله جمع‌آوری‌شده","dash.s3":"صرف‌شده برای درمان و دارو","dash.s4":"قلم تجهیزات پزشکی تولیدشده",
+  "dash.s5":"لغزش ۶ماهه گرین‌روت*","dash.s6":"لغزش ۶ماهه معمول*","dash.s7":"CO₂e صرفه‌جویی‌شده با بازیافت","dash.s8":"تکمیل برنامه",
+  "dash.note":"*مقایسهٔ تشریحی: گروه داخلی پایلوت در برابر بازه‌های رایج لغزش ۶ماهه. ارقام نمایشی، نه ادعای بالینی.",
+  "dash.ch1.t":"جمع‌آوری ماهانه (کیلوگرم)","dash.ch1.s":"خروجی تیم همراه با بهبودی رشد می‌کند — مومنتمی که می‌شود وزنش کرد.",
+  "dash.ch2.t":"ترکیب زباله (٪)","dash.ch2.s":"تیم‌ها چه جمع می‌کنند — و هر جریان چه می‌شود.",
+  "dash.ch2.t1":"۱۸.۴ تن","dash.ch2.t2":"جمع‌آوری‌شده",
+  "dash.ch3.t":"تخصیص صندوق درمان","dash.ch3.s":"پول بازیافت کجا می‌رود، به تفکیک ماه (نمایشی).",
+  "dash.ch3.l1":"جلسات درمان","dash.ch3.l2":"داروها","dash.ch3.l3":"هماهنگی",
+  "dash.ch4.t":"گزارش ماهانه — گروه پایلوت","dash.ch4.s":"هر ماه، علنی منتشر می‌شود.",
+  "dash.ch4.th1":"ماه","dash.ch4.th2":"فعال","dash.ch4.th3":"کیلوگرم","dash.ch4.th4":"صندوق (€)",
+  "dash.tr.c1t":"بودجهٔ باز","dash.tr.c1p":"هر یوروی درآمد بازیافت ردیابی می‌شود: دستمزد، صندوق درمان، عملیات. انتشار ماهانه.",
+  "dash.tr.c2t":"ارزیابی مستقل","dash.tr.c2p":"پیامدهای سلامت با همکاری دانشگاه‌ها سنجیده می‌شود، نه فقط توسط خودمان.",
+  "dash.tr.c3t":"سنجه‌های حفظ حریم خصوصی","dash.tr.c3p":"همهٔ داده‌های اعضا تجمیعی و بی‌نام است. هیچ فردی در این عددها دیده نمی‌شود.",
+  "dash.cta.h2":"این داشبورد را برای شهرتان می‌خواهید؟",
+  "dash.cta.p":"شهرداری‌ها، شرکت‌های پسماند و کلینیک‌ها: بیایید یک گروه بسازیم.",
+  "dash.cta.b":"همکاری با ما",
+
+  "join.hero.kicker":"به گرین‌روت بپیوندید","join.hero.h1":"اینجا برای شما جایی هست",
+  "join.hero.p":"چه در حال جنگیدن برای بهبودی خودتان باشید، چه حمایتی برای عزیزی، چه ادارهٔ یک شهر — یا آمادهٔ تأمین مالی مدل — از همین‌جا شروع کنید.",
+  "join.a.c1t":"کمک لازم دارم","join.a.c1p":"محرمانه، بدون تعهد. تا ۴۸ ساعت با شما تماس می‌گیریم و همه‌چیز را — به زبان خودتان — توضیح می‌دهیم.",
+  "join.a.c2t":"عضو خانواده‌ام","join.a.c2p":"هر چیزی می‌خواهید بپرسید. برنامه، قواعد ایمنی و نحوهٔ به‌روزرسانی خانوادگی را توضیح می‌دهیم.",
+  "join.a.c3t":"شهر / شرکت","join.a.c3p":"میزبان یک تیم شوید، جریان پسماند تأمین کنید یا یک گروه را اسپانسر شوید. ESG قابل‌اندازه‌گیری با عمق انسانی.",
+  "join.a.c4t":"سرمایه‌گذار / شریک","join.a.c4p":"درآمد چرخشی به‌علاوهٔ پیامدهای سلامت. گزارش کامل پایلوت و مدل را بخواهید.",
+  "join.form.kicker":"تماس","join.form.h2":"برایمان پیام بفرستید",
+  "join.form.lead":"فرم نمایشی — در نسخهٔ اصلی به خط ورودی محرمانهٔ ما وصل می‌شود.",
+  "join.form.name":"نام شما (یا یک نام مستعار)","join.form.contact":"ایمیل یا تلفن","join.form.role":"من هستم…","join.form.msg":"پیام","join.form.send":"ارسال پیام",
+  "join.form.o1":"فردی در حال بهبودی","join.form.o2":"عضو خانواده","join.form.o3":"شهر / شهرداری","join.form.o4":"شرکت / بازیافت","join.form.o5":"سرمایه‌گذار / NGO","join.form.o6":"فقط کنجکاو",
+  "join.form.ok":"✓ سپاسگزاریم! این دمو داده‌ای به جایی نمی‌فرستد — اما در نسخهٔ اصلی، تیم ما حداکثر تا ۴۸ ساعت بعد، محرمانه با شما تماس می‌گیرد.",
+  "join.faq.h2":"سؤال‌های صادقانه، جواب‌های صادقانه",
+  "join.q1":"این اشتغال واقعی است یا «تئاتر درمان»؟",
+  "join.a1":"اشتغال واقعی. اعضا قرارداد می‌بندند، دستمزد در حد یا بالای حداقلِ محلی می‌گیرند و توکن‌ها پاداشِ اضافه‌اند — هرگز جایگزین دستمزد نیستند.",
+  "join.q2":"اگر وسط برنامه لغزش کنم چه؟",
+  "join.a2":"جایتان حفظ می‌شود. لغزش بخشی از ماهیت پزشکی اعتیاد است. کار را موقتاً متوقف، حمایت بالینی را از نو شروع می‌کنیم و با تأیید تیم سلامت‌تان برمی‌گردید. به‌خاطر مریض‌شدن اخراج نمی‌شوید.",
+  "join.q3":"برای پیوستن باید دارو را قطع کنم؟",
+  "join.a3":"نه — برعکس. درمان با دارو در صورت صلاحدید پزشکی تأمین مالی و تشویق می‌شود. برنامه با پزشکتان هماهنگ است.",
+  "join.q4":"هوش مصنوعی من را به کسی گزارش می‌کند؟",
+  "join.a4":"هرگز بدون رضایت شما. دادهٔ رها مال شماست. فقط هشدارهای اختیاری به مشورتان وجود دارد و موارد بحرانی به انسان‌هایی می‌رسد که مراقب شما هستند — نه به مقامات.",
+  "join.q5":"واقعاً می‌توانم به شغل قبلی‌ام برگردم؟",
+  "join.a5":"در بسیاری موارد، بله. طرح بازگشت شغلی رها مهارت‌ها را صادقانه بازسازی می‌کند، وقفه را راست‌گانه روایت می‌کند و کارآموزیِ حمایتی با کارفرمایانی می‌چیند که بر پایهٔ توانایی استخدام می‌کنند، نه پیشینه.",
+  "join.q6":"پایلوت در چه شهرهایی اجرا می‌شود؟",
+  "join.a6":"در حال بررسی گروه‌های پایلوت در فرانکفورت و تهران هستیم. ثبت‌نام کنید تا بگوییم نزدیک شما چه چیزی فعال است.",
+  "join.crisis.t":"🆘 همین حالا در بحران هستید؟",
+  "join.crisis.p":"اگر شما یا کسی نزدیک‌تان در خطر فوری است (اوردوز، افکار خودکشی)، همین حالا با شمارهٔ اورژانس محلی تماس بگیرید. در ایران، خط ویژهٔ اعتیادِ اورژانس اجتماعی ۰۹۶۲۸ است. در آلمان برای اورژانس با ۱۱۲ تماس بگیرید. شما مهم هستید. یک تماس می‌تواند همه‌چیز را شروع کند."
+}
+};
+
+</script>
+<script>
+/* GreenRoot Turkish language pack + COP31 campaign keys (merged at load) */
+(function(){
+"use strict";
+if (!window.I18N) window.I18N = {};
+
+/* ================= TURKISH SITE DICTIONARY ================= */
+window.I18N.tr = {
+  "title.home":"GreenRoot — İnsanları iyileştir, gezegeni iyileştir",
+  "title.science":"Bilim — GreenRoot",
+  "title.program":"Program — GreenRoot",
+  "title.ai":"Raha, yapay zekâ dostu — GreenRoot",
+  "title.dashboard":"Etki panosu — GreenRoot",
+  "title.join":"Katıl — GreenRoot",
+  "title.cop31":"GreenRoot at COP31 — Antalya & İstanbul",
+
+  "nav.home":"Anasayfa","nav.science":"Bilim","nav.program":"Program","nav.ai":"YZ dostu","nav.impact":"Etki","nav.cop31":"COP31","nav.join":"Katıl","nav.cta":"Pilota katıl",
+  "footer.tag":"İnsanları iyileştiriyoruz, gezegeni de — çevre işiyle toparlanma, geri dönüşümle finanse edilen tedavi, yapay zekâ desteğiyle dönüş.",
+  "footer.links":"Keşfet","footer.contact":"İletişim","footer.contact2":"Frankfurt · Tahran · İstanbul (pilot şehirler)",
+  "footer.disclaimer":"GreenRoot kavramsal bir prototiptir. Bu sitedeki hiçbir içerik tıbbi tavsiye değildir. Bağımlılık tıbbi bir durumdur — daima yetkili hekimler ve lisanslı tedavi hizmetleriyle çalışın. Acil durumda yerel acil numaranızı arayın.",
+
+  "home.hero.kicker":"Bağımlılıktan toparlanma × yeşil iş × yapay zekâ",
+  "home.hero.h1":"Kendini iyileştir.<br>Şehrini iyileştir.",
+  "home.hero.p":"GreenRoot, bağımlılıktan toparlanmayı ücretli çevre işine dönüştürür: toplanan her çöp torbası terapiye ve ilaca dönüşür — ve bir yapay zekâ dostu her kişiyi bağımlılık öncesi mesleğine geri taşır.",
+  "home.hero.cta1":"Programı keşfet","home.hero.cta2":"YZ dostunu dene",
+  "home.chip1":"toparlanmada kişi","home.chip2":"toplanan atık","home.chip3":"6 ayda daha az nüks",
+  "home.loop.title":"GreenRoot Döngüsü",
+  "home.loop.n1":"Topla","home.loop.n2":"Kazan","home.loop.n3":"İyileş","home.loop.n4":"Dön",
+
+  "home.prob.kicker":"GreenRoot neden var","home.prob.h2":"Üç kriz, tek kök",
+  "home.prob.lead":"Bağımlılık, işsizlik ve atık birbirini besler. GreenRoot üçüne aynı anda vurur.",
+  "home.prob.c1t":"Bağımlılık boşlukta büyür",
+  "home.prob.c1p":"Günler boşken toparlanma çöker — yapı yok, amaç yok, insan yok. Nükslerin çoğu uzun ve yapılandırılmamış saatlerde, yalnızken yaşanır.",
+  "home.prob.c2t":"İş tuzağı",
+  "home.prob.c2p":"İşverenler özgeçmişteki boşluğu görür ve reddeder; toparlanan kişi işsiz kalır — işsizlik onu yeniden kullanıma iter. Kapı iki taraftan da kapalıdır.",
+  "home.prob.c3t":"Şehirler çöpe gömülüyor",
+  "home.prob.c3p":"Parklar, nehir kenarları ve sokaklar, belediyelerin temizleme hızından hızlı kirlenir. Bu arada her yıl milyonlar değerinde geri dönüştürülebilir malzeme çöpe gider.",
+
+  "home.sol.kicker":"Cevabımız","home.sol.h2":"Tek program, üç motor",
+  "home.sol.lead":"Her motor diğer ikisini güçlendirir. Tüm fikir budur.",
+  "home.sol.c1t":"Kanıta dayalı toparlanma",
+  "home.sol.c1p":"Sonuç yönetimi, davranışsal aktivasyon ve terapötik topluluk — bağımlılıkta psikolojinin en kanıtlanmış araçları, her iş gününe işlenmiş.",
+  "home.sol.c1l":"Bilimi oku →",
+  "home.sol.c2t":"Ücretli yeşil iş",
+  "home.sol.c2p":"Temizlik ekipleri, ayrıştırma hatları ve geri dönüşüm atölyeleri için gerçek ücret. Geri dönüşüm geliri; terapiyi, ilacı — ve katılımcıların kendisini — finanse eder.",
+  "home.sol.c2l":"Programı gör →",
+  "home.sol.c3t":"YZ ile kariyer dönüşü",
+  "home.sol.c3p":"YZ dostumuz Raha kriz anında koçluk yapar, ruh halini izler ve herkesin becerilerini eski mesleğine geri bağlar — bağımlılık öncesi işine.",
+  "home.sol.c3l":"Raha ile tanış →",
+
+  "home.med.kicker":"Sokaktan servise","home.med.h2":"Atık girer, ilaç çıkar",
+  "home.med.lead":"Katılımcıların topladığı çöp, gerçek anlamda iki kez tedavinin parçası olur.",
+  "home.med.c1t":"1. Geri dönüşüm geliri tedaviyi finanse eder",
+  "home.med.c1p":"Satılan geri dönüşüm malzemesi — PET, metal, kâğıt, cam — gelir üretir. Bu gelir ekibin terapi seanslarını, psikiyatrik bakımını ve temel ilaçlarını öder. Toplanan her kilo, finanse edilen bir doz tedavidir.",
+  "home.med.c2t":"2. Malzeme tıbbi sarfa dönüşür",
+  "home.med.c2p":"Geri dönüşüm hattımızda toplanan plastiğe yıkanır, parçalanır ve sertifikalı ortaklarla tıbbi ürünlere dönüştürülür: yüz siperleri, atel bileşenleri ve klinikler için steril sınıf ambalaj.",
+
+  "home.s1":"Toparlanmada kişi","home.s2":"Toplanan & ayrıştırılan atık","home.s3":"6 ayda nüks azalması*","home.s4":"Terapi ve ilaca aktarılan*",
+  "home.demonote":"*Pilot kohort; konsept için temsili rakamlar.",
+
+  "home.aud.kicker":"Kimin için","home.aud.h2":"Herkese kazanç",
+  "home.aud.c1t":"Toparlanmakta olan senin için","home.aud.c1p":"Yapı, gelir, terapi ve eski kariyerine dönüş yolu — itibarla.",
+  "home.aud.c2t":"Aileler için","home.aud.c2p":"Sevdiğin insanın gurur duyabileceği güvenli, denetlenen bir program.",
+  "home.aud.c3t":"Şehirler ve şirketler için","home.aud.c3p":"Daha temiz kamusal alan, ölçülebilir ESG etkisi ve kanıtlanmış sosyal getiri modeli.",
+  "home.aud.c4t":"Ortaklar ve yatırımcılar için","home.aud.c4p":"Ölçülebilir sağlık sonuçlarıyla çifte gelirli döngüsel ekonomi.",
+  "home.cta.h2":"Bir çöp torbası. Bir toparlanma tuğlası.",
+  "home.cta.p":"Pilot şehir programına katıl — katılımcı, ortak ya da destekçi olarak.",
+
+  "home.cop.kicker":"Kasım 2026 — Antalya & İstanbul",
+  "home.cop.t":"GreenRoot, COP31'e gidiyor",
+  "home.cop.p":"Toparlanma, iklim adaletidir. Üç dilli kampanya kiti, sunum desteleri ve barışçıl eylem mesajlarımız hazır.",
+  "home.cop.b":"COP31 sayfasını gör",
+
+  "sci.hero.kicker":"Modelin arkasındaki psikoloji",
+  "sci.hero.h1":"Doğada çalışmak bağımlılığı neden iyileştirir",
+  "sci.hero.p":"GreenRoot slogan olarak 'tedavi yerine iş' demiyor. Programın her ögesi, bağımlılık biliminde iyi çalışılmış bir mekanizmaya oturur.",
+  "sci.m1t":"Sonuç yönetimi ve jeton ekonomisi",
+  "sci.m1p":"Sonuç yönetimi (CM) — madde kullanmama davranışını anında ve tutarlı ödüllendirmek — madde kullanım bozukluğu için en kanıtlı psikososyal tedaviler arasındadır, özellikle uyarıcılarda. GreenRoot işleyen bir jeton ekonomisidir: her vardiya, her ayrıştırılan kilo ve her temiz test, gerçek değeri olan jeton kazandırır (ilaç kredisi, temel ihtiyaç, beceri kursu).",
+  "sci.m2t":"Davranışsal aktivasyon ve anlamlı iş",
+  "sci.m2p":"Davranışsal aktivasyon; ödüllendirici ve değerlere uygun etkinliklerin planlanmasının ruh halini iyileştirdiğini ve madde kullanımını bazı resmî terapiler kadar azalttığını gösterir. Destekli istihdam araştırmaları daha ileri gider: toparlanmakta olan insanlar için anlamlı iş; kesinleşmeyi, yaşam kalitesini ve tedavide kalmayı iyileştirir.",
+  "sci.m3t":"Ödül sistemini yeniden kablolamak",
+  "sci.m3p":"Bağımlılık beynin dopamin döngüsünü ele geçirir: uyaran → kullanım → rahatlama. Toparlanma yeni bir döngü kurmaktır: uyaran → rutin → ödül. Temizlik vardiyası tam olarak bunu yapar — stres ve boş saatler (uyaranlar) ekip işiyle (rutin) değişir; karşılık görünür, anlık ve sosyaldir: ücret, jeton, temiz sokak, gurur.",
+  "sci.m4t":"Yeşil bakım: doğa ilaçtır",
+  "sci.m4p":"Yeşil alanda geçen süre kortizolü ve zihinsel geviş getirmeyi ölçülebilir biçimde düşürür, dikkati onarır ('dikkat restorasyonu kuramı'). Açık havada bedensel iş egzersiz ekler — çalışmalar bunun kriz yoğunluğunu azalttığını ve uykuyu düzelttiğini gösterir. GreenRoot'ta doğa dekor değildir; tedavi odasıdır.",
+  "sci.m5t":"Topluluk ve kimlik",
+  "sci.m5p":"Terapötik topluluklar — insanların birlikte ve anlamlı rollerle iyileştiği ortamlar — onlarca yıllık kanıta sahiptir. GreenRoot'ta her üye 'hasta' değil; katkısını tüm şehrin gördüğü bir ekip üyesidir. Kimlik 'bağımlı'dan 'çevre işçisi'ne kayar; her temiz parkla damga küçülür.",
+  "sci.m6t":"Çifte etki döngüsü",
+  "sci.m6p":"Her halka bir sonrakini besler: iş → gelir → tedavi → istikrar → daha iyi iş → düşük nüks riski. Bu arada şehir temizlenir, klinikler sarf alır. Toparlanma ve çevre, bileşik faiz gibi büyür.",
+
+  "sci.flow.kicker":"Uçtan uca mekanizma","sci.flow.h2":"Krizden kariyere, tek döngüde",
+  "sci.flow.f1":"Uyaran: boş gün, kriz","sci.flow.f1s":"Yüksek riskli an",
+  "sci.flow.f2":"Açık havada ekip vardiyası","sci.flow.f2s":"Yapı + egzersiz + doğa",
+  "sci.flow.f3":"Ücret + jeton","sci.flow.f3s":"Anında, kazanılmış ödül",
+  "sci.flow.f4":"Terapi ve ilaç finanse edildi","sci.flow.f4s":"Klinik bakım sürüyor",
+  "sci.flow.f5":"Raha YZ koçluğu","sci.flow.f5s":"Kriz, ruh hali, nüks uyarısı",
+  "sci.flow.f6":"Eski kariyere dönüş","sci.flow.f6s":"Kimlik geri kazanıldı",
+
+  "sci.ev.kicker":"Kanıt temeli","sci.ev.h2":"Araştırmalar ne diyor",
+  "sci.ev.lead":"GreenRoot'un üzerine kurulduğu temel bulguların özeti.",
+  "sci.ev.th1":"Müdahale","sci.ev.th2":"Kanıt, kısaca","sci.ev.th3":"GreenRoot'ta",
+  "sci.ev.r1a":"Sonuç yönetimi",
+  "sci.ev.r1b":"Güçlü randomize çalışma kanıtı; uyarıcı kullanım bozukluğu dahil, kesinleşmeyi ve tedavide kalmayı güvenilir biçimde artırır.",
+  "sci.ev.r1c":"Vardiyalar ve kilometre taşları için gerçek ödüllü jeton ekonomisi",
+  "sci.ev.r2a":"Destekli istihdam / sosyal girişim",
+  "sci.ev.r2b":"İşle bütünleşik programlar; toparlanmakta olan kişilerde istihdam sonucunu, benlik saygısını ve yaşam kalitesini iyileştirir.",
+  "sci.ev.r2c":"Ücretli temizlik, ayrıştırma ve geri dönüşüm rolleri",
+  "sci.ev.r3a":"Davranışsal aktivasyon",
+  "sci.ev.r3b":"Yapılandırılmış, değer güdümlü etkinlik; depresif belirtileri ve madde kullanımını azaltır.",
+  "sci.ev.r3c":"Planlı anlamlı vardiyalar, boş saatlerin yerine geçer",
+  "sci.ev.r4a":"Doğa / yeşil egzersiz",
+  "sci.ev.r4b":"Yeşil alan süresi stres hormonlarını düşürür, ruh halini ve dikkati iyileştirir; egzersiz azalan krizle ilişkilendirilir.",
+  "sci.ev.r4c":"Tüm vardiyalar açık havada: park, nehir kenarı, sokak",
+  "sci.ev.r5a":"Terapötik topluluk",
+  "sci.ev.r5b":"Anlamlı rollere sahip akran topluluğu; kesinleşme ve topluma yeniden katılımda uzun vadeli kazanım gösterir.",
+  "sci.ev.r5c":"Ekip kimliği, akran mentorları, mezunlar ağı",
+  "sci.ev.note":"GreenRoot tasarımını açıklamak için yerleşik bilimsel literatüre atıf yapar; bu çalışmaların GreenRoot'u değerlendirdiğini iddia etmez. Başka sayfalarda gösterilen pilot sonuçlar temsilidir.",
+
+  "sci.eth.t1":"Önce onur — etik kırmızı çizgilerimiz",
+  "sci.eth.l1":"Gerçek ücret; asla yalnızca 'terapi jetonu' değil.",
+  "sci.eth.l2":"Terapi ve ilaç asla iş çıktısına veya kotaya bağlı değildir.",
+  "sci.eth.l3":"Travma bilgili gözetim; tempo, katılımcının sağlık ekibi tarafından belirlenir.",
+  "sci.eth.l4":"Tam rıza ve gizlilik: katılım verisi rıza olmadan asla polisle veya işverenle paylaşılmaz.",
+  "sci.eth.l5":"Önce toparlanma — zor bir gün dinlenme sebebidir, yerini kaybetme sebebi değil.",
+  "sci.eth.t2":"GreenRoot ne değildir",
+  "sci.eth.l6":"Tıbbi detoks veya psikiyatrik bakımın yerine geçmez — onu finanse eder ve koordine ederiz.",
+  "sci.eth.l7":"Terapi kılığındaki ücretsiz emek değildir.",
+  "sci.eth.l8":"Gözetim programı değildir — Raha isteğe bağlıdır ve verisi katılımcıya aittir.",
+  "sci.eth.l9":"Bir 'çare' değildir — bağımlılık kroniktir; remisyonu kalıcı kılan yapıyı kurarız.",
+
+  "sci.cta.h2":"Bilim köktür. İnsanlar büyümedir.",
+  "sci.cta.p":"Mekanizmaların 12 aylık gerçek bir programa nasıl dönüştüğünü gör.",
+  "sci.cta.b":"Programı keşfet",
+
+  "prog.hero.kicker":"On iki ay, dört evre",
+  "prog.hero.h1":"GreenRoot programı",
+  "prog.hero.p":"Sağlamlaşmadan ücretli yeşil işe, oradan bağımlılık öncesi kariyerine uzanan yapılandırılmış bir yolculuk — terapi ve ilaç, işin kendisi tarafından finanse edilir.",
+  "prog.ph.kicker":"Dört evre","prog.ph.h2":"GreenRoot'taki yolun",
+  "prog.ph1w":"0–4. haftalar","prog.ph1t":"Sağlamlaş",
+  "prog.ph1p":"Tıbbi check-up ve psikiyatrik değerlendirme; endikasyon varsa ilaçla tedavi; kişisel güvenlik ve kriz planı; YZ dostun Raha ile ilk tanışma. Henüz vardiya yok — önce sağlık.",
+  "prog.ph2w":"2–12. haftalar","prog.ph2t":"Çalış ve iyileş",
+  "prog.ph2p":"Akran mentorlu küçük bir ekipte haftada üç destekli temizlik vardiyası. Haftada iki grup terapisi. Her vardiya için jeton; danışmanla haftalık jeton gözden geçirmesi.",
+  "prog.ph3w":"3–6. aylar","prog.ph3t":"İnşa et",
+  "prog.ph3p":"Ayrıştırma hattına geç: malzeme kullanımı, makine temelleri, geri dönüşüm atölyesi, kalite kontrol. Raha becerilerini haritalar ve eski mesleğine yönelik kariyer dönüşü planını yazar.",
+  "prog.ph4w":"6–12. aylar","prog.ph4t":"Dön",
+  "prog.ph4p":"Dürüst boşluk anlatımıyla özgeçmiş yeniden inşası, deneme mülakatları, destekli staj ya da doğrudan yerleştirme ve mezunlar ağı. Sadece sertifika değil — bir iş ve bir toplulukla ayrılırsın.",
+
+  "prog.day.kicker":"Bir vardiya günü","prog.day.h2":"Yapı, tedavinin kendisidir",
+  "prog.day.lead":"Her saatin bir amacı var — mesele tam olarak bu.",
+  "prog.day.c1":"Ekip buluşması ve check-in: ruh hali, krizler, koruyucu ekipman. Raha check-in'i kaydeder.",
+  "prog.day.c2":"Park / nehir kenarı / sokakta temizlik vardiyası. Molalar planlı; mentor yakında.",
+  "prog.day.c3":"Tartma ve ayrıştırma: PET, metal, kâğıt, cam. Jetonlar anında yüklenir.",
+  "prog.day.c4":"Öğle yemeği; ardından grup terapisi, bir YZ seansı ya da beceri dersi — senin takvimin.",
+
+  "prog.eco.kicker":"Toparlanmanın döngüsel ekonomisi","prog.eco.h2":"Para nereye gidiyor",
+  "prog.eco.c1t":"Geri dönüşüm geliri",
+  "prog.eco.c1p":"Satılan malzeme (PET, metal, kâğıt, cam) artı geri dönüştürülmüş tıbbi ürünler; programın gelirini oluşturur.",
+  "prog.eco.c2t":"Katılımcı ödülleri",
+  "prog.eco.c2p":"Adil ücret artı; temel ihtiyaç, ulaşım, telefon kredisi ve beceri kursları için harcanabilir jeton.",
+  "prog.eco.c3t":"Tedavi fonu",
+  "prog.eco.c3p":"Şeffaf bir pay; her ekibin terapisini, psikiyatrik bakımını ve temel ilaçlarını finanse eder — Etki sayfasında yayımlanır.",
+  "prog.b1":"🧾 Açık bütçe: ekip geliri → %40 ücret · %30 tedavi · %30 operasyon",
+  "prog.b2":"Kota asla katılımcılara karşı kullanılmaz — hiçbir zaman",
+  "prog.b3":"Ücretler yerel asgarinin düzeyinde veya üzerinde",
+
+  "prog.wtw.kicker":"Atık → hastane",
+  "prog.wtw.h2":"Geri dönüşüm hattı: çöpten tıbbi sarfa",
+  "prog.wtw.lead":"Programdaki en simgesel iş: sokağın malzemesini hastaneye faydalı kılmak.",
+  "prog.wtw.c1t":"1 · Topla ve ayrıştır","prog.wtw.c1p":"PET ve HDPE plastikler ayrıştırma hattında ayrılır, tartılır, kayda geçer.",
+  "prog.wtw.c2t":"2 · Yıka ve parçala","prog.wtw.c2p":"Mikro fabrikada yıkanır, dezenfekte edilir, sertifikalı pul ğa parçalanır.",
+  "prog.wtw.c3t":"3 · Yeniden üret","prog.wtw.c3p":"Sertifikalı üretim ortaklarıyla: yüz siperi, atel bileşeni, klinik ambalaj.",
+  "prog.wtw.c4t":"4 · Teslim et","prog.wtw.c4p":"Sarflar kliniklere bağışlanır ya da satılır; gelir tedavi fonuna akar.",
+  "prog.wtw.note":"Güvenlik notu: tıbbi sınıf yeniden üretim, mevzuata uygun sertifikalı ortaklarca yapılır; GreenRoot ekipleri yalnızca toplama, ayrıştırma ve ön işlemden sorumludur.",
+
+  "prog.ai.kicker":"Her evrede Raha","prog.ai.h2":"Cebinde bir YZ dostu",
+  "prog.ai.p":"Raha ilk günden yanında: zor anlarda kriz SOS'u, günlük ruh hali kontrolü, (yalnızca rızanla) danışmana nüks-riski uyarısı, jeton cüzdanı ve eski meslek becerilerini yeniden erişilir kılan kariyer dönüşü planı.",
+  "prog.ai.b":"Raha demosunu dene",
+  "prog.ai.l1":"Kriz SOS: 7/24 dürtü sörfü koçu",
+  "prog.ai.l2":"Nüks-riski uyarılı ruh hali ve uyku takibi",
+  "prog.ai.l3":"Jeton cüzdanı, hedefler ve kilometre taşı kutlaması",
+  "prog.ai.l4":"Kariyer dönüşü: özgeçmiş, beceri haritası, mülakat pratiği",
+  "prog.ai.l5":"Tasarım gereği özel: isteğe bağlı, şifreli, katılımcıya ait",
+
+  "prog.cta.h2":"Yapılandırılmış bir yıla hazır mısın?",
+  "prog.cta.p":"Pilot kohortta kontenjan sınırlı. Konuş bizimle — hiçbir taahhüt yok.",
+
+  "ai.hero.kicker":"Yanında yürüyen yapay zekâ","ai.hero.h1":"Raha ile tanış",
+  "ai.hero.p":"Raha ('rehâ' — özgürlük), GreenRoot'un toparlanma dostudur: zor anlarda kriz koçu, seanslar arasında ruh hali izleyicisi ve seni bağımlılık öncesi işine geri götüren kariyer rehberi.",
+  "ai.hero.cta1":"Demo sohbeti dene","ai.hero.cta2":"Kariyer dönüşü demosu",
+  "ai.hero.side":"'Krizler yaklaşık 20 dakika sürer. Bir krizle asla yalnız yüzleşmek zorunda değilsin.'",
+
+  "ai.f.kicker":"Raha ne yapar","ai.f.h2":"Altı iş, tek dost",
+  "ai.f.c1t":"Kriz SOS","ai.f.c1p":"Dürtü sörfü koçu, nefes egzersizleri ve geciktirme sayacı — işin zorleştiğinde tek dokunuşla yoldaşını ya da danışmanını ara.",
+  "ai.f.c2t":"Ruh hali ve nüks gözcüsü","ai.f.c2p":"Günlük 30 saniyelik check-in. Raha riskli örüntüleri görür — kötü uyku, atlanan vardiya, izolasyon — ve danışmanını uyarır (yalnızca kabul edersen).",
+  "ai.f.c3t":"Jeton cüzdanı ve hedefler","ai.f.c3p":"Vardiya başına kazanılan jetonu gör, hedef koy (bir kurs, bir bisiklet, aileye hediye) ve kilometre taşlarını kutla — alışkanlık döngüsüne bağlanmış küçük zaferler.",
+  "ai.f.c4t":"Kariyer dönüşü","ai.f.c4p":"İmza özellik: Raha bağımlılık öncesi işini haritalar, beceri boşluklarını bulur, tazeleme planı kurar ve seninle mülakat pratiği yapar.",
+  "ai.f.c5t":"Aile köprüsü","ai.f.c5p":"Aileye isteğe bağlı güncelleme: ulaşılan kilometre taşları, çalışılan vardiyalar, ruh hali eğilimi — sözle değil, olguyla güven inşası.",
+  "ai.f.c6t":"Tasarım gereği özel","ai.f.c6p":"Veri sana aittir. Şifreli, her paylaşım için ayrı rıza, asla polisle veya işverenle paylaşılmaz. Tek dokunuşla tamamen silinir.",
+
+  "ai.demo.kicker":"Etkileşimli demo","ai.demo.h2":"Raha ile konuş (prototip)",
+  "ai.demo.lead":"Bu, tarayıcında tamamen çevrimdışı çalışan yazılı bir demodur — gerçek Raha; insan gözetimli bir YZ modeli olacaktır.",
+  "ai.chat.sub":"GreenRoot YZ dostu · demo",
+  "ai.chat.ph":"Bir mesaj yaz…","ai.chat.send":"Gönder",
+
+  "ai.cr.kicker":"Kariyer dönüşü","ai.cr.h2":"Bağımlılık öncesi işine geri dön",
+  "ai.cr.lead":"Eski bir meslek seç; Raha'nın seninle kuracağı örnek 3 adımlı dönüş planını gör.",
+  "ai.cr.j1":"Şoför","ai.cr.j2":"Hemşire / sağlık çalışanı","ai.cr.j3":"Muhasebeci","ai.cr.j4":"Tamirci","ai.cr.j5":"Öğretmen","ai.cr.j6":"Aşçı",
+
+  "ai.mood.t":"Günlük check-in (dene)",
+  "ai.mood.s":"Bugünkü ruh haline dokun — Raha eğilimi tutar, nüks-riski örüntülerini gözcülük eder.",
+  "ai.mood.hint":"Serin ve eğilimin burada görünecek.",
+  "ai.priv.t":"Güvenlik ve dürüstlük",
+  "ai.priv.l1":"Raha asistandır, terapist değil — klinik kararları yetkili insanlar verir.",
+  "ai.priv.l2":"Kriz mesajları her zaman hızla bir insana yönlendirilir.",
+  "ai.priv.l3":"Bu demo yazılıdır ve hiçbir şey kaydetmez.",
+  "ai.priv.l4":"Üretim sürümü klinik doğrulama ve sıkı veri koruma denetimi gerektirecektir (GDPR ve yerel hukuk).",
+
+  "ai.cta.h2":"Yirmi dakika. Bir kriz. Bir dost.",
+  "ai.cta.p":"Pilota katıl — Raha ilk vardiyadan, eski işindeki ilk güne kadar yanında.",
+
+  "dash.hero.badge":"📊 Temsili veri — pilot konsept",
+  "dash.hero.h1":"Etki panosu",
+  "dash.hero.p":"Toparlanma ancak ölçülürse gerçektir. Bu pano, GreenRoot'un her kohort için yayımladığı sayıları gösterir — burada temsili veriyle.",
+  "dash.s1":"Programda kişi","dash.s2":"Toplanan atık","dash.s3":"Terapiye ve ilaca","dash.s4":"Üretilen tıbbi ürün",
+  "dash.s5":"GreenRoot 6 aylık nüks*","dash.s6":"Tipik 6 aylık nüks*","dash.s7":"Geri dönüşümle tasarruf edilen CO₂e","dash.s8":"Program tamamlama",
+  "dash.note":"*Temsili karşılaştırma: iç pilot kohort ile yaygın bildirilen 6 aylık nüks aralıkları. Temsili rakamlar; klinik iddia değildir.",
+  "dash.ch1.t":"Aylık toplama (kg)","dash.ch1.s":"Ekip çıktısı, toparlanma büyüdükçe büyür — tartılabilen ivme.",
+  "dash.ch2.t":"Atık karışımı (%)","dash.ch2.s":"Ekipler ne topluyor — her akış neye dönüşüyor.",
+  "dash.ch2.t1":"18,4 t","dash.ch2.t2":"toplandı",
+  "dash.ch3.t":"Tedavi fonu dağılımı","dash.ch3.s":"Geri dönüşüm parası nereye gidiyor (temsili).",
+  "dash.ch3.l1":"Terapi seansları","dash.ch3.l2":"İlaçlar","dash.ch3.l3":"Koordinasyon",
+  "dash.ch4.t":"Aylık rapor — pilot kohort","dash.ch4.s":"Her ay açıkça yayımlanır.",
+  "dash.ch4.th1":"Ay","dash.ch4.th2":"Aktif","dash.ch4.th3":"kg","dash.ch4.th4":"Fon (€)",
+  "dash.tr.c1t":"Açık bütçe","dash.tr.c1p":"Geri dönüşüm gelirinin her avrosu izlenir: ücret, tedavi fonu, operasyon. Aylık yayımlanır.",
+  "dash.tr.c2t":"Bağımsız değerlendirme","dash.tr.c2p":"Sağlık sonuçları üniversite ortaklarıyla değerlendirilir — yalnız bizimle değil.",
+  "dash.tr.c3t":"Gizlilik-güvenli metrikler","dash.tr.c3p":"Tüm katılımcı verisi toplu ve anonimdir. Bu sayılarda hiçbir birey görünmez.",
+  "dash.cta.h2":"Bu panoyu şehrin için ister misin?",
+  "dash.cta.p":"Belediyeler, atık şirketleri, klinikler: birlikte bir kohort kuralım.",
+  "dash.cta.b":"Ortak ol",
+
+  "join.hero.kicker":"GreenRoot'a katıl","join.hero.h1":"Burada senin için bir yer var",
+  "join.hero.p":"Kendi toparlanman için mücadele ediyor, bir sevdiğini destekliyor, bir şehri yönetiyor ya da modeli finanse etmeye hazırsan — buradan başla.",
+  "join.a.c1t":"Yardıma ihtiyacım var","join.a.c1p":"Gizli, taahhütsüz. 48 saat içinde döneriz ve her şeyi — kendi dilinde — anlatırız.",
+  "join.a.c2t":"Aile üyesiyim","join.a.c2p":"Bize her şeyi sor. Programı, güvenlik kurallarını ve aile bilgilendirmelerinin nasıl işlediğini anlatırız.",
+  "join.a.c3t":"Şehir / şirket","join.a.c3p":"Bir ekibe ev sahipliği yap, atık akışı sağla ya da bir kohorta sponsor ol. İnsan derinliğiyle ölçülebilir ESG.",
+  "join.a.c4t":"Yatırımcı / ortak","join.a.c4p":"Döngüsel gelir artı sağlık sonuçları. Tam pilot raporunu ve modeli iste.",
+  "join.form.kicker":"İletişim","join.form.h2":"Bize mesaj gönder",
+  "join.form.lead":"Demo form — üretimde gizli kabul hattımıza bağlanır.",
+  "join.form.name":"Adın (ya da bir takma ad)","join.form.contact":"E-posta veya telefon","join.form.role":"Ben…","join.form.msg":"Mesaj","join.form.send":"Mesajı gönder",
+  "join.form.o1":"Toparlanmakta olan biri","join.form.o2":"Bir aile üyesi","join.form.o3":"Bir şehir / belediye","join.form.o4":"Bir şirket / geri dönüşümcü","join.form.o5":"Bir yatırımcı / STK","join.form.o6":"Sadece meraklıyım",
+  "join.form.ok":"✓ Teşekkürler! Bu demo hiçbir yere veri göndermez — ama üretimde ekibimiz 48 saat içinde gizlice sana ulaşır.",
+  "join.faq.h2":"Dürüst sorular, dürüst cevaplar",
+  "join.q1":"Bu gerçek istihdam mı, yoksa 'terapi tiyatrosu' mu?",
+  "join.a1":"Gerçek istihdam. Katılımcılar sözleşme imzalar, yerel asgarinin düzeyinde ya da üzerinde kazanır; jetonlar üstüne ek ödüldür — asla ücretin yerine geçmez.",
+  "join.q2":"Program sırasında nüks edersem?",
+  "join.a2":"Yerin korunur. Nüks, bağımlılığın tıbbi gidişatının parçasıdır. İşi duraklatır, klinik desteği yeniden başlatır; sağlık ekibin onaylayınca dönersin. Hasta olduğun için işten çıkarılmazsın.",
+  "join.q3":"Katılmak için ilacımı bırakmam gerekir mi?",
+  "join.a3":"Hayır — tam tersi. Tıbbi endikasyon varsa ilaçla tedavi finanse edilir ve teşvik edilir. Program doktorunla koordineli çalışır.",
+  "join.q4":"YZ beni birine bildirir mi?",
+  "join.a4":"Asla rızan olmadıkça. Raha'nın verisi sana aittir. Yalnızca isteğe bağlı danışman uyarısı vardır; kriz yükseltmeleri seni önemseyen insanlara gider — makamlara değil.",
+  "join.q5":"Gerçekten eski kariyerime dönebilir miyim?",
+  "join.a5":"Çoğu durumda evet. Raha'nın kariyer dönüşü planı becerileri dürüstçe yeniden inşa eder, boşluğu doğru anlatır ve yeteneğe göre işe alan ortak işverenlerle destekli staj ayarlar.",
+  "join.q6":"Pilot hangi şehirlerde?",
+  "join.a6":"Frankfurt, Tahran ve İstanbul'da pilot kohort planlıyoruz. Kaydol; sana en yakında neyin aktif olduğunu söyleyelim.",
+  "join.crisis.t":"🆘 Şu anda krizde misin?",
+  "join.crisis.p":"Sen ya da yanındaki kişi derhal tehlikedeyse (aşırı doz, intihar düşüncesi) şimdi yerel acil numarayı ara. Türkiye'de acil durum: 112; Yeşilay bağımlılık danışma hattı: 115. İran'da bağımlılık hattı: 09628. Almanya'da: 112. Sen önemlisin. Tek bir arama her şeyi başlatabilir."
+};
+
+/* ================= COP31 keys — all languages ================= */
+Object.assign(window.I18N.en, {
+  "nav.cop31":"COP31",
+  "title.cop31":"GreenRoot at COP31 — Antalya & Istanbul",
+  "footer.contact2":"Frankfurt · Tehran · Istanbul (pilot cities)",
+  "home.cop.kicker":"November 2026 — Antalya & Istanbul",
+  "home.cop.t":"GreenRoot goes to COP31",
+  "home.cop.p":"Recovery is climate justice. Our trilingual campaign kit, pitch decks and protest messages are ready.",
+  "home.cop.b":"See the COP31 page",
+  "cop.hero.kicker":"COP31 — Antalya & Istanbul · 9–20 November 2026",
+  "cop.hero.h1":"Recovery is climate justice too",
+  "cop.hero.p":"The world's climate summit meets in Türkiye this November. GreenRoot will be there — in Antalya and at the Istanbul leaders' meetings — with one message: there is no just transition without the people the crisis left behind.",
+  "cop.countdown":"COP31 starts in {d} days — Antalya & Istanbul, 9–20 Nov 2026",
+  "cop.facts.t":"COP31 in one minute",
+  "cop.facts.f1":"📅 9–20 November 2026 — Antalya, Türkiye (Antalya EXPO Center)",
+  "cop.facts.f2":"🇹🇷 Host: Türkiye; COP31 President: Murat Kurum; Australia leads the negotiations",
+  "cop.facts.f3":"🏛 High-level leaders' meetings expected in Istanbul — our city of action",
+  "cop.facts.f4":"🌍 Peoples' Climate Summit — the civil-society space where voices like ours belong",
+  "cop.facts.src":"Based on the published COP31 schedule and public reporting.",
+  "cop.why.kicker":"Why we're going",
+  "cop.why.h2":"Why a recovery program belongs at a climate summit",
+  "cop.why.w1t":"Waste work is climate work",
+  "cop.why.w1p":"Cities cannot hit recycling targets without thousands of hands. GreenRoot turns a marginalized community into a trained green workforce — mitigation and social inclusion in one budget line.",
+  "cop.why.w2t":"Just transition must include people in recovery",
+  "cop.why.w2p":"Climate policy keeps saying \"no one left behind.\" People with addiction histories are among the most left-behind workers in our region — and the most motivated when someone finally offers structure and dignity.",
+  "cop.why.w3t":"Health is adaptation",
+  "cop.why.w3p":"Addiction worsens in heatwaves, displacement and disaster. GreenRoot is a replicable adaptation model: treatment funded by public-service work, resilient crews a city can call on in a crisis.",
+  "cop.ask.kicker":"Our campaign",
+  "cop.ask.h2":"Five asks we bring to the negotiators",
+  "cop.ask.a1":"Recognize recovery-through-work as climate finance: fund therapeutic green employment.",
+  "cop.ask.a2":"Include waste-picker and recovery communities in national just-transition plans.",
+  "cop.ask.a3":"Back city pilots — Istanbul, Frankfurt, Tehran — with open impact dashboards.",
+  "cop.ask.a4":"Set data rights for AI recovery tools: opt-in, participant-owned, never policing tools.",
+  "cop.ask.a5":"Count health outcomes next to CO₂: a tonne of waste diverted and a person in remission are both climate results.",
+  "cop.act.kicker":"Civil society",
+  "cop.act.h2":"Join us — peaceful, lawful, loud",
+  "cop.act.p":"GreenRoot joins the peaceful civil-society mobilization around COP31, including the Peoples' Climate Summit and public events. We act with respect for Turkish law and each other: stay peaceful, follow local assembly rules, look after one another.",
+  "cop.act.s1t":"🗣 Our slogans",
+  "cop.act.s1a":"\"Clean streets, clean starts!\"",
+  "cop.act.s1b":"\"Recovery is climate action!\"",
+  "cop.act.s1c":"\"No one left behind — not even us!\"",
+  "cop.act.s2t":"🤝 Meet the crew (demo)",
+  "cop.act.s2p":"Istanbul meet-ups planned in the month before COP31; Antalya presence during both summit weekends. Register on the Join page and we'll send times and places.",
+  "cop.act.s3t":"🧭 Stay safe",
+  "cop.act.s3p":"Emergency in Türkiye: 112. Addiction counseling (Yeşilay): 115. Know the assembly rules for your city, keep ID with you, and never attend actions alone — crew rules apply to protests too.",
+  "cop.kit.kicker":"Campaign kit",
+  "cop.kit.h2":"Take the message with you",
+  "cop.kit.p":"Trilingual pitch decks and a one-page explainer — print them, share them, hand them to a delegate, a journalist or your mayor.",
+  "cop.kit.d1":"Pitch deck — English",
+  "cop.kit.d2":"Pitch deck — فارسی",
+  "cop.kit.d3":"Pitch deck — Türkçe",
+  "cop.kit.d4":"One-pager (EN/FA/TR)",
+  "cop.cta.h2":"Be the crew that cleans two crises at once.",
+  "cop.cta.p":"Join the pilot, partner with us, or carry our message to Antalya and Istanbul.",
+  "cop.cta.b":"Join GreenRoot"
+});
+Object.assign(window.I18N.fa, {
+  "nav.cop31":"COP31",
+  "title.cop31":"گرین‌روت در COP31 — آنتالیا و استانبول",
+  "footer.contact2":"فرانکفورت · تهران · استانبول (شهرهای پایلوت)",
+  "home.cop.kicker":"نوامبر ۲۰۲۶ — آنتالیا و استانبول",
+  "home.cop.t":"گرین‌روت به COP31 می‌رود",
+  "home.cop.p":"بهبودی، عدالتِ اقلیمی است. کیت سه‌زبانهٔ کارزار، پایتچ‌دک‌ها و پیام‌های اعتراضیِ ما آماده‌اند.",
+  "home.cop.b":"صفحهٔ COP31 را ببینید",
+  "cop.hero.kicker":"COP31 — آنتالیا و استانبول · ۹ تا ۲۰ نوامبر ۲۰۲۶",
+  "cop.hero.h1":"بهبودی هم عدالتِ اقلیمی است",
+  "cop.hero.p":"اجلاس اقلیم جهان این نوامبر در ترکیه برگزار می‌شود. گرین‌روت هم آنجا خواهد بود — در آنتالیا و در نشست‌های سران استانبول — با یک پیام: بدونِ آدم‌هایی که بحران جا گذاشته، «گذار عادلانه» معنا ندارد.",
+  "cop.countdown":"COP31 تا {d} روز دیگر آغاز می‌شود — آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶",
+  "cop.facts.t":"COP31 در یک دقیقه",
+  "cop.facts.f1":"📅 ۹ تا ۲۰ نوامبر ۲۰۲۶ — آنتالیا، ترکیه (مرکز اکسپو آنتالیا)",
+  "cop.facts.f2":"🇹🇷 میزبان: ترکیه؛ رئیس COP31: مرات قوروم؛ هدایت مذاکرات: استرالیا",
+  "cop.facts.f3":"🏛 نشست‌های سطح بالای سران در استانبول — شهرِ اکشنِ ما",
+  "cop.facts.f4":"🌍 قلهٔ اقلیم مردم‌ها — فضای جامعهٔ مدنی؛ جای صدایی مثل صدای ما",
+  "cop.facts.src":"بر پایهٔ برنامهٔ منتشرشدهٔ COP31 و گزارش‌های عمومی.",
+  "cop.why.kicker":"چرا می‌رویم",
+  "cop.why.h2":"چرا یک برنامهٔ بهبودی جای خودش را در یک اجلاس اقلیمی دارد",
+  "cop.why.w1t":"کار پسماند، کارِ اقلیم است",
+  "cop.why.w1p":"شهرها بدون هزاران دست، هدف‌های بازیافت را نمی‌زنند. گرین‌روت یک جامعهٔ به‌حاشیه‌رانده‌شده را به نیروی کار سبزِ آموزش‌دیده تبدیل می‌کند — کاهش انتشار و جامعه‌پذیری در یک ردیف بودجه.",
+  "cop.why.w2t":"گذار عادلانه باید افراد در بهبودی را هم ببیند",
+  "cop.why.w2p":"سیاست اقلیمی مدام می‌گوید «هیچ‌کس جا نمانَد». افرادی با سابقهٔ اعتیاد از جا مانده‌ترین نیروهای کار منطقه‌اند — و وقتی کسی سرانجام نظم و عزت پیشنهاد بدهد، باانگیزه‌ترین‌ها هم هستند.",
+  "cop.why.w3t":"سلامت، سازگاری است",
+  "cop.why.w3p":"اعتیاد در موج گرما، آواره‌گی و بلایا بدتر می‌شود. گرین‌روت یک مدل سازگاریِ قابل‌تکثیر است: درمانِ تأمین‌شده با کارِ خدمت عمومی، و تیم‌های باثباتی که شهر در بحران می‌تواند صدا بزند.",
+  "cop.ask.kicker":"کارزار ما",
+  "cop.ask.h2":"پنج خواسته‌ای که سر میز مذاکره می‌بریم",
+  "cop.ask.a1":"بهبودی از راه کار به‌عنوان تأمین مالی اقلیمی به رسمیت شناخته شود: کارِ سبزِ درمانی را تأمین مالی کنید.",
+  "cop.ask.a2":"جامعهٔ زباله‌چین‌ها و افراد در بهبودی در برنامه‌های گذار عادلانهٔ ملی دیده شوند.",
+  "cop.ask.a3":"از پایلوت‌های شهری — استانبول، فرانکفورت، تهران — با داشبوردهای باز پشتیبانی شود.",
+  "cop.ask.a4":"حقوق داده برای ابزارهای هوش مصنوعی بهبودی تعیین شود: اختیاری، متعلق به خودِ فرد، هرگز ابزارِ پلیس‌گری نه.",
+  "cop.ask.a5":"پیامدهای سلامت را کنار CO₂ بشمارید: یک تن زبالهٔ بازیافتی و یک انسان در بهبودی، هر دو نتیجهٔ اقلیمی‌اند.",
+  "cop.act.kicker":"جامعهٔ مدنی",
+  "cop.act.h2":"به ما بپیوندید — مسالمت‌آمیز، قانونی، بلند",
+  "cop.act.p":"گرین‌روت به بسیج مسالمت‌آمیز جامعهٔ مدنی پیرامون COP31 می‌پیوندد؛ از جمله قلهٔ اقلیم مردم‌ها و رویدادهای عمومی. با احترام به قانون ترکیه و به خودمان عمل می‌کنیم: مسالمت‌آمیز بمانیم، قواعد تجمع محلی را رعایت کنیم، مراقب هم باشیم.",
+  "cop.act.s1t":"🗣 شعارهای ما",
+  "cop.act.s1a":"«خیابان تمیز، آغازِ تمیز!»",
+  "cop.act.s1b":"«بهبودی، اقلیم-عمل است!»",
+  "cop.act.s1c":"«هیچ‌کس جا نمانَد — حتی ما!»",
+  "cop.act.s2t":"🤝 با تیم ما دیدار کنید (نمونه)",
+  "cop.act.s2p":"قرارهای استانبول در ماه مانده به COP31 برنامه‌ریزی می‌شود؛ حضور در آنتالیا در هر دو آخرهفتهٔ اجلاس. در صفحهٔ پیوستن ثبت‌نام کنید تا زمان و مکان را بفرستیم.",
+  "cop.act.s3t":"🧭 ایمن بمانید",
+  "cop.act.s3p":"اورژانس ترکیه: ۱۱۲. مشاورهٔ اعتیاد (یه‌شیل‌آی): ۱۱۵. قواعد تجمع شهرتان را بدانید، مدارک‌تان همراه باشد، و هرگز تنها به رویداد نروید — قاعدهٔ تیم، برای اعتراض هم هست.",
+  "cop.kit.kicker":"کیت کارزار",
+  "cop.kit.h2":"پیام را با خودتان ببرید",
+  "cop.kit.p":"پایتچ‌دک‌های سه‌زبانه و برشوانهٔ یک‌صفحه‌ای — چاپ کنید، بفرستید، دستِ یک نماینده، یک روزنامه‌نگار یا شهردارتان بدهید.",
+  "cop.kit.d1":"پایتچ‌دک — English",
+  "cop.kit.d2":"پایتچ‌دک — فارسی",
+  "cop.kit.d3":"پایتچ‌دک — Türkçe",
+  "cop.kit.d4":"برشوانه (EN/FA/TR)",
+  "cop.cta.h2":"همان تیمی باش که دو بحران را با هم تمیز می‌کند.",
+  "cop.cta.p":"به پایلوت بپیوندید، شریک شوید، یا پیام ما را به آنتالیا و استانبول برسانید.",
+  "cop.cta.b":"به گرین‌روت بپیوندید"
+});
+Object.assign(window.I18N.tr, {
+  "nav.cop31":"COP31",
+  "title.cop31":"GreenRoot COP31'de — Antalya & İstanbul",
+  "cop.hero.kicker":"COP31 — Antalya & İstanbul · 9–20 Kasım 2026",
+  "cop.hero.h1":"İyileşmek de iklim adaletidir",
+  "cop.hero.p":"Dünyanın iklim zirvesi bu kasım Türkiye'de toplanıyor. GreenRoot orada olacak — Antalya'da ve İstanbul'daki liderler toplantılarında — tek bir mesajla: krizin geride bıraktığı insanlar olmadan 'adil geçiş' olmaz.",
+  "cop.countdown":"COP31 {d} gün içinde başlıyor — Antalya ve İstanbul, 9–20 Kasım 2026",
+  "cop.facts.t":"COP31 bir dakikada",
+  "cop.facts.f1":"📅 9–20 Kasım 2026 — Antalya, Türkiye (Antalya EXPO Merkezi)",
+  "cop.facts.f2":"🇹🇷 Ev sahibi: Türkiye; COP31 Başkanı: Murat Kurum; müzakerelerin lideri: Avustralya",
+  "cop.facts.f3":"🏛 İstanbul'da beklenen liderler toplantıları — bizim eylem şehrimiz",
+  "cop.facts.f4":"🌍 Halkların İklim Zirvesi — bizim gibi seslerin yeri: sivil toplum alanı",
+  "cop.facts.src":"Yayımlanan COP31 takvimi ve kamuya açık haberlere dayanır.",
+  "cop.why.kicker":"Neden gidiyoruz",
+  "cop.why.h2":"Bir toparlanma programı neden bir iklim zirvesine aittir",
+  "cop.why.w1t":"Atık işi, iklim işidir",
+  "cop.why.w1p":"Şehirler binlerce el olmadan geri dönüşüm hedeflerini tutturamaz. GreenRoot; marginalized bir topluluğu eğitimli yeşil iş gücüne dönüştürür — azaltım ve sosyal katılım tek bütçe satırında.",
+  "cop.why.w2t":"Adil geçiş, toparlanmakta olanları da kapsamalı",
+  "cop.why.w2p":"İklim politikası sürekli 'kimse geride kalmasın' diyor. Bağımlılık geçmişi olan insanlar bölgemizin en çok geride bırakılmış işçileri arasındadır — ve birileri sonunda yapı ve onur teklif ettiğinde en motive olanları da onlardır.",
+  "cop.why.w3t":"Sağlık, uyumdur",
+  "cop.why.w3p":"Bağımlılık sıcak dalgalarında, yerinden edilmede ve afetlerde ağırlaşır. GreenRoot çoğaltılabilir bir uyum modelidir: kamu hizmeti işiyle finanse edilen tedavi; şehrin kriz anında çağırabileceği dirençli ekipler.",
+  "cop.ask.kicker":"Kampanyamız",
+  "cop.ask.h2":"Müzakerecilere götürdüğümüz beş talep",
+  "cop.ask.a1":"İşle toparlanma iklim finansmanı olarak tanınsın: terapötik yeşil istihdam fonlansın.",
+  "cop.ask.a2":"Çöp toplayıcı ve toparlanma toplulukları ulusal adil geçiş planlarına alınsın.",
+  "cop.ask.a3":"Şehir pilotları desteklensin — İstanbul, Frankfurt, Tahran — açık etki panolarıyla.",
+  "cop.ask.a4":"YZ destekli toparlanma araçları için veri hakları belirlensin: isteğe bağlı, katılımcıya ait, asla kolluk aracı değil.",
+  "cop.ask.a5":"Sağlık sonuçlarını CO₂'nin yanına koyun: geri kazanılmış bir ton atık da, remisyondaki bir insan da iklim sonucudur.",
+  "cop.act.kicker":"Sivil toplum",
+  "cop.act.h2":"Bize katıl — barışçıl, yasal, gürültülü",
+  "cop.act.p":"GreenRoot; Halkların İklim Zirvesi ve kamuya açık etkinlikler dahil, COP31 çevresindeki barışçıl sivil toplum hareketlenmesine katılır. Türkiye hukukuna ve birbirimize saygıyla hareket ederiz: barışçıl kalır, yerel toplanma kurallarına uyarız, birbirimize göz kulak oluruz.",
+  "cop.act.s1t":"🗣 Sloganlarımız",
+  "cop.act.s1a":"'Temiz sokaklar, temiz başlangıçlar!'",
+  "cop.act.s1b":"'İyileşmek iklim eylemidir!'",
+  "cop.act.s1c":"'Kimse geride kalmasın — biz de kalmyacağız!'",
+  "cop.act.s2t":"🤝 Ekiple buluş (demo)",
+  "cop.act.s2p":"COP31'den önceki ay İstanbul buluşmaları; zirvenin iki hafta sonunda Antalya varlığı. Katıl sayfasından kaydol; saat ve mekânı gönderelim.",
+  "cop.act.s3t":"🧭 Güvende kal",
+  "cop.act.s3p":"Türkiye'de acil: 112. Bağımlılık danışma (Yeşilay): 115. Şehrinin toplanma kurallarını öğren, kimliğini yanına al ve asla tek başına eyleme gitme — ekip kuralı eylemlerde de geçerlidir.",
+  "cop.kit.kicker":"Kampanya kiti",
+  "cop.kit.h2":"Mesajı yanında götür",
+  "cop.kit.p":"Üç dilli sunum desteleri ve tek sayfalık anlatım — yazdır, paylaş; bir delegasyona, gazeteciye ya da belediye başkanına uzat.",
+  "cop.kit.d1":"Sunum destesi — English",
+  "cop.kit.d2":"Sunum destesi — فارسی",
+  "cop.kit.d3":"Sunum destesi — Türkçe",
+  "cop.kit.d4":"Tek sayfa (EN/FA/TR)",
+  "cop.cta.h2":"İki krizi birden temizleyen ekiple gel.",
+  "cop.cta.p":"Pilota katıl, ortak ol ya da mesajımızı Antalya ve İstanbul'a taşı.",
+  "cop.cta.b":"GreenRoot'a katıl"
+});
+
+/* ================= Turkish chat / career / mood data ================= */
+window.GR_EXTRA_TR = {
+  greeting:"Merhaba, ben Raha 🌱 GreenRoot'un toparlanma dostuyum. Bugün nasılsın? Aşağıdaki düğmelere dokun ya da serbestçe yaz — Türkçe ya da فارسی, ikisi de olur.",
+  fallback:"Seni duydum. Ben demo sürümüyüm — kriz, ruh hali, jeton, haftalık plan ve kariyer dönüşünü bilirim. Aşağıdan bir düğme seç ya da 'kriz', 'iş', 'bakiye' yaz…",
+  chips:[
+    {id:"craving", tr:"Kriz yaşıyorum"},
+    {id:"mood", tr:"Kendimi kötü hissediyorum"},
+    {id:"career", tr:"Kariyer dönüşü"},
+    {id:"balance", tr:"Jeton bakiyem"},
+    {id:"schedule", tr:"Bu haftanın planı"}
+  ],
+  intents:{
+    crisis:"Söylediğine çok sevindim. Lütfen hemen bir insana ulaş:\n• Yerel acil numaran (Türkiye: 112)\n• Yeşilay danışmanlık hattı: 115\n• GreenRoot danışmanınin numarası kartında.\nYalnız değilsin ve bu an geçecek. Benimle kal — sonra ara.",
+    craving:"Krizi duydum — söylemen bile bir kazanç. Dalgayı sörfleyelim:\n1. Düşünceyi 10 dakikalık zamanlayıcıya koy.\n2. Benimle 3 kez 4-7-8 nefesi: al 4… tut 7… ver 8…\n3. Ekip arkadaşına yönel ya da yoldaşını ara.\nKriz zirve yapar ve geçer — genelde 20 dakikadan kısa. Buradayım.",
+    mood:"Anlattığın için teşekkürler. Kötü günler veridir, başarısızlık değil.\n• Bugünkü vardiya isteğe bağlı — dinlenmek de tedavidir.\n• Danışmanına bir mesaj yazmamı ister misin?\n• Küçük bir şey: su, pencere, 5 yavaş nefes. Şimdilik bu yeter.",
+    career:"Kariyer dönüşü en sevdiğim konu 💼 Planının 3 adımı var: beceri haritası → program içinde ücretli tazeleme rolü → ortak bir işverenle yerleştirme.\nEski mesleğini söyle — şoför, hemşire, muhasebeci, tamirci, öğretmen, aşçı — ya da sohbetin altındaki Kariyer dönüşü demosunu dene.",
+    balance:"Jeton bakiyesi: 340 🪙\n• Bu hafta: +60 (3 vardiya)\n• Mevcut ödüller: otobüs kartı (40) · telefon kredisi (25) · kaynak kursu (220)\nİpucu: cüzdanda hedef koy — hedefler bağlılığı yaklaşık iki katına çıkarır.",
+    schedule:"Bu haftanın planı:\n• Pzt / Çar / Cum 08:00 — temizlik vardiyası (depoda buluşma)\n• Sal 17:00 — grup terapisi\n• Per 16:00 — Raha seansı + beceri dersi\nYağmur planı: kapalı ayrıştırma hattı. Bir gün kaçtı mı? Olur — mentoruna söyle, yerin güvende.",
+    trash:"Bugünkü ekipler 214 kg topladı: 96 kg PET · 41 kg metal · 52 kg kâğıt · 25 kg cam.\nYaklaşık €118 tedavi fonuna — ve atölyeye gidecek 3 yüz siperi için yeterli pul. Bunu sen gerçekleştiriyorsun.",
+    about:"Ben Raha — 'rehâ' özgürlük demek. Programın YZ dostuyum: kriz SOS'u, ruh hali kontrolleri, jeton cüzdanı ve kariyer dönüşü koçu. İnsan gözetiminde bir araçtım — klinik kararları danışmanın ve doktorların verir. Veri politikam basit: hikâyen sana ait.",
+    thanks:"Ne zaman. Ben bunun için buradayım — yarın check-in'de görüşür müyüz? 🌱"
+  },
+  mood:{
+    1:"Çok kötü — yalnız değilsin. 'Kriz yaşıyorum'/SOS'a dokun ya da danışmanını ara. Bir check-in işaretledim.",
+    2:"Kötü — kaydettiğin için teşekkürler. Bir SOS seansı ya da erken yatmayı düşün.",
+    3:"İdare eder günler de sayılır. Kaydedildi.",
+    4:"İyi — kaydedildi. Ritmi koru.",
+    5:"Harika bir gün — kaydedildi. Toparlanma böyle serilerle kurulur. 🌱"
+  },
+  career:{
+    driver:{title:"🚚 Şoför — dönüş planı",
+      s1:"Ehliyet ve sicil kontrolü: ehliyet durumunu doğrularız; beceri fonu yenileme kursunu karşılar.",
+      s2:"Temizlik ekiplerinin lojistiğinde 6 ücretli hafta yedek şoför — temiz vardiya sertifikasıyla.",
+      s3:"Raha özgeçmişini 12+ ay belgelenmiş güvenilirlik üzerine kurar; sonra ortak lojistik firmalarıyla yerleştirir.",
+      story:"Ekipte geçen zaman bir boşluk değil — güvenilirlik kanıtıdır."},
+    nurse:{title:"🧑‍⚕️ Hemşire / sağlık çalışanı — dönüş planı",
+      s1:"Düşük yoğunluklu rollerle klinik yaşama dönüş: ekipler içinde hijyen ve sağlık taraması turları.",
+      s2:"Beceri yenileme: BLS tekrarı, ruhsat evrakları — beceri fonu destekli.",
+      s3:"Ortak kliniklerde destekli vardiyalar; Raha kademeli tam dönüş planını kurar.",
+      story:"Kendine vermeyi öğrendiğin bakım, artık referansındır."},
+    accountant:{title:"🧾 Muhasebeci — dönüş planı",
+      s1:"Ücretsiz değerlendirmelerle beceri denetimi (Excel, ön muhasebe) — bir hafta içinde boşluk haritası.",
+      s2:"Altı hafta yazılım tazeleme + gerçek rol: ekiplerin malzeme gelirini saymak ve raporlamak.",
+      s3:"Raha özgeçmişi '12 ay temiz veri' çerçevesiyle kurar; ortak firmalarla mülakat pratiği yapar.",
+      story:"Toparlanmada inşa ettiğin disiplin, tam olarak muhasebenin aradığı şeydir."},
+    mechanic:{title:"🔧 Tamirci — dönüş planı",
+      s1:"Atölye değerlendirmesi: araç-gereç, güvenlik, mevcut beceriler — teknik bir mentorla.",
+      s2:"Geri dönüşüm hattının makineleri ve araçları için sahada belgelenmiş bakım deneyimi.",
+      s3:"Beceri fonundan uzmanlık sertifikası (örn. elektromekanik) + ortak atölyelere yerleştirme.",
+      story:"Hayata döndürdüğün makineler, en iyi özgeçmişindir."},
+    teacher:{title:"🧑‍🏫 Öğretmen — dönüş planı",
+      s1:"Dürüst anlatı planı: mülakatta boşluğu nasıl anlatacağını Raha ile güç olana dek pratik et.",
+      s2:"Gerçek sınıf: ekibin temizlediği parklarda okul gruplarına çevre okuryazarlığı dersleri.",
+      s3:"Öğretmenlik sertifikası tazeleme + ortak okullarda asistanlık; tam kademe çıkışa kadar.",
+      story:"Toparlanman, gelecekteki sınıfının alacağı en derin derstir."},
+    cook:{title:"🍳 Aşçı — dönüş planı",
+      s1:"Gıda güvenliği ve hijyen sertifikası — resmî; masrafı beceri fonunda.",
+      s2:"Gerçek hacim deneyimi: her gün 50+ kişiye ekip yemeği pişirmek.",
+      s3:"Ortak mutfakta mentorlu destekli staj; ardından yarı zamanlı ya da tam zamanlı yerleştirme.",
+      story:"Ekip için pişirdiğin yemekler, dönüşünün ilk siparişidir."}
+  }
+};
+})();
+
+/* COP31 areas section + join modal keys */
+Object.assign(window.I18N.en, {
+  "ar.cop.h2":"Ten crews across Istanbul — join yours",
+  "ar.cop.all":"All 10 districts",
+  "ar.cop.more":"…and more: Şişli · Bakırköy · Üsküdar · Beyoğlu · Sarıyer · Maltepe · Kartal — see the areas page."
+});
+Object.assign(window.I18N.fa, {
+  "ar.cop.h2":"ده تیم در سراسر استانبول — تیم خودتان را بسازید",
+  "ar.cop.all":"هر ۱۰ منطقه",
+  "ar.cop.more":"و موارد دیگر: شیشلی · باکرکوی · اسکودار · بی‌اوغلو · ساری‌یر · مالتپه · كارتال — صفحهٔ مناطق را ببینید."
+});
+Object.assign(window.I18N.tr, {
+  "ar.cop.h2":"İstanbul genelinde on ekip — sizinkine katılın",
+  "ar.cop.all":"10 bölgenin tümü",
+  "ar.cop.more":"…ve devamı: Şişli · Bakırköy · Üsküdar · Beyoğlu · Sarıyer · Maltepe · Kartal — bölgeler sayfasına bakın."
+});
+
+</script>
+<script>
+(function(){ "use strict";
+if(!window.I18N) window.I18N={en:{},fa:{},tr:{}};
+Object.assign(window.I18N.en, {
+  "nav.areas": "Istanbul areas",
+  "ar.index.kicker": "Ten districts, one city",
+  "ar.index.h1": "GreenRoot Istanbul crews",
+  "ar.index.lead": "Ten neighborhood crews across Istanbul — European and Asian side. Each one: paid green roles for people in recovery, two supported shifts a week, therapy funded by recycling. Pick your district.",
+  "ar.index.note": "Meetup points are set with the first registered members of each crew — your vote counts. Istanbul emergency: 112 · Yeşilay: 115.",
+  "ar.kadikoy.kicker": "Istanbul crew · Kadıköy",
+  "ar.kadikoy.h1": "GreenRoot Kadıköy",
+  "ar.kadikoy.lead": "The GreenRoot crew for Kadıköy: two supported cleanup shifts a week in Coastline, parks and market streets — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.kadikoy.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.kadikoy.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.kadikoy.cop": "This crew carries Kadıköy's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.besiktas.kicker": "Istanbul crew · Beşiktaş",
+  "ar.besiktas.h1": "GreenRoot Beşiktaş",
+  "ar.besiktas.lead": "The GreenRoot crew for Beşiktaş: two supported cleanup shifts a week in Bosphorus shore and park entrances — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.besiktas.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.besiktas.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.besiktas.cop": "This crew carries Beşiktaş's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.sisli.kicker": "Istanbul crew · Şişli",
+  "ar.sisli.h1": "GreenRoot Şişli",
+  "ar.sisli.lead": "The GreenRoot crew for Şişli: two supported cleanup shifts a week in Boulevards, squares and metro exits — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.sisli.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.sisli.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.sisli.cop": "This crew carries Şişli's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.fatih.kicker": "Istanbul crew · Fatih",
+  "ar.fatih.h1": "GreenRoot Fatih",
+  "ar.fatih.lead": "The GreenRoot crew for Fatih: two supported cleanup shifts a week in Historic streets and neighborhood parks — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.fatih.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.fatih.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.fatih.cop": "This crew carries Fatih's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.bakirkoy.kicker": "Istanbul crew · Bakırköy",
+  "ar.bakirkoy.h1": "GreenRoot Bakırköy",
+  "ar.bakirkoy.lead": "The GreenRoot crew for Bakırköy: two supported cleanup shifts a week in Seaside walkways and shopping streets — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.bakirkoy.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.bakirkoy.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.bakirkoy.cop": "This crew carries Bakırköy's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.uskudar.kicker": "Istanbul crew · Üsküdar",
+  "ar.uskudar.h1": "GreenRoot Üsküdar",
+  "ar.uskudar.lead": "The GreenRoot crew for Üsküdar: two supported cleanup shifts a week in Shoreline, hills and neighborhood squares — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.uskudar.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.uskudar.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.uskudar.cop": "This crew carries Üsküdar's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.beyoglu.kicker": "Istanbul crew · Beyoğlu",
+  "ar.beyoglu.h1": "GreenRoot Beyoğlu",
+  "ar.beyoglu.lead": "The GreenRoot crew for Beyoğlu: two supported cleanup shifts a week in Side streets off the main corridor — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.beyoglu.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.beyoglu.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.beyoglu.cop": "This crew carries Beyoğlu's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.sariyer.kicker": "Istanbul crew · Sarıyer",
+  "ar.sariyer.h1": "GreenRoot Sarıyer",
+  "ar.sariyer.lead": "The GreenRoot crew for Sarıyer: two supported cleanup shifts a week in Bosphorus villages and forest edges — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.sariyer.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.sariyer.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.sariyer.cop": "This crew carries Sarıyer's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.maltepe.kicker": "Istanbul crew · Maltepe",
+  "ar.maltepe.h1": "GreenRoot Maltepe",
+  "ar.maltepe.lead": "The GreenRoot crew for Maltepe: two supported cleanup shifts a week in Long coastline and event lawns — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.maltepe.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.maltepe.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.maltepe.cop": "This crew carries Maltepe's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+  "ar.kartal.kicker": "Istanbul crew · Kartal",
+  "ar.kartal.h1": "GreenRoot Kartal",
+  "ar.kartal.lead": "The GreenRoot crew for Kartal: two supported cleanup shifts a week in Harbor shore and city squares — paid roles for people in recovery, tokens for every shift, and therapy and medicine funded by the recycling income.",
+  "ar.kartal.meet": "Meetup point: announced to registered crew members. Register on the Join page — it takes one minute.",
+  "ar.kartal.sched": "Draft rhythm: one weekday morning shift + one weekend shift · equipment and safety gear provided · Raha logs your check-in.",
+  "ar.kartal.cop": "This crew carries Kartal's voice to COP31 (Antalya & Istanbul, 9–20 November 2026): clean streets, clean starts.",
+});
+Object.assign(window.I18N.fa, {
+  "nav.areas": "مناطق استانبول",
+  "ar.index.kicker": "ده منطقه، یک شهر",
+  "ar.index.h1": "تیم‌های گرین‌روت استانبول",
+  "ar.index.lead": "ده تیم محله‌ای در سراسر استانبول — سمت اروپایی و آسیایی. هر تیم: نقش‌های سبزِ حقوق‌دار برای افراد در بهبودی، دو شیفت همراهی‌شده در هفته، درمانِ تأمین‌شده با بازیافت. منطقهٔ خودتان را انتخاب کنید.",
+  "ar.index.note": "نقاط قرار، با نخستین اعضای ثبت‌نام‌شدهٔ هر تیم تعیین می‌شود — رأی شما مؤثر است. اورژانس استانبول: ۱۱۲ · یشیل‌آی: ۱۱۵.",
+  "ar.kadikoy.kicker": "تیم استانبول · کادی‌کوی",
+  "ar.kadikoy.h1": "گرین‌روت کادی‌کوی",
+  "ar.kadikoy.lead": "تیم گرین‌روت در کادی‌کوی: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در ساحل، پارک‌ها و خیابان‌های بازار — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.kadikoy.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.kadikoy.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.kadikoy.cop": "این تیم، صدای کادی‌کوی را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.besiktas.kicker": "تیم استانبول · بشیکتاش",
+  "ar.besiktas.h1": "گرین‌روت بشیکتاش",
+  "ar.besiktas.lead": "تیم گرین‌روت در بشیکتاش: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در کرانهٔ بسفر و ورودی پارک‌ها — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.besiktas.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.besiktas.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.besiktas.cop": "این تیم، صدای بشیکتاش را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.sisli.kicker": "تیم استانبول · شیشلی",
+  "ar.sisli.h1": "گرین‌روت شیشلی",
+  "ar.sisli.lead": "تیم گرین‌روت در شیشلی: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در بلوارها، میدان‌ها و خروجی‌های مترو — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.sisli.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.sisli.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.sisli.cop": "این تیم، صدای شیشلی را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.fatih.kicker": "تیم استانبول · فاتح",
+  "ar.fatih.h1": "گرین‌روت فاتح",
+  "ar.fatih.lead": "تیم گرین‌روت در فاتح: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در خیابان‌های تاریخی و پارک‌های محله — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.fatih.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.fatih.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.fatih.cop": "این تیم، صدای فاتح را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.bakirkoy.kicker": "تیم استانبول · باکرکوی",
+  "ar.bakirkoy.h1": "گرین‌روت باکرکوی",
+  "ar.bakirkoy.lead": "تیم گرین‌روت در باکرکوی: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در پیاده‌راه‌های ساحلی و خیابان‌های خرید — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.bakirkoy.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.bakirkoy.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.bakirkoy.cop": "این تیم، صدای باکرکوی را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.uskudar.kicker": "تیم استانبول · اسکودار",
+  "ar.uskudar.h1": "گرین‌روت اسکودار",
+  "ar.uskudar.lead": "تیم گرین‌روت در اسکودار: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در کرانه، تپه‌ها و میدان‌های محله — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.uskudar.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.uskudar.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.uskudar.cop": "این تیم، صدای اسکودار را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.beyoglu.kicker": "تیم استانبول · بی‌اوغلو",
+  "ar.beyoglu.h1": "گرین‌روت بی‌اوغلو",
+  "ar.beyoglu.lead": "تیم گرین‌روت در بی‌اوغلو: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در کوچه‌های اطراف محور اصلی — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.beyoglu.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.beyoglu.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.beyoglu.cop": "این تیم، صدای بی‌اوغلو را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.sariyer.kicker": "تیم استانبول · ساری‌یر",
+  "ar.sariyer.h1": "گرین‌روت ساری‌یر",
+  "ar.sariyer.lead": "تیم گرین‌روت در ساری‌یر: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در روستاهای بسفر و حاشیهٔ جنگل — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.sariyer.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.sariyer.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.sariyer.cop": "این تیم، صدای ساری‌یر را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.maltepe.kicker": "تیم استانبول · مالتپه",
+  "ar.maltepe.h1": "گرین‌روت مالتپه",
+  "ar.maltepe.lead": "تیم گرین‌روت در مالتپه: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در ساحل طولانی و چمن‌های رویداد — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.maltepe.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.maltepe.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.maltepe.cop": "این تیم، صدای مالتپه را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+  "ar.kartal.kicker": "تیم استانبول · كارتال",
+  "ar.kartal.h1": "گرین‌روت كارتال",
+  "ar.kartal.lead": "تیم گرین‌روت در كارتال: دو شیفت پاک‌سازیِ همراهی‌شده در هفته در کرانهٔ بندر و میدان‌های شهر — نقش‌های حقوق‌دار برای افراد در بهبودی، توکن برای هر شیفت، و تأمین درمان و دارو از درآمد بازیافت.",
+  "ar.kartal.meet": "نقطهٔ قرار: به اعضای ثبت‌نام‌شده اعلام می‌شود. در صفحهٔ پیوستن ثبت‌نام کنید — یک دقیقه بیشتر وقت نمی‌گیرد.",
+  "ar.kartal.sched": "ریتم پیشنهادی: یک شیفت صبح در هفته + یک شیفت آخر هفته · تجهیزات و وسایل ایمنی ارائه می‌شود · رها چک-این را ثبت می‌کند.",
+  "ar.kartal.cop": "این تیم، صدای كارتال را به COP31 می‌رساند (آنتالیا و استانبول، ۹ تا ۲۰ نوامبر ۲۰۲۶): خیابان تمیز، آغازِ تمیز.",
+});
+Object.assign(window.I18N.tr, {
+  "nav.areas": "İstanbul bölgeleri",
+  "ar.index.kicker": "On bölge, tek şehir",
+  "ar.index.h1": "GreenRoot İstanbul ekipleri",
+  "ar.index.lead": "İstanbul genelinde on mahalle ekibi — Avrupa ve Anadolu yakası. Her biri: toparlanmakta olanlar için ücretli yeşil roller, haftada iki destekli vardiya, geri dönüşümle finanse edilen terapi. Bölgenizi seçin.",
+  "ar.index.note": "Buluşma noktaları her ekibin ilk kayıtlı üyeleriyle belirlenir — oyunuz önemli. İstanbul acil: 112 · Yeşilay: 115.",
+  "ar.kadikoy.kicker": "İstanbul ekibi · Kadıköy",
+  "ar.kadikoy.h1": "GreenRoot Kadıköy",
+  "ar.kadikoy.lead": "Kadıköy GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Sahil, parklar ve çarşı sokakları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.kadikoy.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.kadikoy.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.kadikoy.cop": "Bu ekip, Kadıköy sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.besiktas.kicker": "İstanbul ekibi · Beşiktaş",
+  "ar.besiktas.h1": "GreenRoot Beşiktaş",
+  "ar.besiktas.lead": "Beşiktaş GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Boğaz kıyısı ve park girişleri bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.besiktas.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.besiktas.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.besiktas.cop": "Bu ekip, Beşiktaş sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.sisli.kicker": "İstanbul ekibi · Şişli",
+  "ar.sisli.h1": "GreenRoot Şişli",
+  "ar.sisli.lead": "Şişli GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Bulvarlar, meydanlar ve metro çıkışları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.sisli.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.sisli.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.sisli.cop": "Bu ekip, Şişli sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.fatih.kicker": "İstanbul ekibi · Fatih",
+  "ar.fatih.h1": "GreenRoot Fatih",
+  "ar.fatih.lead": "Fatih GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Tarihî sokaklar ve mahalle parkları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.fatih.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.fatih.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.fatih.cop": "Bu ekip, Fatih sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.bakirkoy.kicker": "İstanbul ekibi · Bakırköy",
+  "ar.bakirkoy.h1": "GreenRoot Bakırköy",
+  "ar.bakirkoy.lead": "Bakırköy GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Deniz kenarı yolları ve çarşı sokakları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.bakirkoy.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.bakirkoy.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.bakirkoy.cop": "Bu ekip, Bakırköy sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.uskudar.kicker": "İstanbul ekibi · Üsküdar",
+  "ar.uskudar.h1": "GreenRoot Üsküdar",
+  "ar.uskudar.lead": "Üsküdar GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Kıyı, tepeler ve mahalle meydanları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.uskudar.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.uskudar.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.uskudar.cop": "Bu ekip, Üsküdar sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.beyoglu.kicker": "İstanbul ekibi · Beyoğlu",
+  "ar.beyoglu.h1": "GreenRoot Beyoğlu",
+  "ar.beyoglu.lead": "Beyoğlu GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Ana aksın yan sokakları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.beyoglu.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.beyoglu.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.beyoglu.cop": "Bu ekip, Beyoğlu sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.sariyer.kicker": "İstanbul ekibi · Sarıyer",
+  "ar.sariyer.h1": "GreenRoot Sarıyer",
+  "ar.sariyer.lead": "Sarıyer GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Boğaz köyleri ve orman kenarları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.sariyer.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.sariyer.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.sariyer.cop": "Bu ekip, Sarıyer sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.maltepe.kicker": "İstanbul ekibi · Maltepe",
+  "ar.maltepe.h1": "GreenRoot Maltepe",
+  "ar.maltepe.lead": "Maltepe GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Uzun kıyı ve etkinlik çayırları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.maltepe.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.maltepe.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.maltepe.cop": "Bu ekip, Maltepe sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+  "ar.kartal.kicker": "İstanbul ekibi · Kartal",
+  "ar.kartal.h1": "GreenRoot Kartal",
+  "ar.kartal.lead": "Kartal GreenRoot ekibi: haftada iki destekli temizlik vardiyası — Sahil ve kent meydanları bölgesinde. Toparlanmakta olanlar için ücretli roller, her vardiya için jeton; terapi ve ilaç, geri dönüşüm geliriyle finanse edilir.",
+  "ar.kartal.meet": "Buluşma noktası: kayıtlı ekip üyelerine duyurulur. Katıl sayfasından kaydolun — bir dakika sürer.",
+  "ar.kartal.sched": "Önerilen ritim: hafta içi bir sabah vardiyası + hafta sonu bir vardiya · ekipman ve güvenlik malzemesi sağlanır · Raha check-in'i kaydeder.",
+  "ar.kartal.cop": "Bu ekip, Kartal sesini COP31'e taşır (Antalya ve İstanbul, 9–20 Kasım 2026): temiz sokaklar, temiz başlangıçlar.",
+});
+})();
+Object.assign(window.I18N.en, {
+  "ar.meet.t":"Meetup point","ar.meet.b":"Register now →",
+  "ar.sched.t":"Shift rhythm","ar.cop.t":"To COP31","ar.cop.b":"COP31 page →",
+  "ar.other.k":"Other districts","ar.other.t":"Find your crew",
+  "ar.idx.cta":"Open crew page →"
+});
+Object.assign(window.I18N.fa, {
+  "ar.meet.t":"نقطهٔ قرار","ar.meet.b":"همین حالا ثبت‌نام کنید ←",
+  "ar.sched.t":"ریتم شیفت‌ها","ar.cop.t":"به سوی COP31","ar.cop.b":"صفحهٔ COP31 ←",
+  "ar.other.k":"مناطق دیگر","ar.other.t":"تیم خودتان را پیدا کنید",
+  "ar.idx.cta":"صفحهٔ تیم ←"
+});
+Object.assign(window.I18N.tr, {
+  "ar.meet.t":"Buluşma noktası","ar.meet.b":"Hemen kaydol →",
+  "ar.sched.t":"Vardiya ritmi","ar.cop.t":"COP31'e","ar.cop.b":"COP31 sayfası →",
+  "ar.other.k":"Diğer bölgeler","ar.other.t":"Ekibinizi bulun",
+  "ar.idx.cta":"Ekip sayfası →"
+});
+
+</script>
+<script>
+/* GreenRoot app: i18n engine, nav, counters, reveal, chat, career, mood, charts, form */
+(function(){
+"use strict";
+
+/* ---------- safe storage ---------- */
+var store = (function(){ try{ var s=window.localStorage; s.setItem("__gr","1"); s.removeItem("__gr"); return s; }catch(e){ return null; } })();
+
+/* ---------- language ---------- */
+var lang = "en";
+var saved = store ? store.getItem("gr-lang") : null;
+if (saved && ["en","fa","tr"].indexOf(saved)>-1) lang = saved;
+else {
+  var nav3 = (navigator.language||"");
+  if (nav3.indexOf("fa")===0) lang = "fa";
+  else if (nav3.indexOf("tr")===0) lang = "tr";
+}
+
+function t(k){
+  var d = I18N[lang] || I18N.en;
+  if (d[k]!==undefined) return d[k];
+  if (I18N.en[k]!==undefined) return I18N.en[k];
+  return "";
+}
+function fmt(n){ return n.toLocaleString("en-US"); }
+var raf = (window.requestAnimationFrame
+  ? function(f){ return window.requestAnimationFrame(f); }
+  : function(f){ return setTimeout(function(){ f(Date.now()); }, 16); });
+function safe(fn){ try{ fn(); }catch(e){ if (window.console) console.warn("GreenRoot init:", e); } }
+function mergeTr(){
+  var X = window.GR_EXTRA_TR;
+  if (!X) return;
+  CHAT_GREETING.tr = X.greeting;
+  CHAT_FALLBACK.tr = X.fallback;
+  X.chips.forEach(function(c){
+    var dst = CHAT_CHIPS.find(function(x){ return x.id===c.id; });
+    if (dst) dst.tr = c.tr;
+  });
+  Object.keys(X.intents).forEach(function(id){
+    var dst = CHAT_INTENTS.find(function(x){ return x.id===id; });
+    if (dst) dst.r.tr = X.intents[id];
+  });
+  Object.keys(X.career||{}).forEach(function(job){
+    var s = X.career[job], d = CAREER_PLANS[job];
+    if (d){ d.title.tr=s.title; d.s1.tr=s.s1; d.s2.tr=s.s2; d.s3.tr=s.s3; d.story.tr=s.story; }
+  });
+}
+
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang==="fa") ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    el.innerHTML = t(el.getAttribute("data-i18n"));
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph")));
+  });
+  document.querySelectorAll(".lang-sw .lang").forEach(function(b){
+    b.classList.toggle("on", b.getAttribute("data-lang")===lang);
+  });
+  /* COP31 countdown */
+  var days = Math.max(0, Math.ceil((new Date(2026,10,9) - new Date())/86400000));
+  document.querySelectorAll("[data-cop-days]").forEach(function(elm){
+    elm.textContent = t("cop.countdown").replace("{d}", days);
+  });
+  var page = document.body.getAttribute("data-page");
+  if (page && t("title."+page)) document.title = t("title."+page);
+  var cs = document.getElementById("chatShellDir");
+  if (page==="ai") renderChips();
+  applyChatDir();
+  if (page==="dashboard" && document.getElementById("chartMonthly")) initDashboard();
+  var file = (page === "home" ? "index" : page) + ".html";
+  document.querySelectorAll(".links a").forEach(function(a){
+    a.classList.toggle("active", a.getAttribute("href") === file);
+  });
+}
+
+function setLang(l){
+  lang = l;
+  if (store) try{ store.setItem("gr-lang", l); }catch(e){}
+  safe(applyLang);
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  safe(mergeTr);
+  safe(applyLang);
+
+  document.querySelectorAll(".lang-sw .lang").forEach(function(b){
+    b.addEventListener("click", function(){ setLang(b.getAttribute("data-lang")); });
+  });
+
+  /* burger */
+  var nav = document.getElementById("nav");
+  var burger = document.getElementById("burger");
+  if (burger && nav){
+    burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+    nav.querySelectorAll(".links a").forEach(function(a){
+      a.addEventListener("click", function(){ nav.classList.remove("open"); });
+    });
+  }
+
+  /* footer year */
+  document.querySelectorAll("#year").forEach(function(el){ el.textContent = new Date().getFullYear(); });
+
+  /* reveal on scroll */
+  var rvs = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {threshold:.12});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else { rvs.forEach(function(el){ el.classList.add("in"); }); }
+
+  /* animated counters */
+  function runCounter(el){
+    var target = parseFloat(el.getAttribute("data-count"))||0;
+    var pre = el.getAttribute("data-prefix")||"", suf = el.getAttribute("data-suffix")||"";
+    var dur = 1500, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts-t0)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = pre + fmt(Math.round(target*eased)) + suf;
+      if (p<1) raf(step);
+    }
+    raf(step);
+  }
+  var counters = document.querySelectorAll("[data-count]");
+  if ("IntersectionObserver" in window){
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ safe(function(){ runCounter(e.target); }); cio.unobserve(e.target); } });
+    }, {threshold:.4});
+    counters.forEach(function(el){ cio.observe(el); });
+  } else { counters.forEach(function(el){ safe(function(){ runCounter(el); }); }); }
+
+  /* page inits */
+  var page = document.body.getAttribute("data-page");
+  safe(function(){
+    if (page==="ai") initAI();
+    if (page==="dashboard") initDashboard();
+    if (page==="join") initJoin();
+  });
+});
+
+/* ============================================================
+   Raha chat (AI page)
+============================================================ */
+var CHAT_INTENTS = [
+  { id:"crisis",
+    kw:["suicide","kill myself","overdose","end it","خودکشی","اوردوز","مردن","تموم کنم","نابود","intihar","aşırı doz","bitirmek istiyorum"],
+    r:{ en:"I'm really glad you told me. Please reach a human right now:\n• Your local emergency number (DE: 112 · IR: 123)\n• Iran addiction hotline: 09628\n• Your GreenRoot counselor — number is on your card.\nYou are not alone, and this moment will pass. Stay with me — then call.",
+        fa:"خیلی خوشحالم که گفتی. لطفاً همین حالا به یک انسان وصل شو:\n• شمارهٔ اورژانس محلی (آلمان: ۱۱۲ · ایران: ۱۲۳)\n• خط اعتیاد ایران: ۰۹۶۲۸\n• شمارهٔ مشاور گرین‌روت روی کارتت هست.\nتنها نیستی و این لحظه رد می‌شود. با من بمون — بعد زنگ بزن." } },
+  { id:"craving",
+    kw:["craving","crave","urge","relapse now","using again","هوس","کشش","میل","لغزش","مصرف","kriz","canım çekti","kullanmak istiyorum"],
+    r:{ en:"Craving noticed — that's already a win. Let's ride the wave:\n1. Put the thought on a 10-minute timer.\n2. 4-7-8 breathing ×3 with me: in 4… hold 7… out 8…\n3. Walk toward a crew member or call your buddy.\nCravings peak and pass — usually under 20 minutes. I'm staying right here.",
+        fa:"هوس رو شنیدم — همین که گفتی یعنی یک برد. موج رو سوار بشیم:\n۱. فکر رو روی تایمر ۱۰ دقیقه‌ای بذار.\n۲. سه بار تنفس ۴-۷-۸ با من: دم ۴… نگه ۷… بازدم ۸…\n۳. برو سمت یکی از اعضای تیم یا به همراهت زنگ بزن.\nهوس اوج می‌گیره و رد می‌شه — معمولاً زیر ۲۰ دقیقه. من همین‌جام." } },
+  { id:"mood",
+    kw:["sad","depress","low","lonely","tired","empty","anxious","غم","افسر","تنها","خسته","حالم","اضطراب","نگران","mutsuz","yalnızım","kötüyüm","yorgunum","kaygılı"],
+    r:{ en:"Thanks for telling me. Low days are data, not failure.\n• Today's shift is optional — rest is treatment too.\n• Want me to draft a message to your counselor?\n• One small thing: water, window, 5 slow breaths. That's enough for now.",
+        fa:"ممنون که گفتی. روزهای پایین، داده‌ان نه شکست.\n• شیفت امروز اختیاریه — استراحت هم بخشی از درمانه.\n• برات یک پیام برای مشاورت بنویسم؟\n• یک کار کوچک: آب، پنجره، ۵ نفس آروم. فعلاً همین کافیه." } },
+  { id:"career",
+    kw:["job","career","work again","cv","resume","interview","شغل","کار","رزومه","مصاحبه","حرفه","kariyer","meslek","mülakat","özgeçmiş"],
+    r:{ en:"Career rewind is my favourite topic 💼 Your plan has 3 steps: skill map → paid refresh role inside the program → placement with a partner employer.\nTell me your old job — driver, nurse, accountant, mechanic, teacher, cook — or try the Career rewind demo below the chat.",
+        fa:"بازگشت شغلی موضوع موردعلاقه‌ام هست 💼 طرحت ۳ قدم داره: نقشهٔ مهارت → نقشِ تمرینیِ حقوق‌دار در برنامه → قرارگیری در یک کارفرمای شریک.\nشغل قبلیت رو بگو — راننده، پرستار، حسابدار، مکانیک، معلم، آشپز — یا دموی «بازگشت شغلی» زیر چت رو امتحان کن." } },
+  { id:"balance",
+    kw:["token","balance","reward","point","wallet","توکن","موجودی","پاداش","امتیاز","کیف","jeton","bakiye","cüzdan"],
+    r:{ en:"Token balance: 340 🪙\n• This week: +60 (3 shifts)\n• Available rewards: bus pass (40) · phone credit (25) · welding course (220)\nTip: set a goal in the wallet — goals roughly double follow-through.",
+        fa:"موجودی توکن: 340 🪙\n• این هفته: +60 (۳ شیفت)\n• پاداش‌های موجود: کارت اتوبوس (40) · شارژ (25) · دورهٔ جوشکاری (220)\nپیشنهاد: در کیف، یک هدف بذار — هدف‌گذاری پیگیری رو تقریباً دوبرابر می‌کنه." } },
+  { id:"schedule",
+    kw:["schedule","shift","time","plan","when","برنامه","شیفت","ساعت","کی","وقت","vardiya","bu hafta"],
+    r:{ en:"This week's plan:\n• Mon / Wed / Fri 08:00 — cleanup shift (meet at the depot)\n• Tue 17:00 — group therapy\n• Thu 16:00 — Raha session + skills class\nRain plan: indoor sorting line. Missed a day? It happens — tell your mentor, your place is safe.",
+        fa:"برنامهٔ این هفته:\n• دوشنبه / چهارشنبه / جمعه 08:00 — شیفت پاک‌سازی (قرار مقابل انبار)\n• سه‌شنبه 17:00 — گروه‌درمانی\n• پنجشنبه 16:00 — جلسهٔ رها + کلاس مهارت\nبرنامهٔ بارونی: خط جداسازی سرپوشیده. یه روز جا موندی؟ پیش میاد — به مربیت بگو، جایگاهت محفوظه." } },
+  { id:"trash",
+    kw:["trash","waste","recycl","collect","زباله","بازیافت","جمع","çöp","atık"],
+    r:{ en:"Today's crews collected 214 kg: 96 kg PET · 41 kg metal · 52 kg paper · 25 kg glass.\nThat's about €118 to the treatment fund — and enough flake for 3 face shields heading to the workshop. You make that happen.",
+        fa:"تیم‌های امروز ۲۱۴ کیلو جمع کردند: ۹۶ کیلو پت · ۴۱ فلز · ۵۲ کاغذ · ۲۵ شیشه.\nیعنی حدود €118 به صندوق درمان — و خردِ کافی برای ۳ شیلد صورت به سمت کارگاه. این تو اتفاق انداختی." } },
+  { id:"about",
+    kw:["who are you","what are you","raha","رها کیست","تو کی هستی","چی هستی"],
+    r:{ en:"I'm Raha — \"رهاء\" means freedom. I'm the program's AI companion: craving SOS, mood check-ins, token wallet and career-rewind coach. I'm a tool with human oversight — your counselor and doctors make the clinical calls. My data policy is simple: your story belongs to you.",
+        fa:"من رها هستم؛ «رهاء» یعنی آزادی. همیار هوش مصنوعی برنامه‌ام: SOS هوس، چک-این خلق، کیف توکن و مربی بازگشت شغلی. من یک ابزار با نظارت انسانی‌ام — تصمیم‌های بالینی با مشاور و پزشکت. سیاست داده‌ام ساده‌ست: داستان زندگی‌ات مال خودته." } },
+  { id:"thanks",
+    kw:["thank","thanks","merci","مرسی","ممنون","متشکر","سپاس","teşekkür","sağol"],
+    r:{ en:"Anytime. That's what I'm here for — see you at check-in tomorrow? 🌱",
+        fa:"همیشه در خدمتم. برای همین اینجام — فردا سر چک-این می‌بینمت؟ 🌱" } }
+];
+var CHAT_FALLBACK = {
+  en:"I hear you. I'm the demo version — I know cravings, mood, tokens, the weekly plan and career rewind. Try a chip below, or type \"craving\", \"job\", \"balance\"…",
+  fa:"شنیدمت. من نسخهٔ دمو هستم — از هوس، خلق، توکن، برنامهٔ هفتگی و بازگشت شغلی سر درمیارم. یکی از دکمه‌ها رو بزن، یا بنویس «هوس»، «شغل»، «موجودی»…"
+};
+var CHAT_GREETING = {
+  en:"Hi, I'm Raha 🌱 GreenRoot's recovery companion. How are you feeling today? Tap a chip below or just type — English or فارسی, both work.",
+  fa:"سلام، من رها هستم 🌱 همیار بهبودی گرین‌روت. امروز حالت چطوره؟ از دکمه‌های پایین استفاده کن یا آزادانه بنویس — فارسی یا English، هر دو جواب می‌ده."
+};
+var CHAT_CHIPS = [
+  { id:"craving", en:"I have a craving", fa:"هوس دارم" },
+  { id:"mood",    en:"I feel low",      fa:"حالم پایینه" },
+  { id:"career",  en:"Career rewind",   fa:"بازگشت شغلی" },
+  { id:"balance", en:"Token balance",   fa:"موجودی توکن" },
+  { id:"schedule",en:"This week's plan",fa:"برنامهٔ این هفته" }
+];
+
+var chatBody, chatInput;
+function el(id){ return document.getElementById(id); }
+
+function chatMsg(text, who){
+  var m = document.createElement("div");
+  m.className = "msg " + who;
+  m.textContent = text;
+  chatBody.appendChild(m);
+  chatBody.scrollTop = chatBody.scrollHeight;
+  return m;
+}
+function botReply(intentId, userText){
+  var typing = document.createElement("div");
+  typing.className = "msg bot typing";
+  typing.innerHTML = "<span></span><span></span><span></span>";
+  chatBody.appendChild(typing);
+  chatBody.scrollTop = chatBody.scrollHeight;
+  var resp, d = I18N[lang]||I18N.en;
+  if (intentId){ resp = CHAT_INTENTS.find(function(i){return i.id===intentId;}).r[lang] || CHAT_INTENTS.find(function(i){return i.id===intentId;}).r.en; }
+  else {
+    var lower = (userText||"").toLowerCase();
+    var hit = CHAT_INTENTS.find(function(i){ return i.kw.some(function(k){ return lower.indexOf(k.toLowerCase())>-1; }); });
+    resp = hit ? (hit.r[lang]||hit.r.en) : (CHAT_FALLBACK[lang]||CHAT_FALLBACK.en);
+  }
+  setTimeout(function(){ typing.remove(); chatMsg(resp,"bot"); }, 800 + Math.random()*500);
+}
+function routeIntent(intentId){
+  var chip = CHAT_CHIPS.find(function(c){return c.id===intentId;});
+  var label = chip ? (chip[lang]||chip.en) : intentId;
+  chatMsg(label,"user");
+  botReply(intentId,null);
+}
+function renderChips(){
+  var wrap = el("chatChips");
+  if (!wrap) return;
+  wrap.innerHTML = "";
+  CHAT_CHIPS.forEach(function(c){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = c[lang]||c.en;
+    b.addEventListener("click", function(){ routeIntent(c.id); });
+    wrap.appendChild(b);
+  });
+}
+function sendChat(){
+  var v = (chatInput.value||"").trim();
+  if (!v) return;
+  chatMsg(v,"user");
+  chatInput.value = "";
+  botReply(null,v);
+}
+function initAI(){
+  chatBody = el("chatBody"); chatInput = el("chatInput");
+  var shell = document.querySelector(".chat-shell");
+  if (shell){ shell.removeAttribute("dir"); }
+  applyChatDir();
+  chatMsg(CHAT_GREETING[lang]||CHAT_GREETING.en,"bot");
+  renderChips();
+  var send = el("chatSend");
+  if (send) send.addEventListener("click", sendChat);
+  if (chatInput) chatInput.addEventListener("keydown", function(e){ if (e.key==="Enter") sendChat(); });
+
+  /* career rewind */
+  var plans = CAREER_PLANS;
+  var picker = el("careerPicker"), planBox = el("careerPlan");
+  if (picker && planBox){
+    picker.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click", function(){
+        picker.querySelectorAll("button").forEach(function(x){ x.classList.remove("on"); });
+        b.classList.add("on");
+        var job = b.getAttribute("data-job");
+        renderPlan(job);
+      });
+    });
+  }
+  function renderPlan(job){
+    var p = plans[job];
+    planBox.style.display = "block";
+    planBox.innerHTML =
+      "<h4>"+ (p.title[lang]||p.title.en) +"</h4>" +
+      "<ol><li>"+ (p.s1[lang]||p.s1.en) +"</li><li>"+ (p.s2[lang]||p.s2.en) +"</li><li>"+ (p.s3[lang]||p.s3.en) +"</li></ol>" +
+      "<p class='small' style='margin-top:12px;color:var(--teal);font-weight:700'>💡 "+ (p.story[lang]||p.story.en) +"</p>";
+  }
+
+  /* mood tracker */
+  var moodLog = [];
+  var moodRow = el("moodRow"), moodMsg = el("moodMsg");
+  if (moodRow && moodMsg){
+    moodRow.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click", function(){
+        moodLog.push(parseInt(b.getAttribute("data-mood"),10));
+        if (moodLog.length>12) moodLog.shift();
+        renderMood();
+      });
+    });
+  }
+  function renderMood(){
+    if (!moodLog.length) return;
+    var MOOD_TXT = {
+      1:{en:"Very low — you're not alone. Tap \"I have a craving\" / SOS or call your counselor. I've flagged a check-in.",fa:"خیلی پایین — تنها نیستی. «هوس دارم»/SOS رو بزن یا به مشاورت زنگ بزن. یک چک-این علامت خوردم."},
+      2:{en:"Low — thanks for logging. Consider an SOS session or an early night.",fa:"پایین — ممنون که ثبت کردی. یک جلسهٔ SOS یا زودخوابیدن رو در نظر بگیر."},
+      3:{en:"Okay days count too. Logged.",fa:"روزهای معمولی هم می‌شمارند. ثبت شد."},
+      4:{en:"Good — noted. Keep the rhythm.",fa:"خوب — ثبت شد. ریتم رو نگه دار."},
+      5:{en:"Great day — logged. Streaks are how recovery is built. 🌱",fa:"روزِ خوبی بود — ثبت شد. رشته‌ها، بهبودی را می‌سازند. 🌱"}
+    };
+    var last = moodLog[moodLog.length-1];
+    var txt = (lang==="tr" && window.GR_EXTRA_TR && window.GR_EXTRA_TR.mood[last]) || MOOD_TXT[last][lang] || MOOD_TXT[last].en;
+    var trend = moodLog.length>1 ? (moodLog[moodLog.length-1]>=moodLog[moodLog.length-2] ? " ↗" : " ↘") : "";
+    /* sparkline */
+    var w=220,h=44,pts="";
+    moodLog.forEach(function(v,i){
+      var x = moodLog.length===1 ? w/2 : (i/(moodLog.length-1))*(w-8)+4;
+      var y = h-6-((v-1)/4)*(h-12);
+      pts += x.toFixed(1)+","+y.toFixed(1)+" ";
+    });
+    var svg = "<svg width='"+w+"' height='"+h+"' viewBox='0 0 "+w+" "+h+"'><polyline points='"+pts+"' fill='none' stroke='#16A34A' stroke-width='2.5' stroke-linecap='round'/></svg>";
+    moodMsg.innerHTML = txt + trend + "<br>" + svg + "<br><span class='muted'>" + moodLog.length + " × " + (lang==="fa"?"چک-این":"check-ins") + "</span>";
+  }
+}
+
+var CAREER_PLANS = {
+  driver:{ title:{en:"🚚 Driver — rewind plan",fa:"🚚 راننده — طرح بازگشت"},
+    s1:{en:"Licence & record check: we verify your licence status and the skills fund covers any refresher course.",fa:"بررسی گواهینامه و سوابق: وضعیت گواهینامه‌ات را بررسی می‌کنیم و صندوق مهارت هزینهٔ دورهٔ تجدید را می‌پوشاند."},
+    s2:{en:"6 paid weeks as relief driver for the cleanup crews' logistics — with a clean-shift certificate.",fa:"۶ هفتهٔ حقوق‌دار به‌عنوان رانندهٔ جانشین در حمل‌ونقل تیم‌های پاک‌سازی — با گواهی شیفت‌های تمیز."},
+    s3:{en:"Raha rebuilds your CV around 12+ months of documented reliability, then places you with partner logistics firms.",fa:"رها رزومه‌ات را حول ۱۲+ ماه اتکاپذیریِ مستند بازمی‌سازد و بعد با شرکت‌های حمل‌ونقل شریک قرارت می‌دهد."},
+    story:{en:"Your time on the crew isn't a gap — it's proof of reliability.",fa:"بودنت در تیم، یک «وقفه» نیست — مدرک اتکاپذیری است."}},
+  nurse:{ title:{en:"🧑‍⚕️ Nurse / health worker — rewind plan",fa:"🧑‍⚕️ پرستار / کارمند سلامت — طرح بازگشت"},
+    s1:{en:"Re-enter clinical life through lower-intensity roles: hygiene and health-promotion rounds within the crews.",fa:"بازگشت به فضای بالینی از نقش‌های کم‌فشار: گشتی‌های بهداشت و ارتقای سلامت درون تیم‌ها."},
+    s2:{en:"Skills revalidation: BLS refresher, licence paperwork — supported by the skills fund.",fa:"بازاعتبارسنجی مهارت: دورهٔ BLS، امور پروانه — با پشتیبانی صندوق مهارت."},
+    s3:{en:"Supported shifts with partner clinics while Raha builds your gradual full-return plan.",fa:"شیفت‌های حمایتی در کلینیک‌های شریک، در حالی که رها طرح بازگشت کامل تدریجی‌ات را می‌سازد."},
+    story:{en:"The care you learned to give yourself is now your credential.",fa:"مراقبتی که یاد گرفتی به خودت بدهی، حالا اعتبارت است."}},
+  accountant:{ title:{en:"🧾 Accountant — rewind plan",fa:"🧾 حسابدار — طرح بازگشت"},
+    s1:{en:"Skills audit with free assessments (Excel, bookkeeping) — a gap map within one week.",fa:"ارزیابی مهارت با تست‌های رایگان (اکسل، اصول حسابداری) — نقشهٔ شکاف‌ها در یک هفته."},
+    s2:{en:"Six weeks of software refresh + a real role: counting and reporting the crews' material revenue.",fa:"شش هفته به‌روزرسانی نرم‌افزار + یک نقش واقعی: شمارش و گزارش درآمد مواد تیم‌ها."},
+    s3:{en:"Raha frames your CV around \"12 months of clean data\", then runs interview practice with partner firms.",fa:"رها رزومه را حول «۱۲ ماه دادهٔ تمیز» قاب می‌گیرد و بعد با شرکت‌های شریک مصاحبه تمرینی می‌گذارد."},
+    story:{en:"The discipline you built in recovery is exactly what accounting wants.",fa:"انضباطی که در بهبودی ساختی، دقیقاً همان چیزی است که حسابداری می‌خواهد."}},
+  mechanic:{ title:{en:"🔧 Mechanic — rewind plan",fa:"🔧 مکانیک — طرح بازگشت"},
+    s1:{en:"Workshop assessment: tools, safety, current skills — with a technical mentor.",fa:"ارزیابی کارگاهی: ابزار، ایمنی، مهارت‌های فعلی — با یک مربی فنی."},
+    s2:{en:"Documented experience maintaining the recycling line's machines and vehicles, on site.",fa:"تجربهٔ مستند نگهداشت ماشین‌آلات و خودروهای خط بازیافت — در همان سایت."},
+    s3:{en:"Specialist certificate (e.g. electromechanics) from the skills fund + placement at partner workshops.",fa:"گواهی تخصصی (مثلاً الکترومکانیک) از صندوق مهارت + قرارگیری در کارگاه‌های شریک."},
+    story:{en:"The machines you brought back to life are your best résumé.",fa:"ماشین‌هایی که به آن‌ها زندگی دوباره دادی، بهترین رزومهٔ تو هستند."}},
+  teacher:{ title:{en:"🧑‍🏫 Teacher — rewind plan",fa:"🧑‍🏫 معلم — طرح بازگشت"},
+    s1:{en:"The honest-narrative plan: how to tell the gap in interviews, practised with Raha until it's strength.",fa:"طرحِ روایت صادقانه: چطور وقفه را در مصاحبه بگویی — با رها تمرین می‌کنی تا به نقطه‌قوت تبدیل شود."},
+    s2:{en:"Real classroom: environmental-literacy lessons for school groups in the parks your crew cleaned.",fa:"کلاس واقعی: درس‌های سواد محیط‌زیست برای گروه‌های مدرسه‌ای در پارک‌هایی که تیمت تمیز کرده."},
+    s3:{en:"Teaching-certificate refresh + assistant placement at partner schools, stepping up to full-time.",fa:"روزآمدسازی گواهی تدریس + جایگاه دستیار در مدارس شریک، تا رسیدن به تمام‌وقت."},
+    story:{en:"Your recovery is the deepest lesson your future classroom will ever get.",fa:"بهبودی‌ات، عمیق‌ترین درسی است که کلاس آینده‌ات می‌گیرد."}},
+  cook:{ title:{en:"🍳 Cook — rewind plan",fa:"🍳 آشپز — طرح بازگشت"},
+    s1:{en:"Food safety & hygiene certificate — official, funded by the skills fund.",fa:"گواهی ایمنی و بهداشت غذا — رسمی، هزینه‌اش با صندوق مهارت."},
+    s2:{en:"Real volume experience: cooking crew lunches for 50+ people every day.",fa:"تجربهٔ حجم واقعی: پخت ناهار تیم‌ها برای ۵۰+ نفر هر روز."},
+    s3:{en:"Supported internship in a partner kitchen with a mentor, then part-time or full-time placement.",fa:"کارآموزی حمایتی در آشپزخانهٔ شریک با مربی، بعد جایگاه پاره‌وقت یا تمام‌وقت."},
+    story:{en:"The meals you cook for the crew are the first order of your comeback.",fa:"غذاهایی که برای تیم می‌پزی، اولین سفارشِ بازگشت تو هستند."}}
+};
+
+function applyChatDir(){
+  var shell = document.querySelector(".chat-shell");
+  if (shell) shell.setAttribute("dir", lang==="fa" ? "rtl" : "ltr");
+  if (chatBody) chatBody.setAttribute("dir", lang==="fa" ? "rtl" : "ltr");
+}
+
+/* ============================================================
+   Dashboard charts
+============================================================ */
+var MONTHLY_KG = [1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2400];
+var WASTE_MIX = [
+  {label:"PET", v:42, color:"#16A34A"},
+  {label:"Paper", v:22, color:"#0D9488"},
+  {label:"Metal", v:18, color:"#F59E0B"},
+  {label:"Glass", v:11, color:"#3B82F6"},
+  {label:"Other", v:7, color:"#94A3B8"}
+];
+var FUND = [
+  {v:1900, color:"#16A34A"},
+  {v:1250, color:"#F59E0B"},
+  {v:600,  color:"#0D9488"}
+];
+var REPORT = [
+  {m:7, a:98,  kg:1600, eur:3200},
+  {m:8, a:104, kg:1700, eur:3400},
+  {m:9, a:109, kg:1800, eur:3600},
+  {m:10,a:113, kg:1900, eur:3800},
+  {m:11,a:117, kg:2000, eur:4100},
+  {m:12,a:120, kg:2400, eur:4600}
+];
+
+function renderReportTable(){
+  var body = el("reportBody");
+  if (!body) return;
+  body.innerHTML = REPORT.map(function(r){
+    return "<tr><td>"+r.m+"</td><td>"+r.a+"</td><td>"+fmt(r.kg)+"</td><td>€"+fmt(r.eur)+"</td></tr>";
+  }).join("");
+}
+
+function initDashboard(){
+  drawBars(el("chartMonthly"), MONTHLY_KG);
+  drawDonut(el("chartMix"), WASTE_MIX);
+  drawHBars(el("chartFund"), FUND);
+  renderReportTable();
+}
+
+function drawBars(container, values){
+  if (!container) return;
+  var W=460,H=230,pad=34,bw=(W-pad-10)/values.length;
+  var max = Math.max.apply(null,values)*1.12;
+  var s = "<svg viewBox='0 0 "+W+" "+H+"' style='width:100%;height:auto'>";
+  s += "<line x1='"+pad+"' y1='"+(H-26)+"' x2='"+(W-4)+"' y2='"+(H-26)+"' stroke='#E2E9DD' stroke-width='1.5'/>";
+  values.forEach(function(v,i){
+    var h = Math.round((v/max)*(H-58));
+    var x = pad + i*bw + 3;
+    var y = H-26-h;
+    s += "<rect x='"+x+"' y='"+y+"' width='"+(bw-7)+"' height='"+h+"' rx='4' fill='url(#gbars)'><title>"+fmt(v)+" kg</title></rect>";
+    if (i%2===0) s += "<text x='"+(x+(bw-7)/2)+"' y='"+(H-10)+"' font-size='10' fill='#8AA395' text-anchor='middle'>"+(i+1)+"</text>";
+    if (i===values.length-1) s += "<text x='"+(x+(bw-7)/2)+"' y='"+(y-6)+"' font-size='11' font-weight='700' fill='#166534' text-anchor='middle'>"+fmt(v)+"</text>";
+  });
+  s += "<defs><linearGradient id='gbars' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#22C55E'/><stop offset='1' stop-color='#15803D'/></linearGradient></defs>";
+  s += "</svg>";
+  container.innerHTML = s;
+}
+
+function drawDonut(container, segs){
+  if (!container) return;
+  var total = segs.reduce(function(a,b){return a+b.v;},0);
+  var R=76,C=2*Math.PI*R, off=0;
+  var s = "<svg viewBox='0 0 200 200' style='width:min(220px,100%);margin:auto;display:block'>";
+  s += "<g transform='rotate(-90 100 100)'>";
+  segs.forEach(function(seg){
+    var len = seg.v/total*C;
+    s += "<circle cx='100' cy='100' r='"+R+"' fill='none' stroke='"+seg.color+"' stroke-width='34' stroke-dasharray='"+len.toFixed(1)+" "+(C-len).toFixed(1)+"' stroke-dashoffset='"+(-off).toFixed(1)+"'><title>"+seg.label+" "+seg.v+"%</title></circle>";
+    off += len;
+  });
+  s += "</g><text x='100' y='96' text-anchor='middle' font-size='24' font-weight='800' fill='#0C2318'>"+t("dash.ch2.t1")+"</text>";
+  s += "<text x='100' y='116' text-anchor='middle' font-size='11' fill='#54685C'>"+t("dash.ch2.t2")+"</text></svg>";
+  container.innerHTML = s;
+  var lg = el("mixLegend");
+  if (lg){
+    lg.innerHTML = segs.map(function(seg){
+      return "<span><i style='background:"+seg.color+"'></i>"+seg.label+" "+seg.v+"%</span>";
+    }).join("");
+  }
+}
+
+function drawHBars(container, items){
+  if (!container) return;
+  var labels = [ t("dash.ch3.l1"), t("dash.ch3.l2"), t("dash.ch3.l3") ];
+  var max = Math.max.apply(null, items.map(function(i){return i.v;}))*1.1;
+  var s = "";
+  items.forEach(function(it,i){
+    var pct = Math.round(it.v/max*100);
+    s += "<div style='margin-bottom:14px'>" +
+      "<div style='display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:5px'><b>"+labels[i]+"</b><span class='muted' dir='ltr'>€"+fmt(it.v)+"/"+(lang==="fa"?"ماه":"mo")+"</span></div>" +
+      "<div style='background:#EEF3EA;border-radius:99px;height:14px;overflow:hidden' dir='ltr'><div style='width:"+pct+"%;height:100%;border-radius:99px;background:"+it.color+"'></div></div></div>";
+  });
+  container.innerHTML = s;
+}
+
+/* ============================================================
+   Join form
+============================================================ */
+function initJoin(){
+  var f = el("joinForm");
+  if (!f) return;
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    el("formOk").style.display = "block";
+    f.querySelector("button[type=submit]").disabled = true;
+  });
+}
+})();
+
+</script>
+</body>
+</html>
